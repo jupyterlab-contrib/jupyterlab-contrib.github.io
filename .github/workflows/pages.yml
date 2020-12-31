@@ -21,7 +21,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git remote -v
           export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)
           export TIME_STAMP=$(date -d"@${SOURCE_DATE_EPOCH}" --iso-8601=seconds)
           make clean
@@ -31,4 +30,4 @@ jobs:
           git add .
           export msg="Updating website for commit ${GITHUB_SHA} made on ${TIME_STAMP} from ${GITHUB_REF} by ${GITHUB_ACTOR}"
           git commit -am "${msg}"
-          # git push --force
+          git push --force
