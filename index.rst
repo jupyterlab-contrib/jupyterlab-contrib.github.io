@@ -1,7 +1,7 @@
 JupyterLab Unofficial Extensions & Tools
 ========================================
 
-The `jupyterlab-contrib <https://github.com/jupyterlab-contrib/`_ organization contains a collection of
+The `jupyterlab-contrib <https://github.com/jupyterlab-contrib/>`_ organization contains a collection of
 community-contributed unofficial extensions
 and tools that add functionalities to `JupyterLab <https://jupyterlab.readthedocs.io/en/stable/>`_. Each
 extension is stored in a independent GitHub repository.
@@ -19,6 +19,7 @@ relevant repositories. If the extension has been **archived**, you can `request 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
    extensions
    migrate_from_classical
    contributing

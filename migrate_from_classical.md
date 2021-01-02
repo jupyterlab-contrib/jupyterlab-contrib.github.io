@@ -5,8 +5,8 @@ from [jupyter_contrib_nbextensions](https://jupyter-contrib-nbextensions.readthe
 to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/):
 
 | Classical notebook | JupyterLab |
-| === | === |
-| [(some) LaTeX environments for Jupyter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/latex_envs/README.html) |  |
+| --- | --- |
+| [(some) LaTeX environments for Jupyter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/latex_envs/README.html) | |
 | [2to3 Converter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_2to3.html) |  |
 | [AddBefore](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/addbefore/readme.html) |  |
 | [Autopep8](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_autopep8.html) |  |
