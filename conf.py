@@ -68,7 +68,15 @@ html_sidebars = {
 html_theme_options = {
 
     # Set the name of the project to appear in the navigation.
-    'nav_title': 'JupyterLab Unofficial Extensions & Tools ',
+    'nav_title': 'JupyterLab Unofficial Extensions & Tools',
+    "nav_links": [
+        {
+            "href": "https://jupyterlab.readthedocs.io/en/stable/",
+            "title": "JupyterLab Documentation",
+            "internal": False,
+        }
+    ],
+    "master_doc": False,
 
     # Set you GA account ID to enable tracking
     # 'google_analytics_account': 'UA-XXXXX',
@@ -76,10 +84,10 @@ html_theme_options = {
     # Specify a base_url used to generate sitemap.xml. If not
     # specified, then no sitemap will be built.
     'base_url': 'https://jupyterlab-contrib.github.io',
-
+    'logo_icon': '&#xe87b',
     # Set the color and the accent color
-    'color_primary': 'blue',
-    'color_accent': 'light-blue',
+    'color_primary': 'deep-orange',
+    'color_accent': 'orange',
 
     # Set the repo location to get a badge with stats
     'repo_url': 'https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io',
