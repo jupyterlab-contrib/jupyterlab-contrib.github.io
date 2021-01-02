@@ -74,6 +74,21 @@ html_theme_options = {
             "href": "https://jupyterlab.readthedocs.io/en/stable/",
             "title": "JupyterLab Documentation",
             "internal": False,
+        },
+        {
+            "href": "https://jupyter-server.readthedocs.io/en/stable/",
+            "title": "Jupyter Server Documentation",
+            "internal": False,
+        },
+        {
+            "href": "https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?labels=transfer&template=transfer-repository-to-this-organization.md",
+            "title": "Transfer your extension",
+            "internal": False,
+        },
+        {
+            "href": "https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?template=help-with-maintenance.md",
+            "title": "I want to help",
+            "internal": False,
         }
     ],
     "master_doc": False,
