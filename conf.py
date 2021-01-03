@@ -17,7 +17,9 @@
 # List all organization extensions
 import os
 import pathlib
+import recommonmark
 import requests
+from recommonmark.transform import AutoStructify
 
 HERE = pathlib.Path(__file__).parent
 GET_REPOS = "https://api.github.com/orgs/jupyterlab-contrib/repos"
@@ -52,7 +54,7 @@ try:
             )
             filename = repo["name"]
             (HERE / (filename + ".md")).write_text(readme.text)
-            extensions += f"\n   {filename}"
+            extensions += f"\n* [{filename.replace('_', ' ')}]({filename}.md)"
         except BaseException as err:
             print(err)
             print(f"Fail to get README for {filename}.")
@@ -60,7 +62,7 @@ except BaseException as err:
     print(err)
     print("Fail to get organization repositories")
 finally:
-    (HERE / "extensions.rst").write_text(extensions)
+    (HERE / "extensions.md").write_text(extensions)
 
 
 # -- Project information -----------------------------------------------------
@@ -163,3 +165,8 @@ html_theme_options = {
     # If True, show hidden TOC entries
     "globaltoc_includehidden": False,
 }
+
+
+def setup(app):
+    app.add_config_value("recommonmark_config", {"enable_auto_toc_tree": True}, True)
+    app.add_transform(AutoStructify)

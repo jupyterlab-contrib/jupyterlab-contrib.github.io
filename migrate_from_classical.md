@@ -2,7 +2,10 @@
 
 The following table will help you find the equivalent extensions when migrating
 from [jupyter_contrib_nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/)
-to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/):
+to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
+
+> Feel free to edit this page to add more information by clicking on **Edit on GitHub** in the
+> top right corner of this page.
 
 | Classical notebook | JupyterLab |
 | --- | --- |
