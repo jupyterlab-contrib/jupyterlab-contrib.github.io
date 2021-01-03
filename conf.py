@@ -28,8 +28,11 @@ try:
         headers={"Accept": "application/vnd.github.v3+json"},
         params={"per_page": 100},
     )
+    data = repos.json()
+    for repo in data:
+        if isinstance(repo, str):
+            raise ValueError(data["message"])
 
-    for repo in repos.json():
         if repo["name"].startswith("jupyterlab-contrib"):
             continue  # Skip special repositories
 

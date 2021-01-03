@@ -1,0 +1,34 @@
+{% extends '!layout.html' %}
+
+{%- block extrahead %}
+    <style>
+        .md-source__repo {
+            display: block;
+            padding-right: .6rem;
+            transition: opacity .25s;
+            font-size: .65rem;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .md-header-nav__source .md-source__repo:hover {
+            opacity: .7;
+        }
+
+        .md-source__repo::after,
+        .md-source__edit::after {
+            content: none
+        }
+
+        .md-source__edit {
+            font-size: .55rem;
+            font-weight: initial;
+            opacity: .75;
+        }
+        
+        .md-header-nav__source .md-source__edit:hover {
+            opacity: .9;
+        }
+    </style>
+    {{ super() }}
+{%- endblock %}
