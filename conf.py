@@ -15,17 +15,23 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 # List all organization extensions
+import os
 import pathlib
 import requests
 
 HERE = pathlib.Path(__file__).parent
 GET_REPOS = "https://api.github.com/orgs/jupyterlab-contrib/repos"
+TOKEN = os.getenv("GITHUB_TOKEN")
 
 extensions = (HERE / "extensions.tpl").read_text()
+default_headers = {}
+if TOKEN is not None:
+    default_headers["authorization"] = f"Bearer {TOKEN}"
+
 try:
     repos = requests.get(
         GET_REPOS,
-        headers={"Accept": "application/vnd.github.v3+json"},
+        headers={**default_headers, "Accept": "application/vnd.github.v3+json"},
         params={"per_page": 100},
     )
     data = repos.json()
@@ -39,7 +45,10 @@ try:
         try:
             readme = requests.get(
                 repo["contents_url"].replace("{+path}", "README.md"),
-                headers={"Accept": "application/vnd.github.VERSION.raw"},
+                headers={
+                    **default_headers,
+                    "Accept": "application/vnd.github.VERSION.raw",
+                },
             )
             filename = repo["name"]
             (HERE / (filename + ".md")).write_text(readme.text)
