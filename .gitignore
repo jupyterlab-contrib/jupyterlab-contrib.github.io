@@ -126,3 +126,5 @@ dmypy.json
 .pyre/
 
 _build/
+extensions.rst
+j*.md
