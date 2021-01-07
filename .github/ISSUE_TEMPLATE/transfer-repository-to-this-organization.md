@@ -28,10 +28,10 @@ If mandatory points are not fulfilled, there is a low chance the transfer will b
 -->
 
 - [ ] You are owner of the repository you want to transfer
-- Your role in the transferred repository will be (check one of):
-  - [ ] Maintainer of all `jupyterlab-contrib` repositories
-  - [ ] Maintainer of the transferred repository only
-  - [ ] I don't care
+- Which role do you want to have in the `jupyterlab-contrib` organization (check one of):
+  - [ ] Help with all `jupyterlab-contrib` repositories
+  - [ ] Help with the transferred repository only
+  - [ ] I don't have time anymore to keep helping the project
 - The transferred repository (check one of):
   - [ ] Must keep the extension name
   - [ ] Cannot use the original name
@@ -49,3 +49,5 @@ If mandatory points are not fulfilled, there is a low chance the transfer will b
 - [ ] _optional_ The backend code (Python) is tested
 - [ ] I certify the extension is not using exclusively paid-plan of any commercial service
 - [ ] I will help the transfer process on the code repository AND the built packages
+
+> You must enable [two-factor authentication on GitHub](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/configuring-two-factor-authentication)
