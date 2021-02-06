@@ -151,7 +151,6 @@ html_theme_options = {
     # Specify a base_url used to generate sitemap.xml. If not
     # specified, then no sitemap will be built.
     "base_url": "https://jupyterlab-contrib.github.io",
-    "logo_icon": "&#xe87b",
     # Set the color and the accent color
     "color_primary": "deep-orange",
     "color_accent": "orange",
@@ -165,6 +164,8 @@ html_theme_options = {
     # If True, show hidden TOC entries
     "globaltoc_includehidden": False,
 }
+
+html_logo = "logo.png"
 
 
 def setup(app):
