@@ -1,4 +1,3 @@
-# List of extensions and tools
 
 ## Extensions from elsewhere
 
@@ -55,6 +54,5 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [Dask](https://github.com/dask/dask-labextension) - Manage Dask clusters, as well as embed Dask's dashboard plots directly into JupyterLab panes.
 - [jupyterlab-autoplay](https://github.com/remborg/autoplay) - Run and hide code cells automatically when opening a notebook.
 
-## Extensions in this organization
-
-The extensions hosted in this organization.
+If you don't find what you are looking here or in the web, you can always start coding a new extension; for
+more information have a look at the [documentation](https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html).

@@ -23,9 +23,17 @@ from recommonmark.transform import AutoStructify
 
 HERE = pathlib.Path(__file__).parent
 GET_REPOS = "https://api.github.com/orgs/jupyterlab-contrib/repos"
+GET_REPO = "https://api.github.com/repos/jupyterlab-contrib/"
 TOKEN = os.getenv("GITHUB_TOKEN")
 
-extensions = (HERE / "extensions.tpl").read_text()
+footer = (HERE / "extensions.tpl").read_text()
+header = """# List of extensions and tools
+
+## Extensions in this organization
+
+The extensions hosted in this organization.
+
+"""
 default_headers = {}
 if TOKEN is not None:
     default_headers["authorization"] = f"Bearer {TOKEN}"
@@ -37,6 +45,7 @@ try:
         params={"per_page": 100},
     )
     data = repos.json()
+    extensions = ""
     for repo in data:
         if isinstance(repo, str):
             raise ValueError(data["message"])
@@ -45,6 +54,12 @@ try:
             continue  # Skip special repositories
 
         try:
+            response = requests.get(
+                GET_REPO + repo["name"],
+                headers={**default_headers, "Accept": "application/vnd.github.v3+json"}
+            )
+            repo_attributes = response.json()
+            description = repo_attributes.get("description", "")
             readme = requests.get(
                 repo["contents_url"].replace("{+path}", "README.md"),
                 headers={
@@ -54,7 +69,7 @@ try:
             )
             filename = repo["name"]
             (HERE / (filename + ".md")).write_text(readme.text)
-            extensions += f"\n* [{filename.replace('_', ' ')}]({filename}.md)"
+            extensions += f"\n* [{filename.replace('_', ' ')}]({filename}.md): {description}"
         except BaseException as err:
             print(err)
             print(f"Fail to get README for {filename}.")
@@ -62,7 +77,7 @@ except BaseException as err:
     print(err)
     print("Fail to get organization repositories")
 finally:
-    (HERE / "extensions.md").write_text(extensions)
+    (HERE / "extensions.md").write_text(header + extensions + footer)
 
 
 # -- Project information -----------------------------------------------------
