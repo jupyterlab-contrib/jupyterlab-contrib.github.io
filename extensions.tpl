@@ -27,7 +27,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 ### UI enhancement
 
 - [jupyterlab-topbar](https://github.com/jtpio/jupyterlab-topbar): JupyterLab Top Bar extension
-  - [jupyterlab-topbar-text](./packages/jupyterlab-topbar-text): add and edit custom text
+  - [jupyterlab-topbar-text](https://github.com/jtpio/jupyterlab-topbar/tree/main/packages/jupyterlab-topbar-text): add and edit custom text
   - [jupyterlab-system-monitor](https://github.com/jtpio/jupyterlab-system-monitor): show system metrics (memory usage)
   - [jupyterlab-logout](https://github.com/jtpio/jupyterlab-logout): add a "Log Out" button
   - [jupyterlab-theme-toggle](https://github.com/jtpio/jupyterlab-theme-toggle): switch between the Light and Dark themes
