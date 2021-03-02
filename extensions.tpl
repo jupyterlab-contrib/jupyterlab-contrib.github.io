@@ -20,7 +20,6 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [Go to definition](https://github.com/krassowski/jupyterlab-go-to-definition): Allows you to <kbd>Alt</kbd> + <kbd>click</kbd> on a variable to jump to its definition.
 - [Language Server Protocol](https://github.com/krassowski/jupyterlab-lsp): Brings VS Code features (code navigation, hover suggestions, linters, autocompletion, etc.) to JupyterLab
 - [LaTeX](https://github.com/jupyterlab/jupyterlab-latex): An extension for JupyterLab which allows for live-editing of LaTeX documents.
-- [Spellchecker](https://github.com/ijmbarr/jupyterlab_spellchecker): Spellchecker for markdown cells
 - [Table of Contents](https://github.com/jupyterlab/jupyterlab-toc): [Built-in since v3] Generates a table of content for your notebook and markdown documents.
 - [Vim](https://github.com/jwkvam/jupyterlab-vim): Notebook cell vim bindings.
 
