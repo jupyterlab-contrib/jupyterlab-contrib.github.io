@@ -47,7 +47,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Move selected cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/move_selected_cells/README.html) | Built-in feature (Edit -> Move Cells Up/Down) | 1+ |
 | [Navigation-Hotkeys](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/navigation-hotkeys/readme.html) | Built-in feature (Advanced Settings -> Keyboard Shortcuts) | 1+ |
 | [nbTranslate](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/nbTranslate/README.html) |  |  |
-| [Notify](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/notify/readme.html) |  |  |
+| [Notify](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/notify/readme.html) |[jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications)|  |
 | [Printview](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/printview/readme.html) |  |  |
 | [Python Markdown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html) |  |  |
 | [Rubberband](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/rubberband/readme.html) | Built-in feature (Shift + Left click) | 1+ |
