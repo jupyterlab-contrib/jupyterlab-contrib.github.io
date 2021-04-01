@@ -67,7 +67,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [jupyterlab_autoversion](https://github.com/timkpaine/jupyterlab_autoversion): Automatically version jupyter notebooks in JupyterLab
 - [jupyterlab-pullrequests](https://github.com/jupyterlab/pull-requests): A JupyterLab extension for reviewing GitHub and GitLab pull requests 
 - [nbdime](https://github.com/jupyter/nbdime): Human friendly notebook differences viewer
-- [neptune-notebooks](https://docs.neptune.ml/notebooks/introduction.html): An extension that lets you version, diff, and share your JupyterLab and Jupyter notebooks on [neptune.ml](https://neptune.ml/). 
+- [neptune-notebooks](https://docs.neptune.ai/getting-started/quick-starts/how-to-version-jupyter-notebooks-step-by-step-guide): An extension that lets you version, diff, and share your JupyterLab and Jupyter notebooks on [neptune.ai](https://neptune.ai/). 
 
 ### Templates handling
 
