@@ -60,7 +60,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Skip-Traceback](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skip-traceback/readme.html) |  |  |
 | [Snippets](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html) | [Elyra Code Snippets](https://elyra.readthedocs.io/en/latest/user_guide/code-snippets.html) extension | 2+ |
 | [Snippets Menu](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets_menu/readme.html) | [jupyterlab-code-snippets](https://github.com/jupytercalpoly/jupyterlab-code-snippets) extension | 2+ |
-|  | [jupyterlab-snippets](https://github.com/QuantStack/jupyterlab-snippets) extension | 2 |
+|  | [jupyterlab-snippets](https://github.com/QuantStack/jupyterlab-snippets) extension | 2+ |
 | [spellchecker](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html) | [@ijmbarr/jupyterlab_spellchecker](https://github.com/ijmbarr/jupyterlab_spellchecker) extension | 1+ |
 | [Split Cells Notebook](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/splitcell/readme.html) |  |  |
 | [Table of Contents (2)](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/toc2/README.html) | Built-in feature | 3+ |
