@@ -32,7 +32,8 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 ### UI enhancement
 
-- [jupyterlab-favorites](https://github.com/NERSC/jupyterlab-favorites): Add the ability to save favorite folders to JupyterLab for quicker browsing .
+- [jupyterlab-favorites](https://github.com/NERSC/jupyterlab-favorites): Add the ability to save favorite folders to JupyterLab for quicker browsing.
+- [jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications): Jupyterlab extension to show notebook cell completion browser notifications.
 - [jupyterlab-recents](https://github.com/NERSC/jupyterlab-recents): JupyterLab extension that tracks recent files and directories.
 - [jupyterlab-topbar](https://github.com/jtpio/jupyterlab-topbar): JupyterLab Top Bar extension
   - [jupyterlab-topbar-text](https://github.com/jtpio/jupyterlab-topbar/tree/main/packages/jupyterlab-topbar-text): add and edit custom text
