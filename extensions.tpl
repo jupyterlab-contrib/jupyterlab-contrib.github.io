@@ -84,7 +84,11 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [Atom Dark](https://github.com/BurglarBenson/Jupyter-Atom-Dark-Theme): Atom Dark theme
 - [Darcula](https://github.com/telamonian/theme-darcula): Darcula theme with scrollbars, based on IntelliJ
 - [Gruvbox](https://github.com/Rahlir/theme-gruvbox): Gruvbox theme
+- [Horizon](https://github.com/mohirio/jupyterlab-horizon-theme): VSCode Horizon Theme port
 - [Material Darker](https://github.com/oriolmirosa/jupyterlab_materialdarker): Material Darker theme
+- [Neon](https://github.com/yeebc/jupyterlab-neon-theme): A flat, 80's neon inspired theme
+- [OneDark](https://github.com/fhfuih/jupyterlab_theme_onedark): Port of OneDark theme.
+- [Tailwind](https://github.com/simicd/jupyterlab-tailwind-theme): Theme extension inspired by [Tailwind](https://tailwindcss.com/)
 
 ### Miscellaneous extensions
 
