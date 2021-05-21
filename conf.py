@@ -19,6 +19,7 @@ import os
 import pathlib
 import recommonmark
 import requests
+from datetime import datetime
 from recommonmark.transform import AutoStructify
 
 HERE = pathlib.Path(__file__).parent
@@ -83,7 +84,8 @@ finally:
 # -- Project information -----------------------------------------------------
 
 project = "jupyterlab-contrib"
-copyright = "2020, JupyterLab Contrib Team"
+year = datetime.strftime(datetime.now(), "%Y")
+copyright = f"2020-{year}, JupyterLab Contrib Team"
 author = "JupyterLab Contrib Team"
 
 # The full version, including alpha/beta/rc tags
