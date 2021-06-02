@@ -40,6 +40,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
   - [jupyterlab-system-monitor](https://github.com/jtpio/jupyterlab-system-monitor): show system metrics (memory usage)
   - [jupyterlab-logout](https://github.com/jtpio/jupyterlab-logout): add a "Log Out" button
   - [jupyterlab-theme-toggle](https://github.com/jtpio/jupyterlab-theme-toggle): switch between the Light and Dark themes
+- [jupyterlab-unfold](https://github.com/martinRenou/jupyterlab-unfold): Tree view files browser.
 
 ### Viewers / Renderers
 
@@ -88,7 +89,8 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [Material Darker](https://github.com/oriolmirosa/jupyterlab_materialdarker): Material Darker theme
 - [Neon](https://github.com/yeebc/jupyterlab-neon-theme): A flat, 80's neon inspired theme
 - [OneDark](https://github.com/fhfuih/jupyterlab_theme_onedark): Port of OneDark theme.
-- [Tailwind](https://github.com/simicd/jupyterlab-tailwind-theme): Theme extension inspired by [Tailwind](https://tailwindcss.com/)
+- [Solarized](https://github.com/AllanChain/jupyterlab-theme-solarized-dark): Solarized Dark extension.
+- [Tailwind](https://github.com/simicd/jupyterlab-tailwind-theme): Theme extension inspired by [Tailwind](https://tailwindcss.com/).
 
 ### Miscellaneous extensions
 
