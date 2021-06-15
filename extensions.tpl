@@ -46,6 +46,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 - [Bokeh](https://github.com/bokeh/jupyterlab_bokeh): An extension rendering Bokeh content
 - [Dash](https://github.com/plotly/jupyterlab-dash): An extension for rendering [Plotly Dash](https://plot.ly/products/dash/) apps as a separate window.
+- [Evidently](https://github.com/evidentlyai/evidently) - Interactive reports to analyze machine learning models during validation or production monitoring.
 - [fasta](https://github.com/jupyterlab/jupyter-renderers): Fasta renderer
 - [geojson](https://github.com/jupyterlab/jupyter-renderers): Geojson renderer
 - HDF5:
