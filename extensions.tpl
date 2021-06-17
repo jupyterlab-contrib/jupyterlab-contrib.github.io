@@ -71,6 +71,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [jupyterlab-pullrequests](https://github.com/jupyterlab/pull-requests): A JupyterLab extension for reviewing GitHub and GitLab pull requests 
 - [nbdime](https://github.com/jupyter/nbdime): Human friendly notebook differences viewer
 - [neptune-notebooks](https://docs.neptune.ai/integrations-and-supported-tools/ide-and-notebooks/jupyter-lab-and-jupyter-notebook): An extension that lets you version, diff, and share your JupyterLab and Jupyter notebooks on [neptune.ai](https://neptune.ai/). 
+- [Verdant](https://marybethkery.com/Verdant/): An experimental tool that stores and visualizes local versioning in JupyterLab.
 
 ### Templates handling
 
@@ -109,6 +110,10 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [ML Workspace](https://github.com/ml-tooling/ml-workspace): All-in-one web IDE for machine learning and data science. Combines Jupyterlab, VS Code, Tensorflow, and many other tools/libraries into one Docker image.
 - [scriptedforms](https://github.com/SimonBiggs/scriptedforms): Quickly create live-update GUIs for Python packages using Markdown and simple HTML elements.
 - [Variable inspector](https://github.com/lckr/jupyterlab-variableInspector): Nice interactive variable inspector for your notebook
+
+You can also look for:
+- Repositories with topic _jupyterlab-extension_ on [GitHub](https://github.com/topics/jupyterlab-extension).
+- NodeJS package with keyword _jupyterlab-extension_ on [npmjs](https://www.npmjs.com/search?q=jupyterlab-extension).
 
 If you don't find what you are looking here or in the web, you can always start coding a new extension; for
 more information have a look at the [documentation](https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html).
