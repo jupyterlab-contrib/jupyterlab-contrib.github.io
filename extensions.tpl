@@ -97,6 +97,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 ### Miscellaneous extensions
 
 - [Dask](https://github.com/dask/dask-labextension): Manage Dask clusters, as well as embed Dask's dashboard plots directly into JupyterLab panes.
+- [Ganimede](https://github.com/manugraj/ganimede) - Store, version, edit and execute notebooks in sandboxes and integrate them directly via REST interfaces.
 - [gator](https://github.com/mamba-org/gator): Conda environment and package management extension from within Jupyter
 - [jupyterlab-autoplay](https://github.com/remborg/autoplay): Run and hide code cells automatically when opening a notebook.
 - [jupyterlab-autorun-cells](https://github.com/epi2me-labs/jupyterlab-autorun-cells): Allows toggling of code cells to execute automatically after opening a notebook.
