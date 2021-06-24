@@ -105,6 +105,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [jupyterlab-sos](https://github.com/vatlab/jupyterlab-sos): Jupyterlab extension for SoS Polyglot Notebook and Workflow Engine, allows multiple kernels in one notebook 
 - [jupyterlab_spark](https://github.com/manuzhang/jupyterlab_spark): Spark Application UI extension for JupyterLab
 - [jupyterlab_tensorboard](https://github.com/chaoleili/jupyterlab_tensorboard): Tensorboard extension for jupyterlab
+- [jupyter-videochat](https://github.com/yuvipanda/jupyter-videochat): Video Chat with JupyterHub peers inside JupyterLab, powered by [Jitsi](https://jitsi.org/)
 - [jupytext](https://github.com/mwouts/jupytext): Jupyter Notebooks as Markdown Documents, Julia, Python or R scripts
 - [KnowledgeLab](https://github.com/timkpaine/knowledgelab): [KnowledgeRepo](https://github.com/airbnb/knowledge-repo) + JupyterLab
 - [lantern](https://github.com/timkpaine/lantern): Data exploration kit
