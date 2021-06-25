@@ -40,7 +40,9 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
   - [jupyterlab-system-monitor](https://github.com/jtpio/jupyterlab-system-monitor): show system metrics (memory usage)
   - [jupyterlab-logout](https://github.com/jtpio/jupyterlab-logout): add a "Log Out" button
   - [jupyterlab-theme-toggle](https://github.com/jtpio/jupyterlab-theme-toggle): switch between the Light and Dark themes
-- [jupyterlab-unfold](https://github.com/martinRenou/jupyterlab-unfold): Tree view files browser.
+- FileBrowser:
+  - [jupyterlab-unfold](https://github.com/martinRenou/jupyterlab-unfold): Tree view files browser.
+  - [jupyterlab_filetree](https://github.com/youngthejames/jupyterlab_filetree): File Tree view for jupyterlab.
 
 ### Viewers / Renderers
 
