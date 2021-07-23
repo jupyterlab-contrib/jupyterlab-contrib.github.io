@@ -51,7 +51,7 @@ try:
         if isinstance(repo, str):
             raise ValueError(data["message"])
 
-        if repo["name"].startswith("jupyterlab-contrib"):
+        if "github" in repo["name"]:
             continue  # Skip special repositories
 
         try:
