@@ -9,7 +9,7 @@ extension is stored in a independent GitHub repository.
 Those repositories are maintained independently by a group of users and developers and not officially
 related to the JupyterLab development team.
 
-The maturity of the provided extensions varies. And hint on the status is provided through badge in
+The maturity of the provided extensions varies. A hint on the status is provided through badge in
 extension readme's:
 
 - |draft| The extension is in construction mode and not ready yet
