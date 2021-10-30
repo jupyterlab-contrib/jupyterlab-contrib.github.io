@@ -11,21 +11,21 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | --- | --- | --- |
 | [(some) LaTeX environments for Jupyter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/latex_envs/README.html) |  |  |
 | [2to3 Converter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_2to3.html) |  |  |
-| [AddBefore](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/addbefore/readme.html) | Built-in feature | 1+ |
+| [AddBefore](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/addbefore/readme.html) | Built-in feature (press <kbd>A</kbd> in command mode) | 1+ |
 | [Autopep8](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_autopep8.html) | [jupyterlab_code_formatter](https://jupyterlab-code-formatter.readthedocs.io/en/latest/index.html) extension | 2, 3 |
-| [AutoSaveTime](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/autosavetime/README.html) |  |  |
+| [AutoSaveTime](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/autosavetime/README.html) | Built-in feature (Settings → Autosave Documents; Advanced Settings → Document Manager) | 1+ |
 | [Autoscroll](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/autoscroll/README.html) |  |  |
-| [Cell Filter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/cell_filter/README.html) |  |  |
+| [Cell Filter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/cell_filter/README.html) | Built-in Table of Contents heading cells can be filtered by cell tags | 2.2+ |
 | [Code Font Size](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_font_size/README.html) | Built-in feature (View -> Presentation Mode or Settings -> JupyterLab Theme) | 1+ |
 | [Code prettify](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_code_prettify.html) | [jupyterlab_code_formatter](https://jupyterlab-code-formatter.readthedocs.io/en/latest/index.html) extension | 1+ |
 | [Codefolding](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html) | Built-in feature (Advanced Settings -> Notebook -> codeCellConfig.codeFolding) | 1+ |
 | [Codefolding in Editor](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html) | Built-in feature (Advanced Settings -> Text Editor -> editorConfig.codeFolding) | 1+ |
-| [Collapsible Headings](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/collapsible_headings/readme.html) | [aquirdturtle_collapsible_headings](https://github.com/aquirdTurtle/Collapsible_Headings) extension  | 1+ |
+| [Collapsible Headings](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/collapsible_headings/readme.html) | Built in feature since 3.1 ([PR](https://github.com/jupyterlab/jupyterlab/pull/10260)), for older versions use [aquirdturtle_collapsible_headings](https://github.com/aquirdTurtle/Collapsible_Headings) extension | 1+ |
 | [Comment/Uncomment Hotkey](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/comment-uncomment/readme.html) |  |  |
 | [datestamper](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/datestamper/readme.html) |  |  |
 | [Equation Auto Numbering](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/equation-numbering/readme.html) |  |  |
 | [ExecuteTime](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execute_time/readme.html) | [jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time) extension | 2+ |
-| [Execution Dependencies](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execution_dependencies/README.html) |  |  |
+| [Execution Dependencies](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execution_dependencies/README.html) | Work-in-progress: [ipyspaghetti](https://github.com/cphyc/ipyspaghetti), [akernel](https://github.com/davidbrochart/akernel), [nbsafety](https://github.com/nbsafety-project/nbsafety/issues/87) |  |
 | [Exercise](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/exercise/readme.html) |  |  |
 | [Exercise2](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/exercise2/readme.html) |  |  |
 | [Export Embedded HTML](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/export_embedded/readme.html) |  |  |
@@ -55,13 +55,13 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Runtools](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/runtools/readme.html) | Almost all built-in features | 1+ |
 | [Scratchpad](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scratchpad/README.html) | Built-in feature ([connecting code console to notebook](https://jupyterlab.readthedocs.io/en/stable/user/notebook.html)) | 1+ |
 | [ScrollDown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scroll_down/readme.html) |  |  |
-| [Select CodeMirror Keymap](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/select_keymap/README.html) |  |  |
+| [Select CodeMirror Keymap](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/select_keymap/README.html) | Built-in feature for File Editor, [jupyterlab-vim](https://github.com/jupyterlab-contrib/jupyterlab-vim) for vim mode in Notebook |  |
 | [SKILL Syntax](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skill/README.html) |  |  |
 | [Skip-Traceback](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skip-traceback/readme.html) |  |  |
 | [Snippets](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html) | [Elyra Code Snippets](https://elyra.readthedocs.io/en/latest/user_guide/code-snippets.html) extension | 2+ |
 | [Snippets Menu](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets_menu/readme.html) | [jupyterlab-code-snippets](https://github.com/jupytercalpoly/jupyterlab-code-snippets) extension | 2+ |
 |  | [jupyterlab-snippets](https://github.com/QuantStack/jupyterlab-snippets) extension | 2+ |
-| [spellchecker](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html) | [@ijmbarr/jupyterlab_spellchecker](https://github.com/ijmbarr/jupyterlab_spellchecker) extension | 1+ |
+| [spellchecker](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html) | [jupyterlab-spellchecker](https://github.com/jupyterlab-contrib/spellchecker) extension | 1+ |
 | [Split Cells Notebook](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/splitcell/readme.html) |  |  |
 | [Table of Contents (2)](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/toc2/README.html) | Built-in feature | 3+ |
 |  | [@jupyterlab/toc](https://github.com/jupyterlab/jupyterlab-toc) extension | 1, 2 |
