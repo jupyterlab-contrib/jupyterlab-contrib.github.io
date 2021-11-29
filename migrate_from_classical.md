@@ -16,6 +16,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [AutoSaveTime](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/autosavetime/README.html) | Built-in feature (Settings → Autosave Documents; Advanced Settings → Document Manager) | 1+ |
 | [Autoscroll](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/autoscroll/README.html) |  |  |
 | [Cell Filter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/cell_filter/README.html) | Built-in Table of Contents heading cells can be filtered by cell tags | 2.2+ |
+| [cite2c](https://github.com/takluyver/cite2c) | [jupyterlab-citation-manager](https://github.com/krassowski/jupyterlab-citation-manager) extension | 3+ |
 | [Code Font Size](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_font_size/README.html) | Built-in feature (View -> Presentation Mode or Settings -> JupyterLab Theme) | 1+ |
 | [Code prettify](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_code_prettify.html) | [jupyterlab_code_formatter](https://jupyterlab-code-formatter.readthedocs.io/en/latest/index.html) extension | 1+ |
 | [Codefolding](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html) | Built-in feature (Advanced Settings -> Notebook -> codeCellConfig.codeFolding) | 1+ |
