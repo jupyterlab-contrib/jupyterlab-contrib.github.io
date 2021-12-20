@@ -1,7 +1,7 @@
 # Migrate from classical Jupyter notebook
 
 The following table will help you find the equivalent extensions when migrating
-from [jupyter_contrib_nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/)
+from [the classical notebook](https://jupyter-contrib-nbextensions.readthedocs.io/)
 to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 
 > Feel free to edit this page to add more information by clicking on **Edit on GitHub** in the
@@ -47,10 +47,12 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Limit Output](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/limit_output/readme.html) |  |  |
 | [Move selected cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/move_selected_cells/README.html) | Built-in feature (Edit -> Move Cells Up/Down) | 1+ |
 | [Navigation-Hotkeys](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/navigation-hotkeys/readme.html) | Built-in feature (Advanced Settings -> Keyboard Shortcuts) | 1+ |
+| [nbgrader](https://github.com/jupyter/nbgrader) | | |
 | [nbTranslate](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/nbTranslate/README.html) |  |  |
 | [Notify](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/notify/readme.html) |[jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications)|  |
 | [Printview](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/printview/readme.html) |  |  |
 | [Python Markdown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html) |  |  |
+| [Rise](https://github.com/damianavila/RISE) |  |  |
 | [Rubberband](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/rubberband/readme.html) | Built-in feature (Shift + Left click) | 1+ |
 | [Ruler](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scratchpad/README.html) | Built-in feature (Advanced Settings -> Notebook -> codeCellConfig.rulers) | 1+ |
 | [Runtools](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/runtools/readme.html) | Almost all built-in features | 1+ |
