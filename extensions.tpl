@@ -69,7 +69,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [jupyterlab-pullrequests](https://github.com/jupyterlab/pull-requests): A JupyterLab extension for reviewing GitHub and GitLab pull requests 
 - [nbdime](https://github.com/jupyter/nbdime): Human friendly notebook differences viewer
 - [neptune-notebooks](https://docs.neptune.ai/integrations-and-supported-tools/ide-and-notebooks/jupyter-lab-and-jupyter-notebook): An extension that lets you version, diff, and share your JupyterLab and Jupyter notebooks on [neptune.ai](https://neptune.ai/). 
-- [Verdant](https://marybethkery.com/Verdant/): An experimental tool that stores and visualizes local versioning in JupyterLab.
+- [Verdant](https://github.com/mkery/Verdant/): An experimental tool that stores and visualizes local versioning in JupyterLab.
 
 ### Templates handling
 
