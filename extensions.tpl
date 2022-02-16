@@ -62,6 +62,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 ### Version Control
 
+- [Databooks](https://datarootsio.github.io/databooks/): A command-line utility that eases versioning and sharing of notebooks.
 - [Git](https://github.com/jupyterlab/jupyterlab-git): Git extension
 - [GitHub](https://github.com/jupyterlab/jupyterlab-github): GitHub extension
 - [GitLab](https://gitlab.com/ENKI-portal/jupyterlab-gitlab): GitLab extension
