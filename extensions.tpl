@@ -10,6 +10,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 - [Dash](https://github.com/plotly/jupyter-dash): Extension for the Interactive development of Dash apps in JupyterLab.
 - [jupyter-containds](https://github.com/ideonate/jupyter-containds): Companion Jupyter extension for ContainDS Dashboards (dashboards sharing service within JupyterHub).
+- [StickyLand](https://github.com/xiaohk/stickyland): Break the linear presentation of Jupyter Notebooks with sticky cells! 
 - [voila-gridstack](https://github.com/voila-dashboards/voila-gridstack): JupyterLab extension to build gridstack dashboard with voilà.
 - [voila-preview](https://github.com/voila-dashboards/voila): JupyterLab extension that displays a Voilà preview of your Notebook in a side-pane.
 
