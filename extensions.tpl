@@ -33,7 +33,11 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 ### UI enhancement
 
+- [ksmm][https://github.com/deshaw/ksmm]: This JupyterLab Extension allows users to manage Kernelspecs from within JupyterLab.
+- [jupyterlab-limit-output](https://github.com/deshaw/jupyterlab-limit-output): Limit long text output for a single JupyterLab mime render.
+- [jupyterlab-notify](https://github.com/deshaw/jupyterlab-notify): JupyterLab extension to notify cell completion.
 - [jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications): Jupyterlab extension to show notebook cell completion browser notifications.
+- [jupyterlab-skip-traceback](https://github.com/deshaw/jupyterlab-skip-traceback): A JupyterLab extension for rendering Errors with a copy/paste button and expand/collapse.
 - [jupyterlab-topbar](https://github.com/jupyterlab-contrib/jupyterlab-topbar): JupyterLab Top Bar extension
   - [jupyterlab-system-monitor](https://github.com/jtpio/jupyterlab-system-monitor): show system metrics (memory usage)
   - [jupyterlab-theme-toggle](https://github.com/jtpio/jupyterlab-theme-toggle): switch between the Light and Dark themes
@@ -103,6 +107,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [jupyterlab-autorun-cells](https://github.com/epi2me-labs/jupyterlab-autorun-cells): Allows toggling of code cells to execute automatically after opening a notebook.
 - [jupyterlab_debugger](https://github.com/jupyterlab/debugger): [Built-in since v3] JupyterLab extension to allow visual debuggeing of Jupyter notebooks, consoles, and source files.
 - [jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time): Execute Time Plugin for Jupyter Lab
+- [jupyterlab-pyflyby](https://github.com/deshaw/jupyterlab-pyflyby): A labextension to integrate [pyflyby](https://github.com/deshaw/pyflyby)(an auto-import tool) with notebooks
 - [jupyterlab-sos](https://github.com/vatlab/jupyterlab-sos): Jupyterlab extension for SoS Polyglot Notebook and Workflow Engine, allows multiple kernels in one notebook 
 - [jupyterlab_spark](https://github.com/manuzhang/jupyterlab_spark): Spark Application UI extension for JupyterLab
 - [jupyterlab_tensorboard](https://github.com/chaoleili/jupyterlab_tensorboard): Tensorboard extension for jupyterlab
