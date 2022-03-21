@@ -33,7 +33,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 ### UI enhancement
 
-- [ksmm][https://github.com/deshaw/ksmm]: This JupyterLab Extension allows users to manage Kernelspecs from within JupyterLab.
+- [ksmm](https://github.com/deshaw/ksmm): This JupyterLab Extension allows users to manage Kernelspecs from within JupyterLab.
 - [jupyterlab-limit-output](https://github.com/deshaw/jupyterlab-limit-output): Limit long text output for a single JupyterLab mime render.
 - [jupyterlab-notify](https://github.com/deshaw/jupyterlab-notify): JupyterLab extension to notify cell completion.
 - [jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications): Jupyterlab extension to show notebook cell completion browser notifications.
