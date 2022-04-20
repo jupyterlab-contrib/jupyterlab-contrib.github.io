@@ -12,7 +12,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [(some) LaTeX environments for Jupyter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/latex_envs/README.html) |  |  |
 | [2to3 Converter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_2to3.html) |  |  |
 | [AddBefore](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/addbefore/readme.html) | Built-in feature (press <kbd>A</kbd> in command mode) | 1+ |
-| [Autopep8](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_autopep8.html) | [jupyterlab_code_formatter](https://jupyterlab-code-formatter.readthedocs.io/en/latest/index.html) extension | 2, 3 |
+| [Autopep8](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_autopep8.html) | [jupyterlab_code_formatter](https://ryantam626.github.io/jupyterlab_code_formatter/index.html) extension | 2, 3 |
 | [AutoSaveTime](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/autosavetime/README.html) | Built-in feature (Settings → Autosave Documents; Advanced Settings → Document Manager) | 1+ |
 | [Autoscroll](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/autoscroll/README.html) |  |  |
 | [Cell Filter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/cell_filter/README.html) | Built-in Table of Contents heading cells can be filtered by cell tags | 2.2+ |
@@ -40,7 +40,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [highlighter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/highlighter/readme.html) |  |  |
 | [Hinterland](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/hinterland/README.html) | [jupyterlab-lsp](https://github.com/krassowski/jupyterlab-lsp) extension | 2+ |
 | [Initialization cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/init_cell/README.html) | [jupyterlab-autorun-cells](https://github.com/epi2me-labs/jupyterlab-autorun-cells) extension | 2 |
-| [isort formatter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_isort.html) | [jupyterlab_code_formatter](https://jupyterlab-code-formatter.readthedocs.io/en/latest/index.html) extension | 1+ |
+| [isort formatter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_isort.html) | [jupyterlab_code_formatter](https://ryantam626.github.io/jupyterlab_code_formatter/index.html) extension | 1+ |
 | [Keyboard shortcut editor](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/keyboard_shortcut_editor/README.html) | Built-in feature (Advanced Settings -> Keyboard Shortcuts) | 1+ |
 |  | [jupyterlab-shortcutui](https://github.com/jupyterlab/jupyterlab-shortcutui) extension | 2+ |
 | [Launch QTConsole](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/qtconsole/README.html) |  |  |
