@@ -34,6 +34,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 ### UI enhancement
 
 - [ksmm](https://github.com/deshaw/ksmm): This JupyterLab Extension allows users to manage Kernelspecs from within JupyterLab.
+- [jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time): Execute Time Plugin for Jupyter Lab
 - [jupyterlab-limit-output](https://github.com/deshaw/jupyterlab-limit-output): Limit long text output for a single JupyterLab mime render.
 - [jupyterlab-notify](https://github.com/deshaw/jupyterlab-notify): JupyterLab extension to notify cell completion.
 - [jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications): Jupyterlab extension to show notebook cell completion browser notifications.
@@ -44,6 +45,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - FileBrowser:
   - [jupyterlab-unfold](https://github.com/martinRenou/jupyterlab-unfold): Tree view files browser.
   - [jupyterlab_filetree](https://github.com/youngthejames/jupyterlab_filetree): File Tree view for jupyterlab.
+  - [jupyter-fs](https://github.com/jpmorganchase/jupyter-fs) - A filesystem-like contents manager for multiple backends in Jupyter
 
 ### Viewers / Renderers
 
@@ -55,6 +57,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - HDF5:
   - [jupyterlab-hdf5](https://github.com/jupyterlab/jupyterlab-hdf5): Open and explore HDF5 files in JupyterLab. Can handle very large (TB) sized files, and datasets of any dimensionality.
   - [jupyterlab-h5web](https://github.com/silx-kit/jupyterlab-h5web): A JupyterLab extension to explore and visualize HDF5 file contents based on [h5web](https://github.com/silx-kit/h5web).
+- [jupyterlab_iframe](https://github.com/timkpaine/jupyterlab_iframe) - View html as an embedded iframe in JupyterLab
 - [ipysheet](https://github.com/QuantStack/ipysheet): Interactive spreadsheet in JupyterLab.
 - [ipywidgets](https://github.com/jupyter-widgets/ipywidgets): Interactive widgets for the Jupyter Notebook
 - [katex](https://github.com/jupyterlab/jupyter-renderers): Katex renderer
@@ -93,6 +96,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [Gruvbox](https://github.com/Rahlir/theme-gruvbox): Gruvbox theme
 - [Horizon](https://github.com/mohirio/jupyterlab-horizon-theme): VSCode Horizon Theme port
 - [Material Darker](https://github.com/oriolmirosa/jupyterlab_materialdarker): Material Darker theme
+- [Miami Nights](https://github.com/timkpaine/jupyterlab_miami_nights) - Combination of VS Code's SynthWave '84 and JupyterLab's Neon Night
 - [Neon](https://github.com/yeebc/jupyterlab-neon-theme): A flat, 80's neon inspired theme
 - [OneDark](https://github.com/fhfuih/jupyterlab_theme_onedark): Port of OneDark theme.
 - [Solarized](https://github.com/AllanChain/jupyterlab-theme-solarized-dark): Solarized Dark extension.
@@ -105,8 +109,9 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [gator](https://github.com/mamba-org/gator): Conda environment and package management extension from within Jupyter
 - [jupyterlab-autoplay](https://github.com/remborg/autoplay): Run and hide code cells automatically when opening a notebook.
 - [jupyterlab-autorun-cells](https://github.com/epi2me-labs/jupyterlab-autorun-cells): Allows toggling of code cells to execute automatically after opening a notebook.
+- [jupyterlab_commands](https://github.com/timkpaine/jupyterlab_commands) - Add arbitrary python commands to the jupyterlab command palette
 - [jupyterlab_debugger](https://github.com/jupyterlab/debugger): [Built-in since v3] JupyterLab extension to allow visual debuggeing of Jupyter notebooks, consoles, and source files.
-- [jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time): Execute Time Plugin for Jupyter Lab
+- [jupyterlab_email](https://github.com/timkpaine/jupyterlab_email): A jupyterlab extension to email notebooks directly from JupyterLab.
 - [jupyterlab-pyflyby](https://github.com/deshaw/jupyterlab-pyflyby): A labextension to integrate [pyflyby](https://github.com/deshaw/pyflyby)(an auto-import tool) with notebooks
 - [jupyterlab-sos](https://github.com/vatlab/jupyterlab-sos): Jupyterlab extension for SoS Polyglot Notebook and Workflow Engine, allows multiple kernels in one notebook 
 - [jupyterlab_spark](https://github.com/manuzhang/jupyterlab_spark): Spark Application UI extension for JupyterLab
@@ -116,6 +121,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [KnowledgeLab](https://github.com/timkpaine/knowledgelab): [KnowledgeRepo](https://github.com/airbnb/knowledge-repo) + JupyterLab
 - [lantern](https://github.com/timkpaine/lantern): Data exploration kit
 - [ML Workspace](https://github.com/ml-tooling/ml-workspace): All-in-one web IDE for machine learning and data science. Combines Jupyterlab, VS Code, Tensorflow, and many other tools/libraries into one Docker image.
+- [nbcelltests](https://github.com/jpmorganchase/nbcelltests) - Cell-by-cell testing for production Jupyter notebooks in JupyterLab
 - [scriptedforms](https://github.com/SimonBiggs/scriptedforms): Quickly create live-update GUIs for Python packages using Markdown and simple HTML elements.
 - [Variable inspector](https://github.com/lckr/jupyterlab-variableInspector): Nice interactive variable inspector for your notebook
 
