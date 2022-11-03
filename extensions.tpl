@@ -14,6 +14,11 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [voila-gridstack](https://github.com/voila-dashboards/voila-gridstack): JupyterLab extension to build gridstack dashboard with voilà.
 - [voila-preview](https://github.com/voila-dashboards/voila): JupyterLab extension that displays a Voilà preview of your Notebook in a side-pane.
 
+
+### GPU Management
+
+- [genv](https://github.com/run-ai/jupyterlab_genv): GPU Environment Management for JupyterLab
+
 ### Databases
 
 - [jupyterlab-omnisci](https://github.com/omnisci/jupyterlab-omnisci): OmniSci integrations for JupyterLab
