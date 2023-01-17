@@ -49,7 +49,7 @@ try:
     )
     data = repos.json()
     extensions = ""
-    for repo in data:
+    for repo in sorted(data, key=lambda r: r["name"]):
         if isinstance(repo, str):
             raise ValueError(data["message"])
 
