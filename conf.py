@@ -17,6 +17,7 @@
 # List all organization extensions
 import os
 import pathlib
+import re
 import recommonmark
 import requests
 from datetime import datetime
@@ -25,6 +26,7 @@ from recommonmark.transform import AutoStructify
 HERE = pathlib.Path(__file__).parent
 GET_REPOS = "https://api.github.com/orgs/jupyterlab-contrib/repos"
 GET_REPO = "https://api.github.com/repos/jupyterlab-contrib/"
+REPO_BADGE = "[![GitHub Repo stars](https://img.shields.io/github/stars/jupyterlab-contrib/{name}?style=social)]({html_url})"
 TOKEN = os.getenv("GITHUB_TOKEN")
 
 footer = (HERE / "extensions.tpl").read_text()
@@ -51,8 +53,8 @@ try:
         if isinstance(repo, str):
             raise ValueError(data["message"])
 
-        if "github" in repo["name"]:
-            continue  # Skip special repositories
+        if "github" in repo["name"] or repo["archived"]:
+            continue  # Skip special repositories and archived ones
 
         try:
             response = requests.get(
@@ -69,7 +71,9 @@ try:
                 },
             )
             filename = repo["name"]
-            (HERE / (filename + ".md")).write_text(readme.text)
+            badge = REPO_BADGE.format(name=repo["name"], html_url=repo["html_url"])
+            readme_content = re.sub(r"\n\n", f"\n\n{badge}", readme.text, count=1)
+            (HERE / (filename + ".md")).write_text(readme_content)
             extensions += f"\n* [{filename.replace('_', ' ')}]({filename}.md): {description}"
         except BaseException as err:
             print(err)
