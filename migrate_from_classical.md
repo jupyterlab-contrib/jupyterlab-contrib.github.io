@@ -44,7 +44,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Keyboard shortcut editor](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/keyboard_shortcut_editor/README.html) | Built-in feature (Advanced Settings -> Keyboard Shortcuts) | 1+ |
 |  | [jupyterlab-shortcutui](https://github.com/jupyterlab/jupyterlab-shortcutui) extension | 2+ |
 | [Launch QTConsole](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/qtconsole/README.html) |  |  |
-| [Limit Output](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/limit_output/readme.html) |  |  |
+| [Limit Output](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/limit_output/readme.html) | [jupyterlab-limit-output](https://github.com/deshaw/jupyterlab-limit-output) extension | 3+ |
 | [Move selected cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/move_selected_cells/README.html) | Built-in feature (Edit -> Move Cells Up/Down) | 1+ |
 | [Navigation-Hotkeys](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/navigation-hotkeys/readme.html) | Built-in feature (Advanced Settings -> Keyboard Shortcuts) | 1+ |
 | [nbgrader](https://github.com/jupyter/nbgrader) | | |
