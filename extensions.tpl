@@ -33,6 +33,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [Language Server Protocol](https://github.com/krassowski/jupyterlab-lsp): Brings VS Code features (code navigation, hover suggestions, linters, autocompletion, etc.) to JupyterLab
 - [LaTeX](https://github.com/jupyterlab/jupyterlab-latex): An extension for JupyterLab which allows for live-editing of LaTeX documents.
 - [jupyterlab_markup](https://github.com/agoose77/jupyterlab-markup): JupyterLab extension to enable **markdown-it** rendering, with support for markdown-it plugins
+- [jupyterlab_myst](https://github.com/executablebooks/jupyterlab-myst): JupyterLab extension to enable [MyST Markdown](https://mystmd.org) rendering
 - [Table of Contents](https://github.com/jupyterlab/jupyterlab-toc): [Built-in since v3] Generates a table of content for your notebook and markdown documents.
 - [Vim](https://github.com/axelfahy/jupyterlab-vim): Notebook cell vim bindings.
 
