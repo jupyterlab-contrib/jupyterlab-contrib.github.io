@@ -39,7 +39,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Highlight selected word](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/highlight_selected_word/README.html) | Built-in feature (Edit -> Find...) | 2+ |
 | [highlighter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/highlighter/readme.html) |  |  |
 | [Hinterland](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/hinterland/README.html) | [jupyterlab-lsp](https://github.com/krassowski/jupyterlab-lsp) extension | 2+ |
-| [Initialization cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/init_cell/README.html) | [jupyterlab-autorun-cells](https://github.com/epi2me-labs/jupyterlab-autorun-cells) extension | 2 |
+| [Initialization cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/init_cell/README.html) | [jupyterlab-autorun-cells](https://pypi.org/project/jupyterlab-autorun-cells) extension | 2 |
 | [isort formatter](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README_isort.html) | [jupyterlab_code_formatter](https://ryantam626.github.io/jupyterlab_code_formatter/index.html) extension | 1+ |
 | [Keyboard shortcut editor](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/keyboard_shortcut_editor/README.html) | Built-in feature (Advanced Settings -> Keyboard Shortcuts) | 1+ |
 |  | [jupyterlab-shortcutui](https://github.com/jupyterlab/jupyterlab-shortcutui) extension | 2+ |

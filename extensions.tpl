@@ -114,7 +114,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [Ganimede](https://github.com/manugraj/ganimede) - Store, version, edit and execute notebooks in sandboxes and integrate them directly via REST interfaces.
 - [gator](https://github.com/mamba-org/gator): Conda environment and package management extension from within Jupyter
 - [jupyterlab-autoplay](https://github.com/remborg/autoplay): Run and hide code cells automatically when opening a notebook.
-- [jupyterlab-autorun-cells](https://github.com/epi2me-labs/jupyterlab-autorun-cells): Allows toggling of code cells to execute automatically after opening a notebook.
+- [jupyterlab-autorun-cells](https://pypi.org/project/jupyterlab-autorun-cells) (Code repo is gone): Allows toggling of code cells to execute automatically after opening a notebook.
 - [jupyterlab_commands](https://github.com/timkpaine/jupyterlab_commands) - Add arbitrary python commands to the jupyterlab command palette
 - [jupyterlab_debugger](https://github.com/jupyterlab/debugger): [Built-in since v3] JupyterLab extension to allow visual debuggeing of Jupyter notebooks, consoles, and source files.
 - [jupyterlab_email](https://github.com/timkpaine/jupyterlab_email): A jupyterlab extension to email notebooks directly from JupyterLab.
