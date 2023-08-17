@@ -18,7 +18,7 @@ jobs:
           python-version: "3.9"
           architecture: "x64"
       - name: Install dependencies
-        run: python -m pip install sphinx sphinx-material recommonmark "sphinx-markdown-tables>=0.0.17" requests pytest-check-links
+        run: python -m pip install "sphinx<7.2.0" sphinx-material recommonmark "sphinx-markdown-tables>=0.0.17" requests pytest-check-links
       - name: Check links
         run: |
           cp extensions.tpl extensions.md
