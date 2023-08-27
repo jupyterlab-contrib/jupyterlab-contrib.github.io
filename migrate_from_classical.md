@@ -52,7 +52,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Notify](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/notify/readme.html) |[jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications)|  |
 | [Printview](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/printview/readme.html) |  |  |
 | [Python Markdown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/python-markdown/readme.html) |  |  |
-| [Rise](https://github.com/damianavila/RISE) |  |  |
+| [Rise](https://github.com/damianavila/RISE) | [jupyterlab_rise](https://github.com/jupyterlab-contrib/rise) extension | 3+ |
 | [Rubberband](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/rubberband/readme.html) | Built-in feature (Shift + Left click) | 1+ |
 | [Ruler](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scratchpad/README.html) | Built-in feature (Advanced Settings -> Notebook -> codeCellConfig.rulers) | 1+ |
 | [Runtools](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/runtools/readme.html) | Almost all built-in features | 1+ |
