@@ -32,6 +32,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Export Embedded HTML](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/export_embedded/readme.html) |  |  |
 | [Freeze](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/freeze/readme.html) |  |  |
 | [Gist-it](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/gist_it/readme.html) |  |  |
+| [Goto Error](https://github.com/teticio/nbextension-gotoerror) | [jupyter-stack-trace](https://github.com/teticio/jupyter-stack-trace) extension | 3+ |
 | [Help panel](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/help_panel/readme.html) | Built-in feature (Help entries open in panels) | 1+ |
 | [Hide Header](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/hide_header/README.html) | Built-in feature (View -> Simple interface) | 1+ |
 | [Hide input](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/hide_input/readme.html) | Built-in feature (View -> Collapse Selected Code) | 1+ |
