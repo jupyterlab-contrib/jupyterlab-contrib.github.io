@@ -52,7 +52,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
   - [jupyterlab-unfold](https://github.com/martinRenou/jupyterlab-unfold): Tree view files browser.
   - [jupyterlab_filetree](https://github.com/youngthejames/jupyterlab_filetree): File Tree view for jupyterlab.
   - [jupyter-fs](https://github.com/jpmorganchase/jupyter-fs) - A filesystem-like contents manager for multiple backends in Jupyter
-- [jupyter-stack-trace](https://github.com/teticio/jupyter-stack-trace): Jump to the line in the file of the stack trace.
+- [jupyter-stack-trace](https://github.com/teticio/jupyter-stack-trace): Jump to the line in the file of the stack trace, search Google for the error in Stack Overflow, or ask Bing Chat for help.
 
 ### Viewers / Renderers
 
