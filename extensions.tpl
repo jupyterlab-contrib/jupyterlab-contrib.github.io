@@ -131,7 +131,6 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [ML Workspace](https://github.com/ml-tooling/ml-workspace): All-in-one web IDE for machine learning and data science. Combines Jupyterlab, VS Code, Tensorflow, and many other tools/libraries into one Docker image.
 - [nbcelltests](https://github.com/jpmorganchase/nbcelltests) - Cell-by-cell testing for production Jupyter notebooks in JupyterLab
 - [scriptedforms](https://github.com/SimonBiggs/scriptedforms): Quickly create live-update GUIs for Python packages using Markdown and simple HTML elements.
-- [Variable inspector](https://github.com/lckr/jupyterlab-variableInspector): Nice interactive variable inspector for your notebook
 
 You can also look for:
 - Repositories with topic _jupyterlab-extension_ on [GitHub](https://github.com/topics/jupyterlab-extension).
