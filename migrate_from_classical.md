@@ -61,7 +61,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [ScrollDown](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/scroll_down/readme.html) |  |  |
 | [Select CodeMirror Keymap](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/select_keymap/README.html) | Built-in feature for File Editor, [jupyterlab-vim](https://github.com/jupyterlab-contrib/jupyterlab-vim) for vim mode in Notebook |  |
 | [SKILL Syntax](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skill/README.html) |  |  |
-| [Skip-Traceback](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skip-traceback/readme.html) |  |  |
+| [Skip-Traceback](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/skip-traceback/readme.html) | [jupyterlab-skip-traceback](https://github.com/deshaw/jupyterlab-skip-traceback) |  |
 | [Snippets](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets/README.html) | [Elyra Code Snippets](https://elyra.readthedocs.io/en/latest/user_guide/code-snippets.html) extension | 2+ |
 | [Snippets Menu](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets_menu/readme.html) | [jupyterlab-code-snippets](https://github.com/jupytercalpoly/jupyterlab-code-snippets) extension | 2+ |
 |  | [jupyterlab-snippets](https://github.com/QuantStack/jupyterlab-snippets) extension | 2+ |
