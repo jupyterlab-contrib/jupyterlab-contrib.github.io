@@ -26,6 +26,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 ### Editors
 
+- [AI Prompt](https://pypi.org/project/ai-einblick-prompt/): Context-aware code generation for data science tasks, powered by AI/LLMs. Generates usable code and fixes, not just boilerplate. 
 - [Code Formatter](https://github.com/ryantam626/jupyterlab_code_formatter): Easily beautifies Python code inside JupyterLab using one of the formatters: Black/YAPF/AutoPEP8.
 - [Collapsable Headings](https://github.com/aquirdTurtle/Collapsible_Headings): Allows to collapse an entire group of cells under the same header
 - [DrawIO](https://github.com/QuantStack/jupyterlab-drawio): An extension to draw diagrams in JupyterLab.
@@ -34,7 +35,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [LaTeX](https://github.com/jupyterlab/jupyterlab-latex): An extension for JupyterLab which allows for live-editing of LaTeX documents.
 - [jupyterlab_markup](https://github.com/agoose77/jupyterlab-markup): JupyterLab extension to enable **markdown-it** rendering, with support for markdown-it plugins
 - [jupyterlab_myst](https://github.com/executablebooks/jupyterlab-myst): JupyterLab extension to enable [MyST Markdown](https://mystmd.org) rendering
-- [Table of Contents](https://github.com/jupyterlab/jupyterlab-toc): [Built-in since v3] Generates a table of content for your notebook and markdown documents.
+- [Table of Contents](https://github.com/jupyterlab/jupyterlab-toc): [Built-in since v3] Generates a table of contents for your notebook and markdown documents.
 
 ### UI enhancement
 
