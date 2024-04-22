@@ -38,7 +38,7 @@ If mandatory points are not fulfilled, there is a low chance the transfer will b
   - [ ] I don't care
 - [ ] The code is available under a Open Source license
 - [ ] A license file is present in the code repository
-- [ ] The extension is working on at least JupyterLab 2.x
+- [ ] The extension is working on at least JupyterLab 3.x
 - [ ] The repository contains a README file describing:
   - [ ] The provided feature(s)
   - [ ] A picture illustrating the feature(s)
