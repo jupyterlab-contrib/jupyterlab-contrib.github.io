@@ -36,6 +36,10 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [jupyterlab_myst](https://github.com/executablebooks/jupyterlab-myst): JupyterLab extension to enable [MyST Markdown](https://mystmd.org) rendering
 - [Table of Contents](https://github.com/jupyterlab/jupyterlab-toc): [Built-in since v3] Generates a table of content for your notebook and markdown documents.
 
+### Infrastructure
+
+- [JupyterLab Pioneer](https://github.com/educational-technology-collective/jupyterlab-pioneer): A JupyterLab extension for generating and exporting JupyterLab event telemetry data.
+
 ### UI enhancement
 
 - [ksmm](https://github.com/deshaw/ksmm): This JupyterLab Extension allows users to manage Kernelspecs from within JupyterLab.
