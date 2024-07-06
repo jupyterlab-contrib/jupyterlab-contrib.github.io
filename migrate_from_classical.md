@@ -2,7 +2,8 @@
 
 The following table will help you find the equivalent extensions when migrating
 from [the classical notebook](https://jupyter-contrib-nbextensions.readthedocs.io/)
-to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
+to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) or
+[Jupyter Notebook v7](https://blog.jupyter.org/announcing-jupyter-notebook-7-8d6d66126dcf).
 
 > Feel free to edit this page to add more information by clicking on **Edit on GitHub** in the
 > top right corner of this page.
@@ -22,7 +23,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Codefolding](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html) | Built-in feature (Advanced Settings -> Notebook -> codeCellConfig.codeFolding) | 1+ |
 | [Codefolding in Editor](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html) | Built-in feature (Advanced Settings -> Text Editor -> editorConfig.codeFolding) | 1+ |
 | [Collapsible Headings](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/collapsible_headings/readme.html) | Built in feature since 3.1 ([PR](https://github.com/jupyterlab/jupyterlab/pull/10260)), for older versions use [aquirdturtle_collapsible_headings](https://github.com/aquirdTurtle/Collapsible_Headings) extension | 1+ |
-| [Comment/Uncomment Hotkey](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/comment-uncomment/readme.html) |  |  |
+| [Comment/Uncomment Hotkey](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/comment-uncomment/readme.html) | Built-in, customizable since 4.2 |  |
 | [datestamper](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/datestamper/readme.html) |  |  |
 | [Equation Auto Numbering](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/equation-numbering/readme.html) |  |  |
 | [ExecuteTime](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execute_time/readme.html) | [jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time) extension | 2+ |
@@ -30,7 +31,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Exercise](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/exercise/readme.html) |  |  |
 | [Exercise2](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/exercise2/readme.html) |  |  |
 | [Export Embedded HTML](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/export_embedded/readme.html) |  |  |
-| [Freeze](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/freeze/readme.html) |  |  |
+| [Freeze](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/freeze/readme.html) | [jupyterlab-freeze](https://github.com/DataDog/jupyterlab-freeze) |  |
 | [Gist-it](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/gist_it/readme.html) |  |  |
 | [Goto Error](https://github.com/teticio/nbextension-gotoerror) | [jupyter-stack-trace](https://github.com/teticio/jupyter-stack-trace) extension | 3+ |
 | [Help panel](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/help_panel/readme.html) | Built-in feature (Help entries open in panels) | 1+ |
@@ -48,7 +49,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Limit Output](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/limit_output/readme.html) | [jupyterlab-limit-output](https://github.com/deshaw/jupyterlab-limit-output) extension | 3+ |
 | [Move selected cells](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/move_selected_cells/README.html) | Built-in feature (Edit -> Move Cells Up/Down) | 1+ |
 | [Navigation-Hotkeys](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/navigation-hotkeys/readme.html) | Built-in feature (Advanced Settings -> Keyboard Shortcuts) | 1+ |
-| [nbgrader](https://github.com/jupyter/nbgrader) | | |
+| [nbgrader](https://github.com/jupyter/nbgrader) | nbgrader works with JupyterLab since v0.8.0 | |
 | [nbTranslate](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/nbTranslate/README.html) |  |  |
 | [Notify](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/notify/readme.html) |[jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications)|  |
 | [Printview](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/printview/readme.html) |  |  |
@@ -66,7 +67,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/).
 | [Snippets Menu](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/snippets_menu/readme.html) | [jupyterlab-code-snippets](https://github.com/jupytercalpoly/jupyterlab-code-snippets) extension | 2+ |
 |  | [jupyterlab-snippets](https://github.com/QuantStack/jupyterlab-snippets) extension | 2+ |
 | [spellchecker](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html) | [jupyterlab-spellchecker](https://github.com/jupyterlab-contrib/spellchecker) extension | 1+ |
-| [Split Cells Notebook](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/splitcell/readme.html) |  |  |
+| [Split Cells Notebook](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/splitcell/readme.html) | [jupyterlab-gridwidth](https://github.com/parmentelat/jupyterlab-gridwidth) |  |
 | [Table of Contents (2)](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/toc2/README.html) | Built-in feature | 3+ |
 |  | [@jupyterlab/toc](https://github.com/jupyterlab/jupyterlab-toc) extension | 1, 2 |
 | [table_beautifier](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/table_beautifier/README.html) |  |  |
