@@ -26,7 +26,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 ### Editors
 
-- [Code Formatter](https://github.com/ryantam626/jupyterlab_code_formatter): Easily beautifies Python code inside JupyterLab using one of the formatters: Black/YAPF/AutoPEP8.
+- [Code Formatter](https://github.com/jupyterlab-contrib/jupyterlab_code_formatter): Easily beautifies Python code inside JupyterLab using one of the formatters: Black/YAPF/AutoPEP8.
 - [Collapsable Headings](https://github.com/aquirdTurtle/Collapsible_Headings): Allows to collapse an entire group of cells under the same header
 - [DrawIO](https://github.com/QuantStack/jupyterlab-drawio): An extension to draw diagrams in JupyterLab.
 - [Go to definition](https://github.com/krassowski/jupyterlab-go-to-definition): Allows you to <kbd>Alt</kbd> + <kbd>click</kbd> on a variable to jump to its definition.
