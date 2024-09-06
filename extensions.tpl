@@ -48,9 +48,9 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 - [jupyterlab-notify](https://github.com/deshaw/jupyterlab-notify): JupyterLab extension to notify cell completion.
 - [jupyterlab-notifications](https://github.com/mwakaba2/jupyterlab-notifications): Jupyterlab extension to show notebook cell completion browser notifications.
 - [jupyterlab-skip-traceback](https://github.com/deshaw/jupyterlab-skip-traceback): A JupyterLab extension for rendering Errors with a copy/paste button and expand/collapse.
-- [jupyterlab-topbar](https://github.com/jupyterlab-contrib/jupyterlab-topbar): JupyterLab Top Bar extension
-  - [jupyterlab-system-monitor](https://github.com/jtpio/jupyterlab-system-monitor): show system metrics (memory usage)
-  - [jupyterlab-theme-toggle](https://github.com/jtpio/jupyterlab-theme-toggle): switch between the Light and Dark themes
+- [jupyterlab-topbar-logout](https://github.com/jupyterlab-contrib/jupyterlab-topbar): add a "Log Out" button to the top bar area
+- [jupyterlab-topbar-text](https://github.com/jupyterlab-contrib/jupyterlab-topbar): add and edit custom text in the top bar area
+- [jupyterlab-theme-toggle](https://github.com/jupyterlab-contrib/jupyterlab-topbar): switch between the Light and Dark themes
 - FileBrowser:
   - [jupyterlab-unfold](https://github.com/martinRenou/jupyterlab-unfold): Tree view files browser.
   - [jupyterlab_filetree](https://github.com/youngthejames/jupyterlab_filetree): File Tree view for jupyterlab.
