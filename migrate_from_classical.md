@@ -27,7 +27,7 @@ to [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) or
 | [datestamper](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/datestamper/readme.html) |  |  |
 | [Equation Auto Numbering](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/equation-numbering/readme.html) |  |  |
 | [ExecuteTime](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execute_time/readme.html) | [jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time) | 2+ |
-| [Execution Dependencies](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execution_dependencies/README.html) | Work-in-progress: [ipyspaghetti](https://github.com/cphyc/ipyspaghetti), [akernel](https://github.com/davidbrochart/akernel), [nbsafety](https://github.com/nbsafety-project/nbsafety/issues/87) |  |
+| [Execution Dependencies](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/execution_dependencies/README.html) | Work-in-progress: [ipyspaghetti](https://github.com/cphyc/ipyspaghetti), [akernel](https://github.com/davidbrochart/akernel), [IPyflow](https://github.com/ipyflow/ipyflow/issues/87) |  |
 | [Exercise](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/exercise/readme.html) |  |  |
 | [Exercise2](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/exercise2/readme.html) |  |  |
 | [Export Embedded HTML](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/export_embedded/readme.html) |  |  |
