@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>jupyterlab-spellchecker &#8212; jupyterlab-contrib 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=75810a84" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d90b8643"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <style>
+        .md-source__repo {
+            display: block;
+            padding-right: .6rem;
+            transition: opacity .25s;
+            font-size: .65rem;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .md-header-nav__source .md-source__repo:hover {
+            opacity: .7;
+        }
+
+        .md-source__repo::after,
+        .md-source__edit::after {
+            content: none
+        }
+
+        .md-source__edit {
+            font-size: .55rem;
+            font-weight: initial;
+            opacity: .75;
+        }
+        
+        .md-header-nav__source .md-source__edit:hover {
+            opacity: .9;
+        }
+    </style>
+    
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=deep-orange data-md-color-accent=orange>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#spellchecker" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a
+          href="index.html"
+          title="jupyterlab-contrib 1.0.0 documentation"
+          class="md-header-nav__button md-logo"
+        >
+           &nbsp; 
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+        >
+          <span class="md-header-nav__topic"
+            >JupyterLab Unofficial Extensions & Tools</span
+          >
+          <span class="md-header-nav__topic"> jupyterlab-spellchecker </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--search md-header-nav__button"
+          for="__search"
+        ></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+          <div class="md-source__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+            >
+              <use
+                xlink:href="#__github"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+          
+          <div class="md-source__repository">
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io"
+              title="Go to repository"
+              class="md-source__repo"
+            >
+              jupyterlab-contrib
+            </a>
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/edit/main/spellchecker.md"
+              title="Edit this page on GitHub"
+              class="md-source__edit"
+            >
+              Edit on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+       
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+            
+            <li class="md-tabs__item"><a href="https://jupyterlab.readthedocs.io/en/stable/" class="md-tabs__link">JupyterLab Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://jupyter-server.readthedocs.io/en/stable/" class="md-tabs__link">Jupyter Server Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?labels=transfer&amp;template=transfer-repository-to-this-organization.md" class="md-tabs__link">Transfer your extension</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?template=help-with-maintenance.md" class="md-tabs__link">I want to help</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="jupyterlab-contrib 1.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="index.html"
+       title="jupyterlab-contrib 1.0.0 documentation">JupyterLab Unofficial Extensions & Tools</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jupyterlab-contrib
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Contents:</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="extensions.html" class="md-nav__link">List of extensions and tools</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="migrate_from_classical.html" class="md-nav__link">Migrate from classical Jupyter notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="contributing.html" class="md-nav__link">Help supporting the extensions</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#spellchecker--page-root" class="md-nav__link">jupyterlab-spellchecker</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#jupyterlab-version" class="md-nav__link">JupyterLab Version</a>
+        </li>
+        <li class="md-nav__item"><a href="#installation" class="md-nav__link">Installation</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#adding-dictionaries-example" class="md-nav__link">Adding dictionaries - example</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#where-to-get-the-dictionaries-from" class="md-nav__link">Where to get the dictionaries from?</a>
+        </li>
+        <li class="md-nav__item"><a href="#using-online-dictionaries" class="md-nav__link">Using online dictionaries</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#contributing" class="md-nav__link">Contributing</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#development-install" class="md-nav__link">Development install</a>
+        </li>
+        <li class="md-nav__item"><a href="#before-commit" class="md-nav__link">Before commit</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="jupyterlab-spellchecker">
+<h1 id="spellchecker--page-root">jupyterlab-spellchecker<a class="headerlink" href="#spellchecker--page-root" title="Permalink to this heading">¶</a></h1>
+<p><a class="reference external" href="https://github.com/jupyterlab-contrib/spellchecker"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jupyterlab-contrib/spellchecker?style=social"/></a><a class="reference external" href="https://jupyterlab-contrib.github.io/"><img alt="Extension status" src="https://img.shields.io/badge/status-ready-success"/></a>
+<a class="reference external" href="https://github.com/jupyterlab-contrib/spellchecker/actions"><img alt="Github Actions Status" src="https://github.com/jupyterlab-contrib/spellchecker/workflows/Build/badge.svg"/></a>
+<a class="reference external" href="https://mybinder.org/v2/gh/jupyterlab-contrib/spellchecker/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg"/></a>
+<a class="reference external" href="https://pypi.org/project/jupyterlab-spellchecker/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/jupyterlab-spellchecker.svg"/></a>
+<a class="reference external" href="https://anaconda.org/conda-forge/jupyterlab-spellchecker"><img alt="Conda version" src="https://img.shields.io/conda/vn/conda-forge/jupyterlab-spellchecker.svg"/></a></p>
+<p>A JupyterLab extension highlighting misspelled words in markdown cells within notebooks and in the text files.</p>
+<p><img alt="https://raw.githubusercontent.com/jupyterlab-contrib/spellchecker/master/demo.gif" src="https://raw.githubusercontent.com/jupyterlab-contrib/spellchecker/master/demo.gif"/></p>
+<p>The JupyterLab extension is based on <a class="reference external" href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tree/master/src/jupyter_contrib_nbextensions/nbextensions/spellchecker">the spellchecker Jupyter Notebook extension</a> and relies on <a class="reference external" href="https://github.com/cfinke/Typo.js">Typo.js</a> for the actual spell checking.
+Spellchecker suggestions are available from the context menu. The style of the highlights can be customized in the <em>Advanced Settings Editor</em>.</p>
+<p>You can click on the status bar item to:</p>
+<ul class="simple">
+<li><p>change language</p></li>
+<li><p>enable spelling in the current document</p></li>
+</ul>
+<p>Spellchecking in comments and strings in code can be configured in settings.</p>
+<p>The extension provides (Hunspell) <a class="reference external" href="http://wordlist.aspell.net/">SCOWL</a> dictionaries for:</p>
+<ul class="simple">
+<li><p>American, British, Canadian, and Australian English</p></li>
+<li><p>French,</p></li>
+<li><p>German (Germany, Austria, Switzerland)</p></li>
+<li><p>Portuguese,</p></li>
+<li><p>Spanish</p></li>
+</ul>
+<p>and will also use the Hunspell dictionaries installed in <a class="reference external" href="https://github.com/jupyterlab-contrib/spellchecker/search?q=OS_SPECIFIC_PATHS">known paths</a> which vary by operating systems.
+If you use JupyterLab in a browser running on a different computer than the jupyter server, please note that the dictionaries need to be installed on the server machine.</p>
+<p>You can add custom dictionary by placing Hunspell files it in <code class="docutils literal notranslate"><span class="pre">dictionaries</span></code> folder in one of the <code class="docutils literal notranslate"><span class="pre">data</span></code> locations as returned by:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>--paths
+</pre></div>
+</div>
+<p>You should place two files with extensions <code class="docutils literal notranslate"><span class="pre">.aff</span></code> and <code class="docutils literal notranslate"><span class="pre">.dic</span></code>, and name following <a class="reference external" href="https://datatracker.ietf.org/doc/html/rfc5646#section-2.1">BCP 47</a> standards.
+For more details, please see the <a class="reference external" href="#adding-dictionaries---example">example</a> below.</p>
+<section id="jupyterlab-version">
+<h2 id="jupyterlab-version">JupyterLab Version<a class="headerlink" href="#jupyterlab-version" title="Permalink to this heading">¶</a></h2>
+<p>The extension has been tested up to JupyterLab version 4.0.</p>
+</section>
+<section id="installation">
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<p>For JupyterLab 3.x and 4.x:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab-spellchecker
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyterlab-spellchecker
+</pre></div>
+</div>
+<p>For JupyterLab 2.x:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>labextension<span class="w"> </span>install<span class="w"> </span>@ijmbarr/jupyterlab_spellchecker
+</pre></div>
+</div>
+<section id="adding-dictionaries-example">
+<h3 id="adding-dictionaries-example">Adding dictionaries - example<a class="headerlink" href="#adding-dictionaries-example" title="Permalink to this heading">¶</a></h3>
+<p>If <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--paths</span></code> looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+    <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">your_name</span><span class="o">/.</span><span class="n">jupyter</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">jupyter</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">jupyter</span>
+<span class="n">data</span><span class="p">:</span>
+    <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">your_name</span><span class="o">/.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">jupyter</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">jupyter</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">jupyter</span>
+<span class="n">runtime</span><span class="p">:</span>
+    <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">your_name</span><span class="o">/.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">jupyter</span><span class="o">/</span><span class="n">runtime</span>
+</pre></div>
+</div>
+<p>and you want to add Polish language, you would put <code class="docutils literal notranslate"><span class="pre">pl_PL.aff</span></code> and <code class="docutils literal notranslate"><span class="pre">pl_PL.dic</span></code> in <code class="docutils literal notranslate"><span class="pre">/home/your_name/.local/share/jupyter/dictionaries</span></code> (you will need to create this folder), so that the final structure looks similar to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/home/your_name/.local/share/jupyter
+├── dictionaries
+│   ├── pl_PL.aff
+│   └── pl_PL.dic
+├── kernels
+│   └── julia-1.5
+│       ├── kernel.json
+│       ├── logo-32x32.png
+│       └── logo-64x64.png
+├── nbconvert
+│   └── templates
+│       ├── html
+│       └── latex
+├── nbsignatures.db
+├── notebook_secret
+└── runtime
+</pre></div>
+</div>
+<section id="where-to-get-the-dictionaries-from">
+<h4 id="where-to-get-the-dictionaries-from">Where to get the dictionaries from?<a class="headerlink" href="#where-to-get-the-dictionaries-from" title="Permalink to this heading">¶</a></h4>
+<p>Some good sources of dictionaries include:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LibreOffice/dictionaries">LibreOffice/dictionaries</a> GitHub repository</p></li>
+<li><p><a class="reference external" href="https://chromium.googlesource.com/chromium/deps/hunspell_dictionaries/+/master">Chromium</a> repository</p></li>
+<li><p>(if you know of any other quality resources please send a PR to add them here)</p></li>
+</ul>
+</section>
+<section id="using-online-dictionaries">
+<h4 id="using-online-dictionaries">Using online dictionaries<a class="headerlink" href="#using-online-dictionaries" title="Permalink to this heading">¶</a></h4>
+<p>An alternative to saving the dictionary on your own disk (or more accurately on the disk where jupyter-server is set up)
+is fetching the dictionaries from a remote URL. This requires an Internet connection to load the dictionary
+(each time when you open JupyterLab or change the dictionary), and might be useful if you are not able
+to save dictionaries on disk (e.g. when using JupyterLab on JupyterHub configured by someone else).</p>
+<p>To configure the online dictionaries go to <em>Advanced Settings Editor</em> → <em>Spellchecker</em>
+and set <code class="docutils literal notranslate"><span class="pre">onlineDictionaries</span></code> to an array of JSON objects like in the example below:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en_US-online"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"aff"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.jsdelivr.net/codemirror.spell-checker/latest/en_US.aff"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"dic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.jsdelivr.net/codemirror.spell-checker/latest/en_US.dic"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My favorite variant of English"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="contributing">
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">¶</a></h2>
+<section id="development-install">
+<h3 id="development-install">Development install<a class="headerlink" href="#development-install" title="Permalink to this heading">¶</a></h3>
+<p>Note: You will need NodeJS to build the extension package.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> command is JupyterLab’s pinned version of
+<a class="reference external" href="https://yarnpkg.com/">yarn</a> that is installed with JupyterLab. You may use
+<code class="docutils literal notranslate"><span class="pre">yarn</span></code> or <code class="docutils literal notranslate"><span class="pre">npm</span></code> in lieu of <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repo to your local environment</span>
+<span class="c1"># Change directory to the jupyterlab_spellchecker directory</span>
+<span class="c1"># Install package in development mode</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+<span class="c1"># Link your development version of the extension with JupyterLab</span>
+jupyter<span class="w"> </span>labextension<span class="w"> </span>develop<span class="w"> </span>.<span class="w"> </span>--overwrite
+<span class="c1"># Rebuild extension Typescript source after making changes</span>
+jlpm<span class="w"> </span>run<span class="w"> </span>build
+pip<span class="w"> </span>install<span class="w"> </span>pytest
+</pre></div>
+</div>
+<p>You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension’s source and automatically rebuild the extension.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Watch the source directory in one terminal, automatically rebuilding when needed</span>
+jlpm<span class="w"> </span>run<span class="w"> </span>watch
+<span class="c1"># Run JupyterLab in another terminal</span>
+jupyter<span class="w"> </span>lab
+</pre></div>
+</div>
+</section>
+<section id="before-commit">
+<h3 id="before-commit">Before commit<a class="headerlink" href="#before-commit" title="Permalink to this heading">¶</a></h3>
+<p>Make sure that eslint passes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm<span class="w"> </span>run<span class="w"> </span>eslint:check
+</pre></div>
+</div>
+<p>If there are any issues it might be possible to autofix them with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm<span class="w"> </span>run<span class="w"> </span>eslint
+</pre></div>
+</div>
+<p>Run tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pytest
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2020-2025, JupyterLab Contrib Team.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

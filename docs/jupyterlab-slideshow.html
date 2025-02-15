@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>jupyterlab-slideshow &#8212; jupyterlab-contrib 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=75810a84" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d90b8643"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <style>
+        .md-source__repo {
+            display: block;
+            padding-right: .6rem;
+            transition: opacity .25s;
+            font-size: .65rem;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .md-header-nav__source .md-source__repo:hover {
+            opacity: .7;
+        }
+
+        .md-source__repo::after,
+        .md-source__edit::after {
+            content: none
+        }
+
+        .md-source__edit {
+            font-size: .55rem;
+            font-weight: initial;
+            opacity: .75;
+        }
+        
+        .md-header-nav__source .md-source__edit:hover {
+            opacity: .9;
+        }
+    </style>
+    
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=deep-orange data-md-color-accent=orange>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#jupyterlab-slideshow" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a
+          href="index.html"
+          title="jupyterlab-contrib 1.0.0 documentation"
+          class="md-header-nav__button md-logo"
+        >
+           &nbsp; 
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+        >
+          <span class="md-header-nav__topic"
+            >JupyterLab Unofficial Extensions & Tools</span
+          >
+          <span class="md-header-nav__topic"> jupyterlab-slideshow </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--search md-header-nav__button"
+          for="__search"
+        ></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+          <div class="md-source__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+            >
+              <use
+                xlink:href="#__github"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+          
+          <div class="md-source__repository">
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io"
+              title="Go to repository"
+              class="md-source__repo"
+            >
+              jupyterlab-contrib
+            </a>
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/edit/main/jupyterlab-slideshow.md"
+              title="Edit this page on GitHub"
+              class="md-source__edit"
+            >
+              Edit on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+       
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+            
+            <li class="md-tabs__item"><a href="https://jupyterlab.readthedocs.io/en/stable/" class="md-tabs__link">JupyterLab Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://jupyter-server.readthedocs.io/en/stable/" class="md-tabs__link">Jupyter Server Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?labels=transfer&amp;template=transfer-repository-to-this-organization.md" class="md-tabs__link">Transfer your extension</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?template=help-with-maintenance.md" class="md-tabs__link">I want to help</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="jupyterlab-contrib 1.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="index.html"
+       title="jupyterlab-contrib 1.0.0 documentation">JupyterLab Unofficial Extensions & Tools</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jupyterlab-contrib
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Contents:</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="extensions.html" class="md-nav__link">List of extensions and tools</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="migrate_from_classical.html" class="md-nav__link">Migrate from classical Jupyter notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="contributing.html" class="md-nav__link">Help supporting the extensions</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#jupyterlab-slideshow--page-root" class="md-nav__link">jupyterlab-slideshow</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#installing" class="md-nav__link">Installing</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#uninstalling" class="md-nav__link">Uninstalling</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#usage" class="md-nav__link">Usage</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#get-started" class="md-nav__link">Get started</a>
+        </li>
+        <li class="md-nav__item"><a href="#deck-mode" class="md-nav__link">Deck Mode</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#remote" class="md-nav__link">Remote</a>
+        </li>
+        <li class="md-nav__item"><a href="#revealing-jupyterlab-ux-features" class="md-nav__link">Revealing JupyterLab UX Features</a>
+        </li>
+        <li class="md-nav__item"><a href="#hidden-jupyterlab-ux-features" class="md-nav__link">Hidden JupyterLab UX Features</a>
+        </li>
+        <li class="md-nav__item"><a href="#exiting-deck-mode" class="md-nav__link">Exiting Deck Mode</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#slides" class="md-nav__link">Slides</a>
+        </li>
+        <li class="md-nav__item"><a href="#layers" class="md-nav__link">Layers</a>
+        </li>
+        <li class="md-nav__item"><a href="#design-tools" class="md-nav__link">Design Tools</a>
+        </li>
+        <li class="md-nav__item"><a href="#slide-layout" class="md-nav__link">Slide Layout</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#moving-parts" class="md-nav__link">Moving Parts</a>
+        </li>
+        <li class="md-nav__item"><a href="#resizing-parts" class="md-nav__link">Resizing Parts</a>
+        </li>
+        <li class="md-nav__item"><a href="#reverting-part-move-resize" class="md-nav__link">Reverting Part Move/Resize</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#configuration" class="md-nav__link">Configuration</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#enabling-deck-mode-at-startup" class="md-nav__link">Enabling Deck Mode at startup</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#frequently-asked-questions" class="md-nav__link">Frequently Asked Questions</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#does-it-work-with-notebook-6-aka-classic" class="md-nav__link">Does it work with <code class="docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">6</span></code> aka classic?</a>
+        </li>
+        <li class="md-nav__item"><a href="#does-it-work-with-notebook-7" class="md-nav__link">Does it work with <code class="docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">7</span></code>?</a>
+        </li>
+        <li class="md-nav__item"><a href="#will-it-generate-powerpoint" class="md-nav__link">Will it generate PowerPoint?</a>
+        </li>
+        <li class="md-nav__item"><a href="#will-it-generate-single-document-static-html-presentations" class="md-nav__link">Will it generate single-document static HTML presentations?</a>
+        </li>
+        <li class="md-nav__item"><a href="#will-it-generate-pdf" class="md-nav__link">Will it generate PDF?</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <!-- this README can be viewed as a slideshow in jupyterlab-slideshow --><p><a class="reference external" href="https://github.com/jupyterlab-contrib/jupyterlab-slideshow"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jupyterlab-contrib/jupyterlab-slideshow?style=social"/></a>—</p>
+<section id="jupyterlab-slideshow">
+<h1 id="jupyterlab-slideshow--page-root">jupyterlab-slideshow<a class="headerlink" href="#jupyterlab-slideshow--page-root" title="Permalink to this heading">¶</a></h1>
+<!-- |        docs         |                      install                      |       extend        |                        demo                         |                                    ci                                     |
+| :-----------------: | :-----------------------------------------------: | :-----------------: | :-------------------------------------------------: | :-----------------------------------------------------------------------: |
+| [![rtd-badge]][rtd] | [![pypi-badge]][pypi]<br/>[![conda-badge]][conda] | [![npm-badge]][npm] | [![binder-badge]][binder]<br/>[![lite-badge]][lite] | [![ci-badge]][ci]<br/>[![reports-badge]][reports]<br/>[![cov-badge]][cov] |
+
+[binder-badge]: https://mybinder.org/badge_logo.svg
+[binder]:
+  https://mybinder.org/v2/gh/deathbeds/jupyterlab-deck/HEAD?urlpath=lab/tree/examples/README.ipynb
+[ci-badge]:
+  https://img.shields.io/github/actions/workflow/status/deathbeds/jupyterlab-deck/ci.yml
+[ci]: https://github.com/deathbeds/jupyterlab-deck/actions?query=branch%3Amain
+[reports-badge]:
+  https://img.shields.io/github/actions/workflow/status/deathbeds/jupyterlab-deck/pages.yml?label=reports
+[reports]: https://deathbeds.github.io/jupyterlab-deck/lab/index.html?path=README.ipynb
+[rtd-badge]: https://img.shields.io/readthedocs/jupyterlab-deck
+[rtd]: https://jupyterlab-deck.rtfd.io
+[lite-badge]:
+  https://raw.githubusercontent.com/jupyterlite/jupyterlite/main/docs/_static/badge-launch.svg
+[lite]:
+  https://jupyterlab-deck.rtfd.io/en/stable/_static/lab/index.html?path=README.ipynb
+[conda-badge]: https://img.shields.io/conda/vn/conda-forge/jupyterlab-deck
+[conda]: https://anaconda.org/conda-forge/jupyterlab-deck
+[pypi-badge]: https://img.shields.io/pypi/v/jupyterlab-deck
+[pypi]: https://pypi.org/project/jupyterlab-deck/
+[npm]: https://npmjs.com/package/jupyterlab-slideshow
+[npm-badge]: https://img.shields.io/npm/v/@deathbeds/jupyterlab-deck
+[cov]: https://codecov.io/gh/deathbeds/jupyterlab-deck
+[cov-badge]:
+  https://codecov.io/gh/deathbeds/jupyterlab-deck/branch/main/graph/badge.svg?token=LS6ZzwKlqU --><blockquote>
+<div><p>Lightweight presentations for JupyterLab</p>
+</div></blockquote>
+<p>Fork of <a class="reference external" href="https://github.com/deathbeds/jupyterlab-deck">https://github.com/deathbeds/jupyterlab-deck</a></p>
+<hr class="docutils"/>
+<section id="installing">
+<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab-slideshow
+</pre></div>
+</div>
+<!-- or
+
+```
+mamba install -c conda-forge jupyterlab-slideshow # or conda, if you must
+``` --><blockquote>
+<div><p>See <a class="reference external" href="https://github.com/jupyterlab-contrib/jupyterlab-slideshow"><code class="docutils literal notranslate"><span class="pre">CONTRIBUTING.md</span></code></a> for a development installation.</p>
+</div></blockquote>
+<hr class="docutils"/>
+<section id="uninstalling">
+<h3 id="uninstalling">Uninstalling<a class="headerlink" href="#uninstalling" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>jupyterlab-slideshow
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>remove<span class="w"> </span>jupyterlab-slideshow<span class="w"> </span><span class="c1"># or conda if you must</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="usage">
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
+<hr class="docutils"/>
+<section id="get-started">
+<h3 id="get-started">Get started<a class="headerlink" href="#get-started" title="Permalink to this heading">¶</a></h3>
+<p>After <a class="reference external" href="#installing">installing</a>, open or create a <em>Notebook</em>.</p>
+<blockquote>
+<div><p>Other documents <em>work</em> but are not as much fun.</p>
+</div></blockquote>
+</section>
+<section id="deck-mode">
+<h3 id="deck-mode">Deck Mode<a class="headerlink" href="#deck-mode" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Start <em>Deck Mode</em> by</p>
+<ul class="simple">
+<li><p>in the <em>Notebook Toolbar</em>, click <img alt="deck-icon" src="https://raw.githubusercontent.com/jupyterlab-contrib/jupyterlab-slideshow/main/js/jupyterlab-slideshow/style/img/deck.svg"/></p></li>
+<li><p>open the <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/commands.html"><em>Command Palette</em></a> and run <em>Start Deck</em></p></li>
+</ul>
+</div></blockquote>
+<p>In <em>Deck Mode</em>, until you configure any <a class="reference external" href="#slides">slide types</a>, all of your content
+should appear in a vertically-scrollable stack.</p>
+<hr class="docutils"/>
+<section id="remote">
+<h4 id="remote">Remote<a class="headerlink" href="#remote" title="Permalink to this heading">¶</a></h4>
+<blockquote>
+<div><p>In <em>Deck Mode</em>, navigate with:</p>
+<ul class="simple">
+<li><p>the onscreen <em>remote</em></p>
+<ul>
+<li><p>if available, up, down, left, right will be available</p></li>
+</ul>
+</li>
+<li><p>these correspond to the standard keyboard shortcuts,</p>
+<ul>
+<li><p><kbd>→</kbd>, <kbd>↓</kbd>, <kbd>←</kbd>, <kbd>↑</kbd></p></li>
+<li><p><kbd>shift+enter</kbd> executes and advances</p></li>
+</ul>
+</li>
+<li><p>the spacebar tries two directions:</p>
+<ul>
+<li><p><kbd>space</kbd> = <kbd>↓</kbd>, <em>or</em> <kbd>→</kbd></p></li>
+<li><p><kbd>shift+space</kbd> = <kbd>↑</kbd>, <em>or</em> <kbd>←</kbd></p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils"/>
+<section id="revealing-jupyterlab-ux-features">
+<h4 id="revealing-jupyterlab-ux-features">Revealing JupyterLab UX Features<a class="headerlink" href="#revealing-jupyterlab-ux-features" title="Permalink to this heading">¶</a></h4>
+<p>Many of the core JupyterLab UI elements are still available, but hidden by default.
+Hover over their usual places to reveal them. These include:</p>
+<ul class="simple">
+<li><p>the right and left sidebar</p></li>
+<li><p>the <em>Notebook Toolbar</em></p></li>
+</ul>
+</section>
+<hr class="docutils"/>
+<section id="hidden-jupyterlab-ux-features">
+<h4 id="hidden-jupyterlab-ux-features">Hidden JupyterLab UX Features<a class="headerlink" href="#hidden-jupyterlab-ux-features" title="Permalink to this heading">¶</a></h4>
+<p>Some elements are <em>not</em> visible, and cannot be revealed:</p>
+<ul class="simple">
+<li><p>the <em>Main Menu</em></p></li>
+<li><p>the <em>Status Bar</em></p></li>
+<li><p>the <em>Cell Toolbar</em></p></li>
+</ul>
+<blockquote>
+<div><p>Next Steps:</p>
+<ul class="simple">
+<li><p>use <a class="reference external" href="#slides">slideshow types</a> to customize how much of your content appears
+on-screen.</p></li>
+<li><p>use <a class="reference external" href="#layers">layer types</a> to customize foreground/background behavior</p></li>
+<li><p>use the <a class="reference external" href="#design-tools">design tools</a> to customize the appearance of cells</p></li>
+<li><p>use the <a class="reference external" href="#slide-layout">slide layout tools</a> to customize the position and size of
+cells</p></li>
+</ul>
+</div></blockquote>
+</section>
+<hr class="docutils"/>
+<section id="exiting-deck-mode">
+<h4 id="exiting-deck-mode">Exiting Deck Mode<a class="headerlink" href="#exiting-deck-mode" title="Permalink to this heading">¶</a></h4>
+<blockquote>
+<div><p>To exit <em>Deck Mode</em>:</p>
+<ul class="simple">
+<li><p>from the remote, click the <img alt="deck-icon" src="https://raw.githubusercontent.com/jupyterlab-contrib/jupyterlab-slideshow/main/js/jupyterlab-slideshow/style/img/deck.svg"/></p></li>
+<li><p>open the <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/commands.html"><em>Command Palette</em></a> and run <em>Stop Deck</em></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="slides">
+<h3 id="slides">Slides<a class="headerlink" href="#slides" title="Permalink to this heading">¶</a></h3>
+<p>Build a slideshow by changing the <em>slideshow type</em> per cell using the <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html#left-and-right-sidebar"><em>Property
+Inspector</em> sidebar</a> or the <a class="reference external" href="#design-tools">design tools</a>.</p>
+<table border="1">
+<thead>
+<tr>
+<th>type</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-</code></td>
+<td>(default) stack underneath the previous cell</td>
+</tr>
+<tr>
+<td><code>slide</code></td>
+<td>start a new stack</td>
+</tr>
+<tr>
+<td><code>fragment</code></td>
+<td>reveal when activated</td>
+</tr>
+<tr>
+<td><code>subslide</code></td>
+<td>start a new cell stack in the optional Y axis</td>
+</tr>
+<tr>
+<td><code>skip</code></td>
+<td>hide the cell entirely</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td><em>TBD: moves this cell to the off-screen note viewer</em></td>
+</tr>
+</tbody>
+</table></section>
+<hr class="docutils"/>
+<section id="layers">
+<h3 id="layers">Layers<a class="headerlink" href="#layers" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Pick a layer type from:</p>
+<ul class="simple">
+<li><p>the <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html#left-and-right-sidebar">property inspector</a></p></li>
+<li><p>or the [design tools].</p></li>
+</ul>
+</div></blockquote>
+<p><em>Layers</em> either temporarily or permanently show content, and won’t be reached by.
+Specifying a layer scope will override the <em>slideshow type</em>. Layers have one of the
+following <em>scopes</em>:</p>
+<table border="1">
+<thead>
+<tr>
+<th>scope</th>
+<th>relationship to <a href="#slides">slides</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deck</code></td>
+<td>show on <em>all</em> current and future <code>slide</code> or <code>subslides</code></td>
+</tr>
+<tr>
+<td><code>stack</code></td>
+<td>show until the next <code>slide</code></td>
+</tr>
+<tr>
+<td><code>slide</code></td>
+<td>show until the next <code>slide</code> <em>or</em> <code>subslide</code></td>
+</tr>
+<tr>
+<td><code>fragment</code></td>
+<td>only show until the next <code>fragment</code></td>
+</tr>
+</tbody>
+</table></section>
+<hr class="docutils"/>
+<section id="design-tools">
+<h3 id="design-tools">Design Tools<a class="headerlink" href="#design-tools" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>In <a class="reference external" href="#deck-mode">Deck mode</a>, click the <em>ellipsis</em> icon in the bottom left corner</p>
+</div></blockquote>
+<p>The design tools offer lightweight buttons to:</p>
+<ul class="simple">
+<li><p>show/hide the <a class="reference external" href="#slide-layout">slide layout</a> overlay</p></li>
+<li><p>set the <a class="reference external" href="#slides">slideshow type</a></p></li>
+<li><p>set the <a class="reference external" href="#layers">layer type</a></p></li>
+<li><p>change a few key appearance properties:</p>
+<ul>
+<li><p>use the sliders to customize</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">z-index</span></code> controls the vertical stacking of elements:</p>
+<ul>
+<li><p>higher is “closer” to the user</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">opacity</span></code> controls how vibrant the fonts and colors appear</p>
+<ul>
+<li><p>higher is more full</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoom</span></code> controls how big the contents of the cell appear</p>
+<ul>
+<li><p>higher is bigger</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>un-check the checkbox to restore to the defaults</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils"/>
+<section id="slide-layout">
+<h3 id="slide-layout">Slide Layout<a class="headerlink" href="#slide-layout" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>After opening the <a class="reference external" href="#design-tools">design tools</a>, click the <em>Show Layout</em> button</p>
+</div></blockquote>
+<p>In <em>slide layout</em> mode, each part of the slide receives an overlay.</p>
+<p>Moving a part manually will remove it from the default layout, and allow you to place it
+anywhere on the screen, but it will keep the same navigation index.</p>
+<p>The keyboard shortcuts and remote should still function as normal.</p>
+<hr class="docutils"/>
+<section id="moving-parts">
+<h4 id="moving-parts">Moving Parts<a class="headerlink" href="#moving-parts" title="Permalink to this heading">¶</a></h4>
+<p>Click and drag a part overlay to move the part underneath.</p>
+</section>
+<hr class="docutils"/>
+<section id="resizing-parts">
+<h4 id="resizing-parts">Resizing Parts<a class="headerlink" href="#resizing-parts" title="Permalink to this heading">¶</a></h4>
+<p>Click one of the <em>handles</em> in the corners of the part overlay to resize a part.</p>
+</section>
+<hr class="docutils"/>
+<section id="reverting-part-move-resize">
+<h4 id="reverting-part-move-resize">Reverting Part Move/Resize<a class="headerlink" href="#reverting-part-move-resize" title="Permalink to this heading">¶</a></h4>
+<p>After moving a part to a fixed position, click the <strong>↺</strong> button on a part overlay to
+restore the part to the default layout.</p>
+</section>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="configuration">
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
+<hr class="docutils"/>
+<section id="enabling-deck-mode-at-startup">
+<h3 id="enabling-deck-mode-at-startup">Enabling Deck Mode at startup<a class="headerlink" href="#enabling-deck-mode-at-startup" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>see the JupyterLab docs about <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/directories.html#overrides-json">settings <code class="docutils literal notranslate"><span class="pre">overrides.json</span></code></a>.</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"jupyterlab-slideshow:plugin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils"/>
+<section id="frequently-asked-questions">
+<h2 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this heading">¶</a></h2>
+<hr class="docutils"/>
+<section id="does-it-work-with-notebook-6-aka-classic">
+<h3 id="does-it-work-with-notebook-6-aka-classic">Does it work with <code class="docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">6</span></code> aka classic?<a class="headerlink" href="#does-it-work-with-notebook-6-aka-classic" title="Permalink to this heading">¶</a></h3>
+<p><strong>No.</strong> Use <a class="reference external" href="https://github.com/damianavila/RISE/">RISE</a>.</p>
+</section>
+<hr class="docutils"/>
+<section id="does-it-work-with-notebook-7">
+<h3 id="does-it-work-with-notebook-7">Does it work with <code class="docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">7</span></code>?<a class="headerlink" href="#does-it-work-with-notebook-7" title="Permalink to this heading">¶</a></h3>
+<p><strong>Mostly.</strong> Navigating multiple documents during the same presentation will probably
+never work, as this is incompatible with the one-document-at-a-time design constraint of
+the Notebook UX. Each skip to another document will open a new browser tab, though deck
+should be installed.</p>
+</section>
+<hr class="docutils"/>
+<section id="will-it-generate-powerpoint">
+<h3 id="will-it-generate-powerpoint">Will it generate PowerPoint?<a class="headerlink" href="#will-it-generate-powerpoint" title="Permalink to this heading">¶</a></h3>
+<p><strong>No.</strong> This would be a fine third-party extension which could consume notebook metadata
+created by this extension, <a class="reference external" href="https://github.com/jupyterlab-fonts">jupyterlab-fonts</a>, and <code class="docutils literal notranslate"><span class="pre">nbconvert</span></code>-compatible
+<a class="reference external" href="#slides">slides</a>.</p>
+</section>
+<hr class="docutils"/>
+<section id="will-it-generate-single-document-static-html-presentations">
+<h3 id="will-it-generate-single-document-static-html-presentations">Will it generate single-document static HTML presentations?<a class="headerlink" href="#will-it-generate-single-document-static-html-presentations" title="Permalink to this heading">¶</a></h3>
+<p><strong>No.</strong> Use <a class="reference external" href="https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow"><code class="docutils literal notranslate"><span class="pre">nbconvert</span></code></a>, but no <a class="reference external" href="#layers">layers</a> or style customization
+will work.</p>
+<p>For a full static viewing experience, try something like <a class="reference external" href="https://github.com/jupyterlite/jupyterlite">JupyterLite</a>.</p>
+</section>
+<hr class="docutils"/>
+<section id="will-it-generate-pdf">
+<h3 id="will-it-generate-pdf">Will it generate PDF?<a class="headerlink" href="#will-it-generate-pdf" title="Permalink to this heading">¶</a></h3>
+<p><strong>Not yet.</strong></p>
+</section>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2020-2025, JupyterLab Contrib Team.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
