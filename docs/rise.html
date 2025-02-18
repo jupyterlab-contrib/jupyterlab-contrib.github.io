@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>jupyterlab_rise &#8212; jupyterlab-contrib 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=75810a84" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d90b8643"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <style>
+        .md-source__repo {
+            display: block;
+            padding-right: .6rem;
+            transition: opacity .25s;
+            font-size: .65rem;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .md-header-nav__source .md-source__repo:hover {
+            opacity: .7;
+        }
+
+        .md-source__repo::after,
+        .md-source__edit::after {
+            content: none
+        }
+
+        .md-source__edit {
+            font-size: .55rem;
+            font-weight: initial;
+            opacity: .75;
+        }
+        
+        .md-header-nav__source .md-source__edit:hover {
+            opacity: .9;
+        }
+    </style>
+    
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=deep-orange data-md-color-accent=orange>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#rise" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a
+          href="index.html"
+          title="jupyterlab-contrib 1.0.0 documentation"
+          class="md-header-nav__button md-logo"
+        >
+           &nbsp; 
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+        >
+          <span class="md-header-nav__topic"
+            >JupyterLab Unofficial Extensions & Tools</span
+          >
+          <span class="md-header-nav__topic"> jupyterlab_rise </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--search md-header-nav__button"
+          for="__search"
+        ></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+          <div class="md-source__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+            >
+              <use
+                xlink:href="#__github"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+          
+          <div class="md-source__repository">
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io"
+              title="Go to repository"
+              class="md-source__repo"
+            >
+              jupyterlab-contrib
+            </a>
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/edit/main/rise.md"
+              title="Edit this page on GitHub"
+              class="md-source__edit"
+            >
+              Edit on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+       
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+            
+            <li class="md-tabs__item"><a href="https://jupyterlab.readthedocs.io/en/stable/" class="md-tabs__link">JupyterLab Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://jupyter-server.readthedocs.io/en/stable/" class="md-tabs__link">Jupyter Server Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?labels=transfer&amp;template=transfer-repository-to-this-organization.md" class="md-tabs__link">Transfer your extension</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?template=help-with-maintenance.md" class="md-tabs__link">I want to help</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="jupyterlab-contrib 1.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="index.html"
+       title="jupyterlab-contrib 1.0.0 documentation">JupyterLab Unofficial Extensions & Tools</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jupyterlab-contrib
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Contents:</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="extensions.html" class="md-nav__link">List of extensions and tools</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="migrate_from_classical.html" class="md-nav__link">Migrate from classical Jupyter notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="contributing.html" class="md-nav__link">Help supporting the extensions</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#rise--page-root" class="md-nav__link">jupyterlab_rise</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#requirements" class="md-nav__link">Requirements</a>
+        </li>
+        <li class="md-nav__item"><a href="#install" class="md-nav__link">Install</a>
+        </li>
+        <li class="md-nav__item"><a href="#uninstall" class="md-nav__link">Uninstall</a>
+        </li>
+        <li class="md-nav__item"><a href="#usage" class="md-nav__link">Usage</a>
+        </li>
+        <li class="md-nav__item"><a href="#troubleshoot" class="md-nav__link">Troubleshoot</a>
+        </li>
+        <li class="md-nav__item"><a href="#contributing" class="md-nav__link">Contributing</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#development-install" class="md-nav__link">Development install</a>
+        </li>
+        <li class="md-nav__item"><a href="#development-uninstall" class="md-nav__link">Development uninstall</a>
+        </li>
+        <li class="md-nav__item"><a href="#testing-the-extension" class="md-nav__link">Testing the extension</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#integration-tests" class="md-nav__link">Integration tests</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#packaging-the-extension" class="md-nav__link">Packaging the extension</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="jupyterlab-rise">
+<h1 id="rise--page-root">jupyterlab_rise<a class="headerlink" href="#rise--page-root" title="Permalink to this heading">¶</a></h1>
+<p><a class="reference external" href="https://github.com/jupyterlab-contrib/rise"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jupyterlab-contrib/rise?style=social"/></a><a class="reference external" href="https://jupyterlab-contrib.github.io/index.html"><img alt="Extension status" src="https://img.shields.io/badge/status-draft-critical"/></a> <a class="reference external" href="https://github.com/jupyterlab-contrib/rise/actions/workflows/build.yml"><img alt="Github Actions Status" src="https://github.com/jupyterlab-contrib/rise/workflows/Build/badge.svg"/></a> <a class="reference external" href="https://mybinder.org/v2/gh/jupyterlab-contrib/rise/main?urlpath=lab/tree/examples/README.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg"/></a> <a class="reference external" href="https://pypi.org/project/jupyterlab-rise/"><img alt="PyPI" src="https://img.shields.io/pypi/v/jupyterlab-rise"/></a></p>
+<p>RISE: “Live” Reveal.js JupyterLab Slideshow extension.</p>
+<section id="requirements">
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>JupyterLab &gt;= 4.1.2</p></li>
+</ul>
+</section>
+<section id="install">
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permalink to this heading">¶</a></h2>
+<p>To install the extension with pip, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab_rise
+</pre></div>
+</div>
+<p>For conda, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>conda-forge::jupyterlab_rise
+</pre></div>
+</div>
+<p>For JupyterLab 3.x, install version prior to 0.40.0:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">"jupyterlab_rise&lt;0.40.0"</span>
+</pre></div>
+</div>
+</section>
+<section id="uninstall">
+<h2 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading">¶</a></h2>
+<p>To remove the extension, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>jupyterlab_rise
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
+<p>To mark a cell as a new slide, sub-slide or fragment, open the property inspector and choose the slide type:</p>
+<img alt="Property inspector slide type" src="./docs/prop-inspector-slide-type.png" style="width:100%; height:auto;"/><p>Use <code class="docutils literal notranslate"><span class="pre">Ctrl+R</span></code> to render the current notebook as a slidehow:</p>
+<img alt="Rendered slideshow" src="./docs/render-slideshow.png" style="width:100%; height:auto;"/></section>
+<section id="troubleshoot">
+<h2 id="troubleshoot">Troubleshoot<a class="headerlink" href="#troubleshoot" title="Permalink to this heading">¶</a></h2>
+<p>If you are seeing the frontend extension, but it is not working, check
+that the server extension is enabled:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>server<span class="w"> </span>extension<span class="w"> </span>list
+</pre></div>
+</div>
+<p>If the server extension is installed and enabled, but you are not seeing
+the frontend extension, check the frontend extension is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>labextension<span class="w"> </span>list
+</pre></div>
+</div>
+</section>
+<section id="contributing">
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">¶</a></h2>
+<section id="development-install">
+<h3 id="development-install">Development install<a class="headerlink" href="#development-install" title="Permalink to this heading">¶</a></h3>
+<p>Note: You will need NodeJS to build the extension package.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> command is JupyterLab’s pinned version of
+<a class="reference external" href="https://yarnpkg.com/">yarn</a> that is installed with JupyterLab. You may use
+<code class="docutils literal notranslate"><span class="pre">yarn</span></code> or <code class="docutils literal notranslate"><span class="pre">npm</span></code> in lieu of <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repo to your local environment</span>
+<span class="c1"># Change directory to the jupyterlab rise directory; the one containing the pyproject.toml file</span>
+<span class="c1"># Install package in development mode</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[test]"</span>
+jlpm<span class="w"> </span>install
+jlpm<span class="w"> </span>build
+<span class="c1"># Link your development version of the extension with JupyterLab</span>
+jupyter<span class="w"> </span>labextension<span class="w"> </span>develop<span class="w"> </span>.<span class="w"> </span>--overwrite
+<span class="c1"># Server extension must be manually installed in develop mode</span>
+jupyter<span class="w"> </span>server<span class="w"> </span>extension<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>jupyterlab_rise
+<span class="c1"># Rebuild extension Typescript source after making changes</span>
+jlpm<span class="w"> </span>build
+</pre></div>
+</div>
+<p>You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension’s source and automatically rebuild the extension.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Watch the source directory in one terminal, automatically rebuilding when needed</span>
+jlpm<span class="w"> </span>watch
+<span class="c1"># Run JupyterLab in another terminal</span>
+jupyter<span class="w"> </span>lab
+</pre></div>
+</div>
+<p>With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).</p>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">build</span></code> command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lab<span class="w"> </span>build<span class="w"> </span>--minimize<span class="o">=</span>False
+</pre></div>
+</div>
+</section>
+<section id="development-uninstall">
+<h3 id="development-uninstall">Development uninstall<a class="headerlink" href="#development-uninstall" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Server extension must be manually disabled in develop mode</span>
+jupyter<span class="w"> </span>server<span class="w"> </span>extension<span class="w"> </span>disable<span class="w"> </span>jupyterlab_rise
+pip<span class="w"> </span>uninstall<span class="w"> </span>jupyterlab_rise
+</pre></div>
+</div>
+<p>In development mode, you will also need to remove the symlink created by <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">develop</span></code>
+command. To find its location, you can run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">list</span></code> to figure out where the <code class="docutils literal notranslate"><span class="pre">labextensions</span></code>
+folder is located. Then you can remove the symlink named <code class="docutils literal notranslate"><span class="pre">jupyterlab-rise</span></code> within that folder.</p>
+</section>
+<section id="testing-the-extension">
+<h3 id="testing-the-extension">Testing the extension<a class="headerlink" href="#testing-the-extension" title="Permalink to this heading">¶</a></h3>
+<section id="integration-tests">
+<h4 id="integration-tests">Integration tests<a class="headerlink" href="#integration-tests" title="Permalink to this heading">¶</a></h4>
+<p>This extension uses <a class="reference external" href="https://playwright.dev/docs/intro">Playwright</a> for the integration tests (aka user level tests).
+More precisely, the JupyterLab helper <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/tree/master/galata">Galata</a> is used to handle testing the extension in JupyterLab.</p>
+<p>More information are provided within the <a class="reference external" href="./ui-tests/README">ui-tests</a> README.</p>
+</section>
+</section>
+<section id="packaging-the-extension">
+<h3 id="packaging-the-extension">Packaging the extension<a class="headerlink" href="#packaging-the-extension" title="Permalink to this heading">¶</a></h3>
+<p>See <a class="reference external" href="RELEASE">RELEASE</a></p>
+</section>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2020-2025, JupyterLab Contrib Team.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

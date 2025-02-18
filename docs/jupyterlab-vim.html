@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>jupyterlab-vim &#8212; jupyterlab-contrib 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=75810a84" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d90b8643"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <style>
+        .md-source__repo {
+            display: block;
+            padding-right: .6rem;
+            transition: opacity .25s;
+            font-size: .65rem;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .md-header-nav__source .md-source__repo:hover {
+            opacity: .7;
+        }
+
+        .md-source__repo::after,
+        .md-source__edit::after {
+            content: none
+        }
+
+        .md-source__edit {
+            font-size: .55rem;
+            font-weight: initial;
+            opacity: .75;
+        }
+        
+        .md-header-nav__source .md-source__edit:hover {
+            opacity: .9;
+        }
+    </style>
+    
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=deep-orange data-md-color-accent=orange>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#jupyterlab-vim" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a
+          href="index.html"
+          title="jupyterlab-contrib 1.0.0 documentation"
+          class="md-header-nav__button md-logo"
+        >
+           &nbsp; 
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+        >
+          <span class="md-header-nav__topic"
+            >JupyterLab Unofficial Extensions & Tools</span
+          >
+          <span class="md-header-nav__topic"> jupyterlab-vim </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--search md-header-nav__button"
+          for="__search"
+        ></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+          <div class="md-source__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+            >
+              <use
+                xlink:href="#__github"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+          
+          <div class="md-source__repository">
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io"
+              title="Go to repository"
+              class="md-source__repo"
+            >
+              jupyterlab-contrib
+            </a>
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/edit/main/jupyterlab-vim.md"
+              title="Edit this page on GitHub"
+              class="md-source__edit"
+            >
+              Edit on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+       
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+            
+            <li class="md-tabs__item"><a href="https://jupyterlab.readthedocs.io/en/stable/" class="md-tabs__link">JupyterLab Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://jupyter-server.readthedocs.io/en/stable/" class="md-tabs__link">Jupyter Server Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?labels=transfer&amp;template=transfer-repository-to-this-organization.md" class="md-tabs__link">Transfer your extension</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?template=help-with-maintenance.md" class="md-tabs__link">I want to help</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="jupyterlab-contrib 1.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="index.html"
+       title="jupyterlab-contrib 1.0.0 documentation">JupyterLab Unofficial Extensions & Tools</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jupyterlab-contrib
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Contents:</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="extensions.html" class="md-nav__link">List of extensions and tools</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="migrate_from_classical.html" class="md-nav__link">Migrate from classical Jupyter notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="contributing.html" class="md-nav__link">Help supporting the extensions</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#jupyterlab-vim--page-root" class="md-nav__link">jupyterlab-vim</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#modes" class="md-nav__link">Modes</a>
+        </li>
+        <li class="md-nav__item"><a href="#install" class="md-nav__link">Install</a>
+        </li>
+        <li class="md-nav__item"><a href="#key-bindings" class="md-nav__link">Key Bindings</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#vim-ex-commands" class="md-nav__link">Vim Ex commands</a>
+        </li>
+        <li class="md-nav__item"><a href="#vim-jupyter-edit-mode-bindings" class="md-nav__link">Vim (Jupyter Edit mode) bindings</a>
+        </li>
+        <li class="md-nav__item"><a href="#jupyter-command-mode-bindings" class="md-nav__link">Jupyter Command mode bindings</a>
+        </li>
+        <li class="md-nav__item"><a href="#switching-between-modes" class="md-nav__link">Switching between modes</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#special-thanks" class="md-nav__link">Special Thanks</a>
+        </li>
+        <li class="md-nav__item"><a href="#contributing" class="md-nav__link">Contributing</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#development-install" class="md-nav__link">Development install</a>
+        </li>
+        <li class="md-nav__item"><a href="#uninstall" class="md-nav__link">Uninstall</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="jupyterlab-vim">
+<h1 id="jupyterlab-vim--page-root">jupyterlab-vim<a class="headerlink" href="#jupyterlab-vim--page-root" title="Permalink to this heading">¶</a></h1>
+<p><a class="reference external" href="https://github.com/jupyterlab-contrib/jupyterlab-vim"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jupyterlab-contrib/jupyterlab-vim?style=social"/></a>&gt; Community fork of <a class="reference external" href="https://github.com/jwkvam/jupyterlab-vim">https://github.com/jwkvam/jupyterlab-vim</a> updated for jupyterlab 2, 3 and 4</p>
+<p><img alt="Extension status" src="https://img.shields.io/badge/status-ready-success"/>
+<a class="reference external" href="https://github.com/jupyterlab-contrib/jupyterlab-vim/actions?query=workflow%3ABuild"><img alt="Github Actions Status" src="https://github.com/jupyterlab-contrib/jupyterlab-vim/workflows/Build/badge.svg"/></a>
+<a class="reference external" href="https://mybinder.org/v2/gh/jupyterlab-contrib/jupyterlab-vim/main?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg"/></a>
+<a class="reference external" href="https://www.npmjs.com/package/@axlair/jupyterlab_vim"><img alt="npm version" src="https://img.shields.io/npm/v/@axlair/jupyterlab_vim"/></a>
+<a class="reference external" href="https://www.npmjs.com/package/@axlair/jupyterlab_vim"><img alt="npm downloads" src="https://img.shields.io/npm/dw/@axlair/jupyterlab_vim.svg"/></a>
+<a class="reference external" href="https://pypi.org/project/jupyterlab-vim"><img alt="PyPI" src="https://img.shields.io/pypi/v/jupyterlab-vim"/></a>
+<a class="reference external" href="https://anaconda.org/conda-forge/jupyterlab_vim"><img alt="Conda Version" src="https://img.shields.io/conda/vn/conda-forge/jupyterlab_vim.svg"/></a></p>
+<p>Notebook cell vim bindings</p>
+<p><img alt="jlabvim" src="https://user-images.githubusercontent.com/86304/38079432-b7596fd8-32f3-11e8-9ebd-4b9e7823f5f9.gif"/></p>
+<section id="modes">
+<h2 id="modes">Modes<a class="headerlink" href="#modes" title="Permalink to this heading">¶</a></h2>
+<p>Like vim, Jupyterlab has a distinction between Edit mode and Command mode. Jupyterlab is in Command mode when the cursor is not in a specific cell, and it is in Edit mode when typing in a cell.</p>
+<p>This extension combines the Jupyterlab (Edit and Command) modes with the standard vim modes (Normal, Insert and Visual). So the set of modes now looks like:</p>
+<ol class="simple">
+<li><p>Jupyterlab Command mode</p></li>
+<li><p>Jupyterlab Edit mode</p>
+<ul class="simple">
+<li><p>Normal</p></li>
+<li><p>Insert</p></li>
+<li><p>Visual</p></li>
+</ul>
+</li>
+</ol>
+<p>See <a class="reference external" href="#switching-between-modes">key bindings for switching between modes</a>.</p>
+</section>
+<section id="install">
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab-vim
+</pre></div>
+</div>
+<p>or with conda/mamba:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyterlab_vim
+</pre></div>
+</div>
+</section>
+<section id="key-bindings">
+<h2 id="key-bindings">Key Bindings<a class="headerlink" href="#key-bindings" title="Permalink to this heading">¶</a></h2>
+<p>To learn how to modify key bindings see the <a class="reference external" href="modify-keybinds">modify-keybinds.md</a> file.</p>
+<p><strong>Please note that all keys are lowercase unless <kbd>Shift</kbd> is explicitly indicated.</strong>
+For example, “<kbd>Y</kbd>, <kbd>Y</kbd>” means pressing lowercase <kbd>y</kbd> twice, while “<kbd>Shift-Y</kbd>, <kbd>Y</kbd>” means pressing <kbd>Shift</kbd>+<kbd>y</kbd> followed by a lowercase <kbd>y</kbd>.</p>
+<p>Shortcuts that this extension introduces:</p>
+<section id="vim-ex-commands">
+<h3 id="vim-ex-commands">Vim Ex commands<a class="headerlink" href="#vim-ex-commands" title="Permalink to this heading">¶</a></h3>
+<table border="1">
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:w[rite]</td>
+<td>Save Notebook</td>
+</tr>
+<tr>
+<td>:q[uit]</td>
+<td>Enter Jupyter Command Mode</td>
+</tr>
+</tbody>
+</table></section>
+<section id="vim-jupyter-edit-mode-bindings">
+<h3 id="vim-jupyter-edit-mode-bindings">Vim (Jupyter Edit mode) bindings<a class="headerlink" href="#vim-jupyter-edit-mode-bindings" title="Permalink to this heading">¶</a></h3>
+<table border="1">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>Split Cell at Cursor</td>
+</tr>
+<tr>
+<td>Ctrl-O, -</td>
+<td>Split Cell at Cursor</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-J</td>
+<td>Extend Marked Cells Below</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-K</td>
+<td>Extend Marked Cells Above</td>
+</tr>
+<tr>
+<td>Ctrl-J</td>
+<td>Select Cell Below</td>
+</tr>
+<tr>
+<td>Ctrl-K</td>
+<td>Select Cell Above</td>
+</tr>
+<tr>
+<td>Ctrl-O, G</td>
+<td>Select First Cell</td>
+</tr>
+<tr>
+<td>Ctrl-O, Ctrl-G</td>
+<td>Select Last Cell</td>
+</tr>
+<tr>
+<td>Ctrl-O, O</td>
+<td>Insert Cell Below</td>
+</tr>
+<tr>
+<td>Ctrl-O, Ctrl-O</td>
+<td>Insert Cell Above</td>
+</tr>
+<tr>
+<td>Ctrl-O, D</td>
+<td>Delete (Cut) Cell</td>
+</tr>
+<tr>
+<td>Ctrl-O, Y</td>
+<td>Yank (Copy) Cell</td>
+</tr>
+<tr>
+<td>Ctrl-O, P</td>
+<td>Paste Cell Below</td>
+</tr>
+<tr>
+<td>Ctrl-E</td>
+<td>Move Cell Down</td>
+</tr>
+<tr>
+<td>Ctrl-Y</td>
+<td>Move Cell Up</td>
+</tr>
+<tr>
+<td>Ctrl-O, U</td>
+<td>Undo Cell Action</td>
+</tr>
+<tr>
+<td>Ctrl-O, Z, Z</td>
+<td>Center Cell</td>
+</tr>
+<tr>
+<td>Ctrl-G</td>
+<td>Show Tooltip</td>
+</tr>
+<tr>
+<td>Cmd/Ctrl-1</td>
+<td>Change to Code Cell</td>
+</tr>
+<tr>
+<td>Cmd/Ctrl-2</td>
+<td>Change to Markdown Cell</td>
+</tr>
+<tr>
+<td>Cmd/Ctrl-3</td>
+<td>Change to Raw Cell</td>
+</tr>
+<tr>
+<td>Shift-Esc</td>
+<td>Exit to Command Mode</td>
+</tr>
+<tr>
+<td>Esc or Ctrl-[</td>
+<td>Exit Current Mode</td>
+</tr>
+</tbody>
+</table></section>
+<section id="jupyter-command-mode-bindings">
+<h3 id="jupyter-command-mode-bindings">Jupyter Command mode bindings<a class="headerlink" href="#jupyter-command-mode-bindings" title="Permalink to this heading">¶</a></h3>
+<table border="1">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G, G</td>
+<td>Select First Cell</td>
+</tr>
+<tr>
+<td>Shift-G</td>
+<td>Select Last Cell</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Insert Cell Below</td>
+</tr>
+<tr>
+<td>Shift-O</td>
+<td>Insert Cell Above</td>
+</tr>
+<tr>
+<td>D, D</td>
+<td>Delete (Cut) Cell</td>
+</tr>
+<tr>
+<td>Y, Y</td>
+<td>Yank (Copy) Cell</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Paste Cell Below</td>
+</tr>
+<tr>
+<td>Shift-P</td>
+<td>Paste Cell Above</td>
+</tr>
+<tr>
+<td>Ctrl-E</td>
+<td>Move Cells Down</td>
+</tr>
+<tr>
+<td>Ctrl-Y</td>
+<td>Move Cells Up</td>
+</tr>
+<tr>
+<td>U</td>
+<td>Undo Cell Action</td>
+</tr>
+<tr>
+<td>Z, Z</td>
+<td>Center Cell</td>
+</tr>
+<tr>
+<td>Z, C</td>
+<td>Hide Code Cell</td>
+</tr>
+<tr>
+<td>Z, O</td>
+<td>Show Code Cell</td>
+</tr>
+<tr>
+<td>Z, M</td>
+<td>Hide All Code Cells</td>
+</tr>
+<tr>
+<td>Z, R</td>
+<td>Show All Code Cells</td>
+</tr>
+</tbody>
+</table></section>
+<section id="switching-between-modes">
+<h3 id="switching-between-modes">Switching between modes<a class="headerlink" href="#switching-between-modes" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>From Command mode:</p>
+<ul>
+<li><p>To enter Normal mode from Command mode, press <kbd>Enter</kbd>.</p></li>
+<li><p>The extension blocks <kbd>Shift</kbd>+<kbd>Esc</kbd> from invoking browser commands, such as the browser task manager, by default. To disable the blocking behavior in Command mode, go to Settings menu → Settings Editor → Notebook Vim, and disable the “Override <code class="docutils literal notranslate"><span class="pre">Shift-Esc</span></code> browser shortcut in Jupyter Command mode” option.</p></li>
+</ul>
+</li>
+<li><p>From Normal mode:</p>
+<ul>
+<li><p>To leave Normal mode to Command mode, several options are available:</p>
+<ul>
+<li><p><kbd>Shift</kbd>+<kbd>Esc</kbd></p></li>
+<li><p><kbd>Esc</kbd> or <kbd>Ctrl</kbd>+<kbd>[</kbd>, if the “Enable <code class="docutils literal notranslate"><span class="pre">Esc</span></code> and <code class="docutils literal notranslate"><span class="pre">Ctrl-[</span></code> leaving vim Normal mode to Jupyter Command mode” option is enabled (on by default). To disable the option, go to Settings menu → Settings Editor → Notebook Vim.</p></li>
+</ul>
+</li>
+<li><p>To enter Insert mode from Normal mode, use one of the insert commmands, such as <kbd>i</kbd>, <kbd>Shift</kbd>+<kbd>i</kbd>, <kbd>a</kbd>, <kbd>Shift</kbd>+<kbd>a</kbd>, <kbd>o</kbd>, <kbd>Shift</kbd>+<kbd>o</kbd>, <kbd>c</kbd>, <kbd>Shift</kbd>+<kbd>c</kbd>, <kbd>s</kbd> or <kbd>Shift</kbd>+<kbd>s</kbd>.</p></li>
+<li><p>To enter Visual mode from Normal mode, use one of the visual commands, such as <kbd>v</kbd>, <kbd>Shift</kbd>+<kbd>v</kbd> or <kbd>Ctrl</kbd>+<kbd>v</kbd>.</p></li>
+</ul>
+</li>
+<li><p>From Insert or Visual mode:</p>
+<ul>
+<li><p>To leave Insert or Visual mode to Normal mode, press <kbd>Esc</kbd> or <kbd>Ctrl</kbd>+<kbd>[</kbd>.</p></li>
+<li><p>To leave Insert or Visual mode to Command mode, press <kbd>Shift</kbd>+<kbd>Esc</kbd>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="special-thanks">
+<h2 id="special-thanks">Special Thanks<a class="headerlink" href="#special-thanks" title="Permalink to this heading">¶</a></h2>
+<p>From @jwkvam:</p>
+<blockquote>
+<div><p>I want to acknowledge <a class="reference external" href="https://github.com/lambdalisue">Alisue</a> and his excellent work creating <a class="reference external" href="https://github.com/lambdalisue/jupyter-vim-binding">vim bindings</a> for Jupyter notebooks.
+I hope this extension can meet the high bar his work set.</p>
+</div></blockquote>
+<p>@jkwvam is the original author of this extension - the original version can be seen <a class="reference external" href="https://github.com/jwkvam/jupyterlab-vim">here</a>. When that version was not updated it was updated first by @axelfahy and then moved to this community organization.</p>
+</section>
+<section id="contributing">
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">¶</a></h2>
+<p>Contributions and feedback are most welcome!</p>
+<section id="development-install">
+<h3 id="development-install">Development install<a class="headerlink" href="#development-install" title="Permalink to this heading">¶</a></h3>
+<p>Note: You will need NodeJS to build the extension package. To install with <code class="docutils literal notranslate"><span class="pre">conda</span></code> do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">nodejs</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> command is JupyterLab’s pinned version of
+<a class="reference external" href="https://yarnpkg.com/">yarn</a> that is installed with JupyterLab. You may use
+<code class="docutils literal notranslate"><span class="pre">yarn</span></code> or <code class="docutils literal notranslate"><span class="pre">npm</span></code> in lieu of <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repo to your local environment</span>
+<span class="c1"># Change directory to the jupyterlab_vim directory</span>
+<span class="c1"># Install package in development mode</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+<span class="c1"># Link your development version of the extension with JupyterLab</span>
+jupyter<span class="w"> </span>labextension<span class="w"> </span>develop<span class="w"> </span>.<span class="w"> </span>--overwrite
+<span class="c1"># Rebuild extension Typescript source after making changes</span>
+jlpm<span class="w"> </span>run<span class="w"> </span>build
+</pre></div>
+</div>
+<p>You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension’s source and automatically rebuild the extension.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Watch the source directory in one terminal, automatically rebuilding when needed</span>
+jlpm<span class="w"> </span>run<span class="w"> </span>watch
+<span class="c1"># Run JupyterLab in another terminal</span>
+jupyter<span class="w"> </span>lab
+</pre></div>
+</div>
+<p>With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).</p>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span></code> command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lab<span class="w"> </span>build<span class="w"> </span>--minimize<span class="o">=</span>False
+</pre></div>
+</div>
+</section>
+<section id="uninstall">
+<h3 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>jupyterlab_vim
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2020-2025, JupyterLab Contrib Team.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

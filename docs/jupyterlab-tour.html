@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>jupyterlab-tour &#8212; jupyterlab-contrib 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=75810a84" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d90b8643"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <style>
+        .md-source__repo {
+            display: block;
+            padding-right: .6rem;
+            transition: opacity .25s;
+            font-size: .65rem;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .md-header-nav__source .md-source__repo:hover {
+            opacity: .7;
+        }
+
+        .md-source__repo::after,
+        .md-source__edit::after {
+            content: none
+        }
+
+        .md-source__edit {
+            font-size: .55rem;
+            font-weight: initial;
+            opacity: .75;
+        }
+        
+        .md-header-nav__source .md-source__edit:hover {
+            opacity: .9;
+        }
+    </style>
+    
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=deep-orange data-md-color-accent=orange>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#jupyterlab-tour" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a
+          href="index.html"
+          title="jupyterlab-contrib 1.0.0 documentation"
+          class="md-header-nav__button md-logo"
+        >
+           &nbsp; 
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+        >
+          <span class="md-header-nav__topic"
+            >JupyterLab Unofficial Extensions & Tools</span
+          >
+          <span class="md-header-nav__topic"> jupyterlab-tour </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--search md-header-nav__button"
+          for="__search"
+        ></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+          <div class="md-source__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+            >
+              <use
+                xlink:href="#__github"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+          
+          <div class="md-source__repository">
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io"
+              title="Go to repository"
+              class="md-source__repo"
+            >
+              jupyterlab-contrib
+            </a>
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/edit/main/jupyterlab-tour.md"
+              title="Edit this page on GitHub"
+              class="md-source__edit"
+            >
+              Edit on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+       
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+            
+            <li class="md-tabs__item"><a href="https://jupyterlab.readthedocs.io/en/stable/" class="md-tabs__link">JupyterLab Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://jupyter-server.readthedocs.io/en/stable/" class="md-tabs__link">Jupyter Server Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?labels=transfer&amp;template=transfer-repository-to-this-organization.md" class="md-tabs__link">Transfer your extension</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?template=help-with-maintenance.md" class="md-tabs__link">I want to help</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="jupyterlab-contrib 1.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="index.html"
+       title="jupyterlab-contrib 1.0.0 documentation">JupyterLab Unofficial Extensions & Tools</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jupyterlab-contrib
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Contents:</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="extensions.html" class="md-nav__link">List of extensions and tools</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="migrate_from_classical.html" class="md-nav__link">Migrate from classical Jupyter notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="contributing.html" class="md-nav__link">Help supporting the extensions</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#jupyterlab-tour--page-root" class="md-nav__link">jupyterlab-tour</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#install" class="md-nav__link">Install</a>
+        </li>
+        <li class="md-nav__item"><a href="#features" class="md-nav__link">Features</a>
+        </li>
+        <li class="md-nav__item"><a href="#requirements" class="md-nav__link">Requirements</a>
+        </li>
+        <li class="md-nav__item"><a href="#how-to-add-a-tour-with-advanced-settings" class="md-nav__link">How to add a Tour with Advanced Settings</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#a-simple-tour" class="md-nav__link">A simple Tour</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#how-to-add-a-tour-to-a-notebook" class="md-nav__link">How to add a Tour to a Notebook</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#shipping-a-tour-to-binder" class="md-nav__link">Shipping a Tour to Binder</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#how-to-add-tour-for-my-jupyterlab-extension" class="md-nav__link">How to add Tour for my JupyterLab extension</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#add-a-tour-with-typescript" class="md-nav__link">Add a Tour with TypeScript</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#disabling-the-user-notebook-and-default-tours" class="md-nav__link">Disabling the User, Notebook, and Default Tours</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#disabling-tours-from-the-command-line" class="md-nav__link">Disabling Tours from the Command Line</a>
+        </li>
+        <li class="md-nav__item"><a href="#disabling-tours-with-pageconfig-json" class="md-nav__link">Disabling Tours with <code class="docutils literal notranslate"><span class="pre">pageConfig.json</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#uninstall" class="md-nav__link">Uninstall</a>
+        </li>
+        <li class="md-nav__item"><a href="#contributing" class="md-nav__link">Contributing</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#development-install" class="md-nav__link">Development install</a>
+        </li>
+        <li class="md-nav__item"><a href="#development-uninstall" class="md-nav__link">Development uninstall</a>
+        </li>
+        <li class="md-nav__item"><a href="#testing-the-extension" class="md-nav__link">Testing the extension</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#frontend-tests" class="md-nav__link">Frontend tests</a>
+        </li>
+        <li class="md-nav__item"><a href="#integration-tests" class="md-nav__link">Integration tests</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#packaging-the-extension" class="md-nav__link">Packaging the extension</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="jupyterlab-tour">
+<h1 id="jupyterlab-tour--page-root">jupyterlab-tour<a class="headerlink" href="#jupyterlab-tour--page-root" title="Permalink to this heading">¶</a></h1>
+<p><a class="reference external" href="https://github.com/jupyterlab-contrib/jupyterlab-tour"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jupyterlab-contrib/jupyterlab-tour?style=social"/></a><a class="reference external" href="https://jupyterlab-contrib.github.io/"><img alt="Extension status" src="https://img.shields.io/badge/status-ready-success"/></a>
+<a class="reference external" href="https://github.com/jupyterlab-contrib/jupyterlab-tour/actions?query=workflow%3ABuild"><img alt="Github Actions Status" src="https://github.com/jupyterlab-contrib/jupyterlab-tour/workflows/Build/badge.svg"/></a>
+<a class="reference external" href="https://mybinder.org/v2/gh/jupyterlab-contrib/jupyterlab-tour/main?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg"/></a>
+<a class="reference external" href="https://www.npmjs.com/package/jupyterlab-tour"><img alt="npm" src="https://img.shields.io/npm/v/jupyterlab-tour"/></a>
+<a class="reference external" href="https://pypi.org/project/jupyterlab-tour"><img alt="PyPI" src="https://img.shields.io/pypi/v/jupyterlab-tour"/></a>
+<a class="reference external" href="https://anaconda.org/conda-forge/jupyterlab-tour"><img alt="conda-forge" src="https://img.shields.io/conda/vn/conda-forge/jupyterlab-tour"/></a></p>
+<p>A JupyterLab UI Tour based on <a class="reference external" href="https://docs.react-joyride.com">react-joyride</a>.</p>
+<p><img alt="demo" src="https://raw.githubusercontent.com/jupyterlab-contrib/jupyterlab-tour/main/doc/tourDemo.gif"/></p>
+<section id="install">
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permalink to this heading">¶</a></h2>
+<p>To install the extension, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab-tour
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyterlab-tour
+</pre></div>
+</div>
+</section>
+<section id="features">
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permalink to this heading">¶</a></h2>
+<p>This extension has the following features:</p>
+<ul class="simple">
+<li><p>Default tours:</p>
+<ul>
+<li><p>Welcome tour</p></li>
+<li><p>Notebook tour</p></li>
+<li><p>User-defined features in Settings</p></li>
+</ul>
+</li>
+<li><p>Toast proposing to start a Tour</p></li>
+<li><p>If a Tour has already be seen by the user, this is saved in the state database. So you
+can start Tour on event only if the user have not seen it; e.g. the <em>Welcome Tour</em> is
+launched at JupyterLab start except if the user have seen it.</p></li>
+</ul>
+<blockquote>
+<div><p>The state is cleaned if this extension is updated</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Tooltip are styled using JupyterLab theming system</p></li>
+<li><p>Commands to <em>add</em> and <em>launch</em> tours</p></li>
+<li><p>Through the <em>Tour Manager</em> (<code class="docutils literal notranslate"><span class="pre">ITourManager</span></code> extension token), add, modify or delete a
+Tour</p></li>
+<li><p>Connect to Tour events through signals</p></li>
+<li><p>Override the default style (and options) for the Tour separately</p></li>
+</ul>
+<p>This extension is inspired by
+<a class="reference external" href="https://github.com/CDAT/jupyterlab-tutorial">@cdat/jupyterlab-tutorial</a> licensed under
+BSD 3-Clause License with Copyright (c) 2020, Lawrence Livermore National Security, LLC.</p>
+</section>
+<section id="requirements">
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>JupyterLab &gt;= 3.6</p></li>
+</ul>
+<p>For JupyterLab 2.x, have look
+<a class="reference external" href="https://github.com/jupyterlab-contrib/jupyterlab-tour/tree/2.x">there</a>.</p>
+<blockquote>
+<div><p>For developers, the API has changed between v3 (for JupyterLab 3) and v2 (for
+JupyterLab 2).</p>
+</div></blockquote>
+</section>
+<section id="how-to-add-a-tour-with-advanced-settings">
+<h2 id="how-to-add-a-tour-with-advanced-settings">How to add a Tour with Advanced Settings<a class="headerlink" href="#how-to-add-a-tour-with-advanced-settings" title="Permalink to this heading">¶</a></h2>
+<p>As a user of JupyterLab, after you’ve installed <code class="docutils literal notranslate"><span class="pre">jupyterlab-tour</span></code>, you can create your
+own <em>Tours</em> as data.</p>
+<ul class="simple">
+<li><p>Open the JupyterLab <em>Advanced Settings</em> panel <kbd>Ctrl+,</kbd></p></li>
+<li><p>Select <em>Tours</em> from list of settings groups</p></li>
+<li><p>In the editor, create JSON(5) compatible with the
+<a class="reference external" href="https://docs.react-joyride.com/props">react-joyride data model</a></p></li>
+<li><p>The <em>Tour</em> will be available from the <em>Help Menu</em>, as well as the <em>Command Palette</em></p></li>
+</ul>
+<section id="a-simple-tour">
+<h3 id="a-simple-tour">A simple Tour<a class="headerlink" href="#a-simple-tour" title="Permalink to this heading">¶</a></h3>
+<p>For example, to show a glowing button on the Jupyter logo, which reveals an orange
+overlay when pressed:</p>
+<div class="highlight-json5 notranslate"><div class="highlight"><pre><span></span><span class="c1">// json5 can have comments</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nv">tours</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="s">'my-tour'</span><span class="p">,</span>
+<span class="w">      </span><span class="nv">label</span><span class="p">:</span><span class="w"> </span><span class="s">'My First Tour'</span><span class="p">,</span>
+<span class="w">      </span><span class="c1">// steps are required, and have many, many options</span>
+<span class="w">      </span><span class="nv">steps</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nv">target</span><span class="p">:</span><span class="w"> </span><span class="s">'#jp-MainLogo'</span><span class="p">,</span><span class="w"> </span><span class="nv">content</span><span class="p">:</span><span class="w"> </span><span class="s">'Look at this!'</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">      </span><span class="c1">// below here not required!</span>
+<span class="w">      </span><span class="nv">options</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nv">styles</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nv">options</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// you can use jupyterlab theme variables</span>
+<span class="w">            </span><span class="nv">backgroundColor</span><span class="p">:</span><span class="w"> </span><span class="s">'var(--jp-warn-color0)'</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="how-to-add-a-tour-to-a-notebook">
+<h2 id="how-to-add-a-tour-to-a-notebook">How to add a Tour to a Notebook<a class="headerlink" href="#how-to-add-a-tour-to-a-notebook" title="Permalink to this heading">¶</a></h2>
+<p>The same JSON used to create a Tour in <em>Advanced Settings</em> can be added to a Notebook.</p>
+<ul class="simple">
+<li><p>Open the Notebook</p></li>
+<li><p>Open the <em>Property Inspector</em> sidebar (the “gears” icon)</p></li>
+<li><p>Open <em>Advanced Tools</em></p></li>
+<li><p>Create a key in <em>Notebook Metadata</em> like:</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"jupyterlab-tour"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"tours"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now, when the notebook is opened, a “pin” icon will be visible in the <em>Notebook Toolbar</em>
+which will allow lauching one (or all) of the tours saved in the Notebook.</p>
+<section id="shipping-a-tour-to-binder">
+<h3 id="shipping-a-tour-to-binder">Shipping a Tour to Binder<a class="headerlink" href="#shipping-a-tour-to-binder" title="Permalink to this heading">¶</a></h3>
+<p>On Binder, and elsewhere, you can store the above (<em>without</em> comments) in an
+<a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/directories.html#overrides-json">overrides.json</a> file and put it in the <em>right place</em>, e.g.
+<code class="docutils literal notranslate"><span class="pre">{sys.prefix}/share/jupyter/lab/settings/overrides.json</span></code>. When JupyterLab is next
+opened, those overrides will become the defaults, and your Tour will be available.</p>
+<p>An example <code class="docutils literal notranslate"><span class="pre">overrides.json</span></code> might look like:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"jupyterlab-tour:user-tours"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"tours"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="how-to-add-tour-for-my-jupyterlab-extension">
+<h2 id="how-to-add-tour-for-my-jupyterlab-extension">How to add Tour for my JupyterLab extension<a class="headerlink" href="#how-to-add-tour-for-my-jupyterlab-extension" title="Permalink to this heading">¶</a></h2>
+<p>As an extension developer, there are two methods to add a tour: the easiest is to use
+JupyterLab commands and the advanced version is to request this extension token
+<code class="docutils literal notranslate"><span class="pre">ITourManager</span></code>.</p>
+<section id="add-a-tour-with-typescript">
+<h3 id="add-a-tour-with-typescript">Add a Tour with TypeScript<a class="headerlink" href="#add-a-tour-with-typescript" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">commands</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">;</span>
+<span class="c1">// Add a Tour - returns the Tour or null if something went wrong</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">tour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">commands</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'jupyterlab-tour:add'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">tour</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Tour must be of type ITour - see src/tokens.ts</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'test-jupyterlab-tour:welcome'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Welcome Tour'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">hasHelpEntry</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">steps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="c1">// Step must be of type IStep - see src/tokens.ts</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">content</span><span class="o">:</span>
+<span class="w">          </span><span class="s1">'The following tutorial will point out some of the main UI components within JupyterLab.'</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">placement</span><span class="o">:</span><span class="w"> </span><span class="s1">'center'</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">'#jp-main-dock-panel'</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'Welcome to Jupyter Lab!'</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">content</span><span class="o">:</span>
+<span class="w">          </span><span class="s1">'This is the main content area where notebooks and other content can be viewed and edited.'</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">placement</span><span class="o">:</span><span class="w"> </span><span class="s1">'left-end'</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">'#jp-main-dock-panel'</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'Main Content'</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">    </span><span class="c1">// can also define `options`</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}))</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ITourHandler</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">tour</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">app</span><span class="p">.</span><span class="nx">commands</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'jupyterlab-tour:launch'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'test-jupyterlab-tour:welcome'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">force</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="w"> </span><span class="c1">// Optional, if false the Tour will start only if the user have not seen or skipped it</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>One example is available on
+<a class="reference external" href="https://github.com/mamba-org/gator/blob/master/packages/labextension/src/index.ts#L76">Mamba navigator</a>.
+Test it on <a class="reference external" href="https://mybinder.org/v2/gh/mamba-org/gator/master?urlpath=lab">binder</a>.</p>
+</div></blockquote>
+<p>If you want to react to step changes to trigger elements of the UI (like opening
+sidebar), you can connect to the <code class="docutils literal notranslate"><span class="pre">stepChanged</span></code> signal. Building from the previous
+example, this snippet will open the filebrowser after the first step.</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="nx">tour</span><span class="p">.</span><span class="nx">stepChanged</span><span class="p">.</span><span class="nx">connect</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="kr">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s1">'step:after'</span><span class="o">:</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">step</span><span class="p">.</span><span class="nx">target</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'#jp-main-dock-panel'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">commands</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'filebrowser:activate'</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">data</span></code> is an object of type
+<a class="reference external" href="https://docs.react-joyride.com/callback"><code class="docutils literal notranslate"><span class="pre">CallbackProps</span></code></a>.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="disabling-the-user-notebook-and-default-tours">
+<h2 id="disabling-the-user-notebook-and-default-tours">Disabling the User, Notebook, and Default Tours<a class="headerlink" href="#disabling-the-user-notebook-and-default-tours" title="Permalink to this heading">¶</a></h2>
+<p>If you <em>only</em> wish to see the default <em>Welcome</em> and <em>Notebook</em> tours, or ones defined by
+users, they can be disabled via the command line or a well-known file.</p>
+<p>The examples below disable all tours not provided by third-party extensions. Adding
+<code class="docutils literal notranslate"><span class="pre">jupyterlab-tour:plugin</span></code> to either of these will disable tours altogether!</p>
+<section id="disabling-tours-from-the-command-line">
+<h3 id="disabling-tours-from-the-command-line">Disabling Tours from the Command Line<a class="headerlink" href="#disabling-tours-from-the-command-line" title="Permalink to this heading">¶</a></h3>
+<p>From the command line, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>labextension<span class="w"> </span>disable<span class="w"> </span><span class="s2">"jupyterlab-tour:user-tours"</span>
+jupyter<span class="w"> </span>labextension<span class="w"> </span>disable<span class="w"> </span><span class="s2">"jupyterlab-tour:notebook-tours"</span>
+jupyter<span class="w"> </span>labextension<span class="w"> </span>disable<span class="w"> </span><span class="s2">"jupyterlab-tour:default-tours"</span>
+</pre></div>
+</div>
+</section>
+<section id="disabling-tours-with-pageconfig-json">
+<h3 id="disabling-tours-with-pageconfig-json">Disabling Tours with <code class="docutils literal notranslate"><span class="pre">pageConfig.json</span></code><a class="headerlink" href="#disabling-tours-with-pageconfig-json" title="Permalink to this heading">¶</a></h3>
+<p>Create a <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/directories.html#labconfig-directories">pageConfig.json</a> and put it in <em>the right place</em>, e.g.
+<code class="docutils literal notranslate"><span class="pre">{sys.prefix}/etc/jupyter/labconfig/pageconfig.json</span></code> and add the plugin IDs to
+<code class="docutils literal notranslate"><span class="pre">disabledExtensions</span></code>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"disabledExtensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jupyterlab-tour:user-tours"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"jupyterlab-tour:notebook-tours"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"jupyterlab-tour:default-tours"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="uninstall">
+<h2 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading">¶</a></h2>
+<p>To remove the extension, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>jupyterlab-tour
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>remove<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyterlab-tour
+</pre></div>
+</div>
+</section>
+<section id="contributing">
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">¶</a></h2>
+<section id="development-install">
+<h3 id="development-install">Development install<a class="headerlink" href="#development-install" title="Permalink to this heading">¶</a></h3>
+<p>Note: You will need NodeJS to build the extension package.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> command is JupyterLab’s pinned version of <a class="reference external" href="https://yarnpkg.com/">yarn</a> that
+is installed with JupyterLab. You may use <code class="docutils literal notranslate"><span class="pre">yarn</span></code> or <code class="docutils literal notranslate"><span class="pre">npm</span></code> in lieu of <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repo to your local environment</span>
+<span class="c1"># Change directory to the jupyterlab-tour directory</span>
+<span class="c1"># Install package in development mode</span>
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">"."</span>
+<span class="c1"># Link your development version of the extension with JupyterLab</span>
+jupyter<span class="w"> </span>labextension<span class="w"> </span>develop<span class="w"> </span>.<span class="w"> </span>--overwrite
+<span class="c1"># Rebuild extension Typescript source after making changes</span>
+jlpm<span class="w"> </span>build
+</pre></div>
+</div>
+<p>You can watch the source directory and run JupyterLab at the same time in different
+terminals to watch for changes in the extension’s source and automatically rebuild the
+extension.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Watch the source directory in one terminal, automatically rebuilding when needed</span>
+jlpm<span class="w"> </span>watch
+<span class="c1"># Run JupyterLab in another terminal</span>
+jupyter<span class="w"> </span>lab
+</pre></div>
+</div>
+<p>With the watch command running, every saved change will immediately be built locally and
+available in your running JupyterLab. Refresh JupyterLab to load the change in your
+browser (you may need to wait several seconds for the extension to be rebuilt).</p>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">build</span></code> command generates the source maps for this extension to
+make it easier to debug using the browser dev tools. To also generate source maps for
+the JupyterLab core extensions, you can run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lab<span class="w"> </span>build<span class="w"> </span>--minimize<span class="o">=</span>False
+</pre></div>
+</div>
+</section>
+<section id="development-uninstall">
+<h3 id="development-uninstall">Development uninstall<a class="headerlink" href="#development-uninstall" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>jupyterlab-tour
+</pre></div>
+</div>
+<p>In development mode, you will also need to remove the symlink created by
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">develop</span></code> command. To find its location, you can run
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">list</span></code> to figure out where the <code class="docutils literal notranslate"><span class="pre">labextensions</span></code> folder is located.
+Then you can remove the symlink named <code class="docutils literal notranslate"><span class="pre">jupyterlab-tour</span></code> within that folder.</p>
+</section>
+<section id="testing-the-extension">
+<h3 id="testing-the-extension">Testing the extension<a class="headerlink" href="#testing-the-extension" title="Permalink to this heading">¶</a></h3>
+<section id="frontend-tests">
+<h4 id="frontend-tests">Frontend tests<a class="headerlink" href="#frontend-tests" title="Permalink to this heading">¶</a></h4>
+<p>This extension is using <a class="reference external" href="https://jestjs.io/">Jest</a> for JavaScript code testing.</p>
+<p>To execute them, execute:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jlpm
+jlpm<span class="w"> </span><span class="nb">test</span>
+</pre></div>
+</div>
+</section>
+<section id="integration-tests">
+<h4 id="integration-tests">Integration tests<a class="headerlink" href="#integration-tests" title="Permalink to this heading">¶</a></h4>
+<p>This extension uses <a class="reference external" href="https://playwright.dev/docs/intro">Playwright</a> for the integration
+tests (aka user level tests). More precisely, the JupyterLab helper
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab/tree/master/galata">Galata</a> is used to handle
+testing the extension in JupyterLab.</p>
+<p>More information are provided within the <a class="reference external" href="./ui-tests/README">ui-tests</a> README.</p>
+</section>
+</section>
+<section id="packaging-the-extension">
+<h3 id="packaging-the-extension">Packaging the extension<a class="headerlink" href="#packaging-the-extension" title="Permalink to this heading">¶</a></h3>
+<p>See <a class="reference external" href="RELEASE">RELEASE</a></p>
+</section>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2020-2025, JupyterLab Contrib Team.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
