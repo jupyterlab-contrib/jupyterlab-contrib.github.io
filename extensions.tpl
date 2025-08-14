@@ -21,7 +21,7 @@ This a list of nice JupyterLab extensions not part of ``jupyterlab-contrib`` org
 
 ### Databases
 
-- [jupyterlab-omnisci](https://github.com/omnisci/jupyterlab-omnisci): OmniSci integrations for JupyterLab
+- [jupyterlab-omnisci](https://github.com/Quansight/jupyterlab-omnisci): OmniSci integrations for JupyterLab
 - [jupyterlab-sql](https://github.com/pbugnion/jupyterlab-sql): SQL GUI for JupyterLab
 
 ### Editors
