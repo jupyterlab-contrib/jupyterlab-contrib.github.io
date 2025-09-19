@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>MSA Viewer Fork &#8212; jupyterlab-contrib 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=75810a84" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d90b8643"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <style>
+        .md-source__repo {
+            display: block;
+            padding-right: .6rem;
+            transition: opacity .25s;
+            font-size: .65rem;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .md-header-nav__source .md-source__repo:hover {
+            opacity: .7;
+        }
+
+        .md-source__repo::after,
+        .md-source__edit::after {
+            content: none
+        }
+
+        .md-source__edit {
+            font-size: .55rem;
+            font-weight: initial;
+            opacity: .75;
+        }
+        
+        .md-header-nav__source .md-source__edit:hover {
+            opacity: .9;
+        }
+    </style>
+    
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=deep-orange data-md-color-accent=orange>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#msa" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a
+          href="index.html"
+          title="jupyterlab-contrib 1.0.0 documentation"
+          class="md-header-nav__button md-logo"
+        >
+           &nbsp; 
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--menu md-header-nav__button"
+          for="__drawer"
+        ></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div
+          class="md-flex__ellipsis md-header-nav__title"
+          data-md-component="title"
+        >
+          <span class="md-header-nav__topic"
+            >JupyterLab Unofficial Extensions & Tools</span
+          >
+          <span class="md-header-nav__topic"> MSA Viewer Fork </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label
+          class="md-icon md-icon--search md-header-nav__button"
+          for="__search"
+        ></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+          <div class="md-source__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+            >
+              <use
+                xlink:href="#__github"
+                width="24"
+                height="24"
+              ></use>
+            </svg>
+          </div>
+          
+          <div class="md-source__repository">
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io"
+              title="Go to repository"
+              class="md-source__repo"
+            >
+              jupyterlab-contrib
+            </a>
+            <a
+              href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/edit/main/msa.md"
+              title="Edit this page on GitHub"
+              class="md-source__edit"
+            >
+              Edit on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+       
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+            
+            <li class="md-tabs__item"><a href="https://jupyterlab.readthedocs.io/en/stable/" class="md-tabs__link">JupyterLab Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://jupyter-server.readthedocs.io/en/stable/" class="md-tabs__link">Jupyter Server Documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?labels=transfer&amp;template=transfer-repository-to-this-organization.md" class="md-tabs__link">Transfer your extension</a></li>
+            
+            <li class="md-tabs__item"><a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io/issues/new?template=help-with-maintenance.md" class="md-tabs__link">I want to help</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="jupyterlab-contrib 1.0.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="index.html"
+       title="jupyterlab-contrib 1.0.0 documentation">JupyterLab Unofficial Extensions & Tools</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/jupyterlab-contrib/jupyterlab-contrib.github.io" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    jupyterlab-contrib
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Contents:</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="extensions.html" class="md-nav__link">List of extensions and tools</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="migrate_from_classical.html" class="md-nav__link">Migrate from classical Jupyter notebook</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="contributing.html" class="md-nav__link">Help supporting the extensions</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#msa--page-root" class="md-nav__link">MSA Viewer Fork</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#use-it" class="md-nav__link">Use it</a>
+        </li>
+        <li class="md-nav__item"><a href="#demo" class="md-nav__link">Demo</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#display-an-msa" class="md-nav__link">display an MSA</a>
+        </li>
+        <li class="md-nav__item"><a href="#features" class="md-nav__link">Features</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#use-the-msaviewer" class="md-nav__link">Use the MSAViewer</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#import-seqs" class="md-nav__link">Import seqs</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#a-directly-import-a-url" class="md-nav__link">a) Directly import a url</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#b-import-your-own-sequences-from-a-string" class="md-nav__link">b) Import your own sequences from a string</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#c-asynchronously-import-seqs" class="md-nav__link">c) Asynchronously import seqs</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#d-import-your-sequences-from-the-dom" class="md-nav__link">d) Import your sequences from the DOM</a>
+        </li>
+        <li class="md-nav__item"><a href="#basic-config-parameters" class="md-nav__link">Basic config parameters</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#getting-help" class="md-nav__link">Getting help</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#msaviewer-in-action" class="md-nav__link">MSAViewer in Action</a>
+        </li>
+        <li class="md-nav__item"><a href="#change-the-colorscheme" class="md-nav__link">Change the colorscheme</a>
+        </li>
+        <li class="md-nav__item"><a href="#add-features" class="md-nav__link">Add features</a>
+        </li>
+        <li class="md-nav__item"><a href="#update-seqs" class="md-nav__link">Update seqs</a>
+        </li>
+        <li class="md-nav__item"><a href="#update-selection" class="md-nav__link">Update selection</a>
+        </li>
+        <li class="md-nav__item"><a href="#jump-to-a-column" class="md-nav__link">Jump to a column</a>
+        </li>
+        <li class="md-nav__item"><a href="#export-and-save" class="md-nav__link">Export and save</a>
+        </li>
+        <li class="md-nav__item"><a href="#update-attributes" class="md-nav__link">Update attributes</a>
+        </li>
+        <li class="md-nav__item"><a href="#listen-to-attribute-events" class="md-nav__link">Listen to attribute events</a>
+        </li>
+        <li class="md-nav__item"><a href="#listen-to-user-interactions" class="md-nav__link">Listen to user interactions</a>
+        </li>
+        <li class="md-nav__item"><a href="#config-parameters-in-g" class="md-nav__link">Config parameters in g</a>
+        </li>
+        <li class="md-nav__item"><a href="#sequence-model" class="md-nav__link">Sequence model</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#faq" class="md-nav__link">FAQ</a>
+        </li>
+        <li class="md-nav__item"><a href="#guidelines" class="md-nav__link">Guidelines</a>
+        </li>
+        <li class="md-nav__item"><a href="#step-1-setting-up" class="md-nav__link">Step 1) Setting up</a>
+        </li>
+        <li class="md-nav__item"><a href="#step-2-developing" class="md-nav__link">Step 2) Developing</a>
+        </li>
+        <li class="md-nav__item"><a href="#compiling-for-the-browser" class="md-nav__link">Compiling for the browser</a>
+        </li>
+        <li class="md-nav__item"><a href="#package-list" class="md-nav__link">Package list</a>
+        </li>
+        <li class="md-nav__item"><a href="#project-structure" class="md-nav__link">Project structure</a>
+        </li>
+        <li class="md-nav__item"><a href="#want-to-learn-more" class="md-nav__link">Want to learn more?</a>
+        </li>
+        <li class="md-nav__item"><a href="#getting-involved" class="md-nav__link">Getting involved</a>
+        </li>
+        <li class="md-nav__item"><a href="#team" class="md-nav__link">Team</a>
+        </li>
+        <li class="md-nav__item"><a href="#versioning-cdn" class="md-nav__link">Versioning & CDN</a>
+        </li>
+        <li class="md-nav__item"><a href="#license" class="md-nav__link">License</a>
+        </li>
+        <li class="md-nav__item"><a href="#citing-the-msaviewer" class="md-nav__link">Citing the MSAViewer</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="msa-viewer-fork">
+<h1 id="msa--page-root">MSA Viewer Fork<a class="headerlink" href="#msa--page-root" title="Permalink to this heading">¶</a></h1>
+<p><a class="reference external" href="https://github.com/jupyterlab-contrib/msa"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jupyterlab-contrib/msa?style=social"/></a><a class="reference external" href="https://jupyterlab-contrib.github.io/"><img alt="Extension status" src="https://img.shields.io/badge/status-ready-success"/></a>
+<a class="reference external" href="https://www.npmjs.org/package/@jlab-contrib/msa"><img alt="NPM version" src="http://img.shields.io/npm/v/@jlab-contrib/msa.svg"/></a>
+<a class="reference external" href="https://www.npmjs.org/package/@jlab-contrib/msa"><img alt="NPM downloads" src="http://img.shields.io/npm/dm/@jlab-contrib/msa.svg"/></a></p>
+<p>This repo contains a fork of the original MSA viewer with several bugfixes, used for the JupyterLab FASTA viewer extension.</p>
+<p>Multiple Sequence Alignment Viewer - the MSAViewer - a BioJS component.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>          .         .
+         ,8.       ,8.            d888888o.           .8.
+        ,888.     ,888.         .`8888:' `88.        .888.
+       .`8888.   .`8888.        8.`8888.   Y8       :88888.
+      ,8.`8888. ,8.`8888.       `8.`8888.          . `88888.
+     ,8'8.`8888,8^8.`8888.       `8.`8888.        .8. `88888.
+    ,8' `8.`8888' `8.`8888.       `8.`8888.      .8`8. `88888.
+   ,8'   `8.`88'   `8.`8888.       `8.`8888.    .8' `8. `88888.
+  ,8'     `8.`'     `8.`8888.  8b   `8.`8888.  .8'   `8. `88888.
+ ,8'       `8        `8.`8888. `8b.  ;8.`8888 .888888888. `88888.
+,8'         `         `8.`8888. `Y8888P ,88P'.8'       `8. `88888.
+</pre></div>
+</div>
+<p>The original repo readme follows.</p>
+<hr class="docutils"/>
+<section id="use-it">
+<h2 id="use-it">Use it<a class="headerlink" href="#use-it" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="http://msa.biojs.net/app">Full screen</a> mode.</p>
+</section>
+<section id="demo">
+<h2 id="demo">Demo<a class="headerlink" href="#demo" title="Permalink to this heading">¶</a></h2>
+<p>These examples show how you could embed the MSAViewer into your page.</p>
+<p><a class="reference external" href="http://jsbin.com/quvex/4/edit?js,output"><img alt="JSBin clustal" src="http://img.shields.io/badge/jsbin-clustal-blue.svg"/></a>
+<a class="reference external" href="http://jsbin.com/zunuko/4/edit?html,js,output"><img alt="JSBin large" src="http://img.shields.io/badge/jsbin-large-blue.svg"/></a></p>
+<p><a class="reference external" href="http://workmen.biojs.net/demo/msa">Current sniper</a> with different examples</p>
+<section id="display-an-msa">
+<h3 id="display-an-msa">display an MSA<a class="headerlink" href="#display-an-msa" title="Permalink to this heading">¶</a></h3>
+<p><img alt="basic MSA" src="https://i.imgur.com/nQtfMmI.png"/></p>
+</section>
+<section id="features">
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>runs purely in the Browser</p></li>
+<li><p>import files in format like FASTA, Clustal, …</p></li>
+<li><p>be interactive and receive <a class="reference external" href="https://github.com/wilzbach/msa/wiki/Events">Events</a></p></li>
+<li><p>filter, sort, hide the sequences</p></li>
+<li><p>display sequence <a class="reference external" href="https://github.com/wilzbach/biojs-vis-easy_features/">features</a></p></li>
+<li><p>extendable <a class="reference external" href="https://github.com/wilzbach/msa/wiki/Views">Views</a> for your integration</p></li>
+<li><p>customizable viewport</p></li>
+<li><p>simplicity as design rule</p></li>
+<li><p>export to fASTAb</p></li>
+<li><p>generate the consenus seq</p></li>
+<li><p>more to come …</p></li>
+</ul>
+</section>
+</section>
+<section id="use-the-msaviewer">
+<h2 id="use-the-msaviewer">Use the MSAViewer<a class="headerlink" href="#use-the-msaviewer" title="Permalink to this heading">¶</a></h2>
+<p><strong>The following examples assume that the <code class="docutils literal notranslate"><span class="pre">msa()</span></code> constructor is available.</strong></p>
+<p>If you have loaded <code class="docutils literal notranslate"><span class="pre">msa</span></code> as a script in your web page with something like…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">"//cdn.bio.sh/msa/latest/msa.min.gz.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>… then congratulations! You are ready to go.</p>
+<p>If you are using <code class="docutils literal notranslate"><span class="pre">npm</span></code> and are adding msa as a dependency, then you can use the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">msa</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">"msa"</span><span class="p">);</span>
+</pre></div>
+</div>
+<section id="import-seqs">
+<h3 id="import-seqs">Import seqs<a class="headerlink" href="#import-seqs" title="Permalink to this heading">¶</a></h3>
+<section id="a-directly-import-a-url">
+<h4 id="a-directly-import-a-url">a) Directly import a url<a class="headerlink" href="#a-directly-import-a-url" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="nx">rootDiv</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">importURL</span><span class="o">:</span><span class="w"> </span><span class="s2">"./data/fer1.clustal"</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msa</span><span class="p">(</span><span class="nx">opts</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>-&gt; <a class="reference external" href="http://jsbin.com/yusifufiwa/1/edit?js,output">JSBin example</a></p>
+</section>
+</section>
+<section id="b-import-your-own-sequences-from-a-string">
+<h3 id="b-import-your-own-sequences-from-a-string">b) Import your own sequences from a string<a class="headerlink" href="#b-import-your-own-sequences-from-a-string" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// your fasta file (advice: save it in a DOM node)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">fasta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;seq1\n\</span>
+<span class="s2">ACTG\n\</span>
+<span class="s2">&gt;seq2\n\</span>
+<span class="s2">ACGG\n"</span><span class="p">;</span>
+
+<span class="c1">// parsed array of the sequences</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">seqs</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nx">msa</span><span class="p">.</span><span class="nx">io</span><span class="p">.</span><span class="nx">fasta</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">fasta</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msa</span><span class="p">({</span>
+<span class="w">     </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="nx">rootDiv</span><span class="p">,</span>
+<span class="w">     </span><span class="nx">seqs</span><span class="o">:</span><span class="w"> </span><span class="nx">seqs</span>
+<span class="p">});</span>
+<span class="nx">m</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>-&gt; <a class="reference external" href="http://jsbin.com/zutaqofuro/1/edit?html,js,output">JSBin Example</a></p>
+<section id="c-asynchronously-import-seqs">
+<h4 id="c-asynchronously-import-seqs">c) Asynchronously import seqs<a class="headerlink" href="#c-asynchronously-import-seqs" title="Permalink to this heading">¶</a></h4>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msa</span><span class="p">({</span>
+<span class="w"> </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="nx">rootDiv</span><span class="p">,</span>
+<span class="p">});</span>
+<span class="nx">msa</span><span class="p">.</span><span class="nx">io</span><span class="p">.</span><span class="nx">clustal</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/wilzbach/msa/master/test/dummy/samples/p53.clustalo.clustal"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">seqs</span><span class="p">){</span>
+<span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">seqs</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="nx">seqs</span><span class="p">);</span>
+<span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>-&gt; <a class="reference external" href="http://jsbin.com/zesihapede/1/edit">JSBin example</a></p>
+</section>
+</section>
+<section id="d-import-your-sequences-from-the-dom">
+<h3 id="d-import-your-sequences-from-the-dom">d) Import your sequences from the DOM<a class="headerlink" href="#d-import-your-sequences-from-the-dom" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">fasta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"fasta-file"</span><span class="p">).</span><span class="nx">innerText</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">seqs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msa</span><span class="p">.</span><span class="nx">io</span><span class="p">.</span><span class="nx">fasta</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">fasta</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msa</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="nx">rootDiv</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">seqs</span><span class="o">:</span><span class="w"> </span><span class="nx">seqs</span>
+<span class="p">});</span>
+<span class="nx">m</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>with the following data stored in your HTML page:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">style</span><span class="o">=</span><span class="s">"display: none"</span> <span class="na">id</span><span class="o">=</span><span class="s">"fasta-file"</span><span class="p">&gt;</span>
+&gt;seq1
+ACTG
+&gt;seq2
+ACGG<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>-&gt; <a class="reference external" href="http://jsbin.com/megecapene/1/edit?html,js,output">JSBin Example</a></p>
+</section>
+<section id="basic-config-parameters">
+<h3 id="basic-config-parameters">Basic config parameters<a class="headerlink" href="#basic-config-parameters" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bootstrapMenu</span></code>: automagically show a menu</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">el</span></code>: the root DOM element</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">importURL</span></code>: when you want to import a file automagically</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seqs</span></code>: if you prefer to pass sequences as object</p></li>
+</ul>
+<p>There also many other option - grouped into these categories. See below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">column</span></code>: hide columns</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">colorscheme</span></code>: everything about a colorscheme</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conf</span></code>: basic configuration</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vis</span></code>:  visual elements</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">visorder</span></code>: ordering of the visual elements</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoomer</span></code>: everything that is pixel-based</p></li>
+</ul>
+</section>
+</section>
+<section id="getting-help">
+<h2 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permalink to this heading">¶</a></h2>
+<p>Please open an <a class="reference external" href="https://github.com/wilzbach/msa/issues/new">issue</a>
+or ping us on <a class="reference external" href="https://gitter.im/wilzbach/msa">Gitter</a></p>
+<section id="msaviewer-in-action">
+<h3 id="msaviewer-in-action">MSAViewer in Action<a class="headerlink" href="#msaviewer-in-action" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://vapor.biojs.tgac.ac.uk">VaPoR</a></p></li>
+<li><p><a class="reference external" href="http://www.cathdb.info/">CATH</a> - <a class="reference external" href="http://cathdb.info/version/v4_1_0/superfamily/3.40.50.620/funfam/89168/alignment">example</a></p></li>
+<li><p><a class="reference external" href="http://gene3d.biochem.ucl.ac.uk/">Gene3D</a> - <a class="reference external" href="http://nar.oxfordjournals.org/content/early/2015/11/16/nar.gkv1231.full#F1">Paper</a>, <a class="reference external" href="http://gene3d.biochem.ucl.ac.uk/model?smd5=408c333701ec7e889d495aeb32d7ae10%3Bregs=81_147%3Bfam=2.30.30.40.FF19354%3Bmregs=81_147%3Bcath_mod=na">example</a></p></li>
+<li><p><a class="reference external" href="https://github.com/bene200/msaR">msaR</a> - Visualize an MSA as interactive R plot or shiny widget</p></li>
+<li><p><a class="reference external" href="http://toolkit.tuebingen.mpg.de/sections/alignment">MPI Bioinformatics Toolkit for protein sequence analysis</a></p></li>
+<li><p><a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/25649618">PolyMarker</a></p></li>
+<li><p><a class="reference external" href="http://www.benjamenwhite.com/2015/07/biojs2galaxy-a-step-by-step-guide">Galaxy visualization plugin</a></p></li>
+<li><p><a class="reference external" href="http://bitterdb.agri.huji.ac.il/bitterdbtest/dbbitter.php#ReceptorAlignment">BitterDB</a></p></li>
+<li><p><a class="reference external" href="https://github.com/thejmazz/js-bioinformatics-exercise">@thejmazz’s <em>JavaScript and Bioinformatics</em> tutorial</a></p></li>
+<li><p><a class="reference external" href="https://cpt.tamu.edu/clustalw-msa-and-visualisations">Center for Phage Technology</a></p></li>
+<li><p><a class="reference external" href="https://online.phyloviz.net">PHYLOViZ Online</a></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/projects/HistoneDB2.0/index.fcgi/browse/">HistoneDB 2.0</a></p></li>
+</ul>
+<p>Are you using the MSAViewer? Don’t hesistate to make a PR and let us know!</p>
+</section>
+<section id="change-the-colorscheme">
+<h3 id="change-the-colorscheme">Change the colorscheme<a class="headerlink" href="#change-the-colorscheme" title="Permalink to this heading">¶</a></h3>
+<p>Checkout this <a class="reference external" href="http://workmen.biojs.net/demo/msa/colorscheme">live example</a> or <a class="reference external" href="http://workmen.biojs.net/jsbin/msa/colorscheme">edit</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">el</span><span class="p">:</span> <span class="n">rootDiv</span><span class="p">,</span>
+  <span class="n">importURL</span><span class="p">:</span> <span class="s2">"./data/fer1.clustal"</span><span class="p">,</span>
+  <span class="n">colorscheme</span><span class="p">:</span> <span class="p">{</span><span class="s2">"scheme"</span><span class="p">:</span> <span class="s2">"hydro"</span><span class="p">}</span>
+<span class="p">};</span>
+<span class="n">var</span> <span class="n">m</span> <span class="o">=</span> <span class="n">msa</span><span class="p">(</span><span class="n">opts</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Own colorscheme</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">el</span><span class="p">:</span> <span class="n">rootDiv</span><span class="p">,</span>
+  <span class="n">importURL</span><span class="p">:</span> <span class="s2">"./data/fer1.clustal"</span><span class="p">,</span>
+  <span class="n">colorscheme</span><span class="p">:</span> <span class="p">{</span><span class="s2">"scheme"</span><span class="p">:</span> <span class="s2">"hydro"</span><span class="p">}</span>
+<span class="p">};</span>
+<span class="n">var</span> <span class="n">m</span> <span class="o">=</span> <span class="n">msa</span><span class="p">(</span><span class="n">opts</span><span class="p">);</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">colorscheme</span><span class="o">.</span><span class="n">addStaticScheme</span><span class="p">(</span><span class="s2">"own"</span><span class="p">,{</span><span class="n">A</span><span class="p">:</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="n">C</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">,</span> <span class="n">G</span><span class="p">:</span> <span class="s2">"green"</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span> <span class="s2">"blue"</span><span class="p">});</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">colorscheme</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"scheme"</span><span class="p">,</span> <span class="s2">"own"</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Have a look at the <a class="reference external" href="https://github.com/wilzbach/msa-colorschemes">doc</a> for more info.</p>
+</section>
+<section id="add-features">
+<h3 id="add-features">Add features<a class="headerlink" href="#add-features" title="Permalink to this heading">¶</a></h3>
+<p>Checkout this <a class="reference external" href="http://workmen.biojs.net/demo/msa/fer1_annoted">live example</a> or <a class="reference external" href="http://workmen.biojs.net/jsbin/msa/fer1_annoted">edit</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">xhr</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">"xhr"</span><span class="p">);</span>
+<span class="n">var</span> <span class="n">gffParser</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">"biojs-io-gff"</span><span class="p">);</span>
+<span class="n">var</span> <span class="n">m</span> <span class="o">=</span> <span class="n">msa</span><span class="p">({</span><span class="n">el</span><span class="p">:</span> <span class="n">rootDiv</span><span class="p">,</span> <span class="n">importURL</span><span class="p">:</span> <span class="s2">"https://raw.githubusercontent.com/wilzbach/msa/master/test/dummy/samples/p53.clustalo.clustal"</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">add</span> <span class="n">features</span>
+<span class="n">xhr</span><span class="p">(</span><span class="s2">"./data/fer1.gff3"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">var</span> <span class="n">features</span> <span class="o">=</span> <span class="n">gffParser</span><span class="o">.</span><span class="n">parseSeqs</span><span class="p">(</span><span class="n">body</span><span class="p">);</span>
+  <span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">addFeatures</span><span class="p">(</span><span class="n">features</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="o">//</span> <span class="ow">or</span> <span class="n">even</span> <span class="n">more</span>
+<span class="n">xhr</span><span class="p">(</span><span class="s2">"./data/fer1.gff_jalview"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">var</span> <span class="n">features</span> <span class="o">=</span> <span class="n">gffParser</span><span class="o">.</span><span class="n">parseSeqs</span><span class="p">(</span><span class="n">body</span><span class="p">);</span>
+  <span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">addFeatures</span><span class="p">(</span><span class="n">features</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="update-seqs">
+<h3 id="update-seqs">Update seqs<a class="headerlink" href="#update-seqs" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"hidden"</span><span class="p">,</span> <span class="n">true</span><span class="p">)</span> <span class="o">//</span> <span class="n">hides</span> <span class="n">the</span> <span class="n">first</span> <span class="n">seq</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"seq"</span><span class="p">)</span> <span class="o">//</span> <span class="n">get</span> <span class="n">raw</span> <span class="n">seq</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"seqId"</span><span class="p">)</span> <span class="o">//</span> <span class="n">get</span> <span class="n">seqid</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"seq"</span><span class="p">,</span> <span class="s2">"AAAA"</span><span class="p">)</span> <span class="o">//</span> <span class="n">sets</span> <span class="n">seq</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">add</span><span class="p">({</span><span class="n">seq</span><span class="p">:</span> <span class="s2">"AAA"</span><span class="p">});</span>  <span class="o">//</span> <span class="n">we</span> <span class="n">add</span> <span class="n">a</span> <span class="n">new</span> <span class="n">seq</span> <span class="n">at</span> <span class="n">the</span> <span class="n">end</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">unshift</span><span class="p">({</span><span class="n">seq</span><span class="p">:</span> <span class="s2">"AAA"</span><span class="p">});</span>  <span class="o">//</span> <span class="n">we</span> <span class="n">add</span> <span class="n">a</span> <span class="n">new</span> <span class="n">seq</span> <span class="n">at</span> <span class="n">the</span> <span class="n">beginning</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="o">//</span> <span class="n">remove</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">last</span> <span class="n">seq</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">shift</span><span class="p">()</span> <span class="o">//</span> <span class="n">remove</span> <span class="ow">and</span> <span class="k">return</span> <span class="n">first</span> <span class="n">seq</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">length</span> <span class="o">//</span> <span class="n">nr</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">pluck</span><span class="p">(</span><span class="s2">"seqId"</span><span class="p">)</span> <span class="o">//</span> <span class="p">[</span><span class="s2">"id1"</span><span class="p">,</span> <span class="s2">"id2"</span><span class="p">,</span> <span class="o">..</span><span class="p">]</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">//</span> <span class="n">remove</span> <span class="n">seq2</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">getMaxLength</span><span class="p">()</span> <span class="o">//</span> <span class="mi">200</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">addFeatures</span><span class="p">()</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">removeAllFeatures</span><span class="p">()</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">setRef</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">//</span> <span class="n">sets</span> <span class="n">the</span> <span class="n">second</span> <span class="n">seq</span> <span class="k">as</span> <span class="n">reference</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">first</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">comparator</span> <span class="o">=</span> <span class="s2">"seqId"</span> <span class="o">//</span> <span class="n">sort</span> <span class="n">after</span> <span class="n">seqId</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="o">//</span> <span class="n">apply</span> <span class="n">our</span> <span class="n">new</span> <span class="n">comparator</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">comparator</span> <span class="o">=</span>  <span class="n">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">){</span> <span class="k">return</span> <span class="o">-</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"seq"</span><span class="p">)</span><span class="o">.</span><span class="n">localeCompare</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"seq"</span><span class="p">))}</span> <span class="o">//</span> <span class="n">sort</span> <span class="n">after</span> <span class="n">the</span> <span class="n">seq</span> <span class="n">itself</span> <span class="ow">in</span> <span class="n">descending</span> <span class="n">order</span>
+<span class="n">m</span><span class="o">.</span><span class="n">seqs</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Even <a class="reference external" href="http://backbonejs.org/#Collection">more</a> is possible.</p>
+</section>
+<section id="update-selection">
+<h3 id="update-selection">Update selection<a class="headerlink" href="#update-selection" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new</span> <span class="n">msa</span><span class="o">.</span><span class="n">selection</span><span class="o">.</span><span class="n">rowsel</span><span class="p">({</span><span class="n">seqId</span><span class="p">:</span> <span class="s2">"f1"</span><span class="p">}));</span> <span class="o">//</span> <span class="n">row</span><span class="o">-</span><span class="n">based</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new</span> <span class="n">msa</span><span class="o">.</span><span class="n">selection</span><span class="o">.</span><span class="n">columnsel</span><span class="p">({</span><span class="n">xStart</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="n">xEnd</span><span class="p">:</span> <span class="mi">12</span><span class="p">}));</span> <span class="o">//</span> <span class="n">column</span><span class="o">-</span><span class="n">wise</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new</span> <span class="n">msa</span><span class="o">.</span><span class="n">selection</span><span class="o">.</span><span class="n">possel</span><span class="p">({</span><span class="n">xStart</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="n">xEnd</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="n">seqId</span><span class="p">:</span> <span class="s2">"f1"</span><span class="p">}));</span> <span class="o">//</span> <span class="n">union</span> <span class="n">of</span> <span class="n">row</span> <span class="ow">and</span> <span class="n">column</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">reset</span><span class="p">([</span><span class="n">new</span> <span class="n">msa</span><span class="o">.</span><span class="n">selection</span><span class="o">.</span><span class="n">rowsel</span><span class="p">({</span><span class="n">seqId</span><span class="p">:</span> <span class="s2">"f1"</span><span class="p">})]);</span> <span class="o">//</span> <span class="n">reset</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">getBlocksForRow</span><span class="p">()</span> <span class="o">//</span> <span class="n">array</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">selected</span> <span class="n">residues</span> <span class="k">for</span> <span class="n">a</span> <span class="n">row</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">getAllColumnBlocks</span><span class="p">()</span> <span class="o">//</span> <span class="n">array</span> <span class="k">with</span> <span class="nb">all</span> <span class="n">selected</span> <span class="n">columns</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">invertRow</span><span class="p">(</span><span class="nd">@model</span><span class="o">.</span><span class="n">pluck</span> <span class="s2">"id"</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">invertCol</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="o">//</span> <span class="n">remove</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">selection</span>
+<span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"searchText"</span><span class="p">,</span> <span class="n">search</span><span class="p">)</span> <span class="o">//</span> <span class="n">search</span>
+</pre></div>
+</div>
+</section>
+<section id="jump-to-a-column">
+<h3 id="jump-to-a-column">Jump to a column<a class="headerlink" href="#jump-to-a-column" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">zoomer</span><span class="o">.</span><span class="n">setLeftOffset</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">//</span> <span class="n">jumps</span> <span class="n">to</span> <span class="n">column</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</section>
+<section id="export-and-save">
+<h3 id="export-and-save">Export and save<a class="headerlink" href="#export-and-save" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">saveAsFile</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s2">"all.fasta"</span><span class="p">)</span> <span class="o">//</span> <span class="n">export</span> <span class="n">seqs</span>
+<span class="n">m</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">saveSelection</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s2">"selection.fasta"</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">saveAnnots</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s2">"features.gff3"</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">saveAsImg</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="s2">"biojs-msa.png"</span><span class="p">)</span>
+
+<span class="o">//</span> <span class="n">share</span> <span class="n">the</span> <span class="n">seqs</span> <span class="k">with</span> <span class="n">the</span> <span class="n">public</span> <span class="o">=</span> <span class="n">get</span> <span class="n">a</span> <span class="n">public</span> <span class="n">link</span>
+<span class="n">m</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">shareLink</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">link</span><span class="p">){</span>
+ <span class="n">window</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="s1">'_blank'</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="o">//</span> <span class="n">share</span> <span class="n">via</span> <span class="n">jalview</span>
+<span class="n">var</span> <span class="n">url</span> <span class="o">=</span>  <span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'url'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">url</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">)</span> <span class="o">||</span> <span class="n">url</span> <span class="o">===</span> <span class="s2">"dragimport"</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">publishWeb</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">link</span><span class="p">){</span>
+     <span class="n">m</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">openInJalview</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">colorscheme</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"scheme"</span><span class="p">))</span>
+    <span class="p">});</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">export</span><span class="o">.</span><span class="n">openInJalview</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">colorscheme</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"scheme"</span><span class="p">))</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="update-attributes">
+<h3 id="update-attributes">Update attributes<a class="headerlink" href="#update-attributes" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">msa</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"marker"</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span> <span class="o">//</span> <span class="n">hides</span> <span class="n">the</span> <span class="n">markers</span>
+<span class="n">msa</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">zoomer</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"alignmentHeight"</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span> <span class="o">//</span> <span class="n">modifies</span> <span class="n">the</span> <span class="n">default</span> <span class="n">height</span>
+</pre></div>
+</div>
+</section>
+<section id="listen-to-attribute-events">
+<h3 id="listen-to-attribute-events">Listen to attribute events<a class="headerlink" href="#listen-to-attribute-events" title="Permalink to this heading">¶</a></h3>
+<p>All classes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">selcol</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"change"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="n">new</span><span class="p">){</span>
+
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>You can also listen to more specific events</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"change:alignmentWidth"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="n">new</span><span class="p">){</span>
+
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="listen-to-user-interactions">
+<h3 id="listen-to-user-interactions">Listen to user interactions<a class="headerlink" href="#listen-to-user-interactions" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">msa</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"residue:click"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">){</span> <span class="o">...</span> <span class="p">}):</span>
+<span class="n">msa</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"residue:mousein"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">){</span> <span class="o">...</span> <span class="p">}):</span>
+<span class="n">msa</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"residue:mouseout"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">){</span> <span class="o">...</span> <span class="p">}):</span>
+</pre></div>
+</div>
+<p>If you want to listen to mouse events, you need to set the flag: <code class="docutils literal notranslate"><span class="pre">conf.registerMouseHover</span></code>.
+There is a plethora of events that you can listen to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">msa</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"row:click"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">){</span> <span class="o">...</span> <span class="p">}):</span>
+<span class="n">msa</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"column:click"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">){</span> <span class="o">...</span> <span class="p">}):</span>
+<span class="n">msa</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"meta:click"</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">){</span> <span class="o">...</span> <span class="p">}):</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="config-parameters-in-g">
+<h3 id="config-parameters-in-g">Config parameters in g<a class="headerlink" href="#config-parameters-in-g" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conf</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">registerMouseHover</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">registerMouseClicks</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">importProxy</span><span class="p">:</span> <span class="s2">"https://cors-anywhere.herokuapp.com/"</span><span class="p">,</span>
+    <span class="n">eventBus</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">alphabetSize</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="n">dropImport</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">debug</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">hasRef</span><span class="p">:</span> <span class="n">false</span> <span class="o">//</span> <span class="n">hasReference</span><span class="p">,</span>
+    <span class="n">manualRendering</span><span class="p">:</span> <span class="n">false</span> <span class="o">//</span> <span class="n">manually</span> <span class="n">control</span> <span class="n">the</span> <span class="n">render</span> <span class="p">(</span><span class="ow">not</span> <span class="n">recommened</span><span class="p">)</span>
+<span class="p">},</span>
+<span class="n">colorscheme</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">scheme</span><span class="p">:</span> <span class="s2">"taylor"</span><span class="p">,</span> <span class="o">//</span> <span class="n">name</span> <span class="n">of</span> <span class="n">your</span> <span class="n">color</span> <span class="n">scheme</span>
+    <span class="n">colorBackground</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="o">//</span> <span class="n">otherwise</span> <span class="n">only</span> <span class="n">the</span> <span class="n">text</span> <span class="n">will</span> <span class="n">be</span> <span class="n">colored</span>
+    <span class="n">showLowerCase</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="o">//</span> <span class="n">used</span> <span class="n">to</span> <span class="n">hide</span> <span class="ow">and</span> <span class="n">show</span> <span class="n">lowercase</span> <span class="n">chars</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">overviewbox</span>
+    <span class="n">opacity</span><span class="p">:</span> <span class="mf">0.6</span> <span class="o">//</span><span class="n">opacity</span> <span class="k">for</span> <span class="n">the</span> <span class="n">residues</span>
+<span class="p">},</span>
+<span class="n">columns</span><span class="p">:</span> <span class="p">{</span>
+ <span class="n">hidden</span><span class="p">:</span> <span class="p">[]</span> <span class="o">//</span> <span class="n">hidden</span> <span class="n">columns</span>
+<span class="p">}</span>
+<span class="n">vis</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">sequences</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">markers</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">metacell</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">conserv</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">overviewbox</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">seqlogo</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">gapHeader</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">leftHeader</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+
+    <span class="o">//</span> <span class="n">about</span> <span class="n">the</span> <span class="n">labels</span>
+    <span class="n">labels</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">labelName</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">labelId</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">labelPartition</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="n">labelCheckbox</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+
+    <span class="o">//</span> <span class="n">meta</span> <span class="n">stuff</span>
+    <span class="n">metaGaps</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">metaIdentity</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">metaLinks</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">},</span>
+<span class="n">zoomer</span><span class="p">:</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">general</span>
+    <span class="n">alignmentWidth</span><span class="p">:</span> <span class="s2">"auto"</span><span class="p">,</span>
+    <span class="n">alignmentHeight</span><span class="p">:</span> <span class="mi">225</span><span class="p">,</span>
+    <span class="n">columnWidth</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="n">rowHeight</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="n">autoResize</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="o">//</span> <span class="n">only</span> <span class="k">for</span> <span class="n">the</span> <span class="n">width</span>
+
+    <span class="o">//</span> <span class="n">labels</span>
+    <span class="n">textVisible</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="n">labelIdLength</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="n">labelNameLength</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="n">labelPartLength</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="n">labelCheckLength</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="n">labelFontsize</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+    <span class="n">labelLineHeight</span><span class="p">:</span> <span class="s2">"13px"</span><span class="p">,</span>
+
+    <span class="o">//</span> <span class="n">marker</span>
+    <span class="n">markerFontsize</span><span class="p">:</span> <span class="s2">"10px"</span><span class="p">,</span>
+    <span class="n">stepSize</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">markerStepSize</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">markerHeight</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+
+    <span class="o">//</span> <span class="n">canvas</span>
+    <span class="n">residueFont</span><span class="p">:</span> <span class="s2">"13"</span><span class="p">,</span> <span class="o">//</span><span class="ow">in</span> <span class="n">px</span>
+    <span class="n">canvasEventScale</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+
+    <span class="o">//</span> <span class="n">overview</span> <span class="n">box</span>
+    <span class="n">boxRectHeight</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">boxRectWidth</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="n">overviewboxPaddingTop</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+
+    <span class="o">//</span> <span class="n">meta</span> <span class="n">cell</span>
+    <span class="n">metaGapWidth</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+    <span class="n">metaIdentWidth</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+    <span class="n">metaLinksWidth</span><span class="p">:</span> <span class="mi">25</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The menu has its own small set of properties that can be modified. It’s the <code class="docutils literal notranslate"><span class="pre">menu</span></code>
+property for both the defaultmenu as using the menu bootstrapping.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">menu</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">menuFontsize</span><span class="p">:</span> <span class="s2">"14px"</span><span class="p">,</span>
+    <span class="n">menuItemFontsize</span><span class="p">:</span> <span class="s2">"14px"</span><span class="p">,</span>
+    <span class="n">menuItemLineHeight</span><span class="p">:</span> <span class="s2">"14px"</span><span class="p">,</span>
+    <span class="n">menuMarginLeft</span><span class="p">:</span> <span class="s2">"3px"</span><span class="p">,</span>
+    <span class="n">menuPadding</span><span class="p">:</span> <span class="s2">"3px 4px 3px 4px"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sequence-model">
+<h3 id="sequence-model">Sequence model<a class="headerlink" href="#sequence-model" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="n">name</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+  <span class="nb">id</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+  <span class="n">seq</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+  <span class="n">height</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="n">ref</span><span class="p">:</span> <span class="n">false</span> <span class="o">//</span> <span class="n">reference</span><span class="p">:</span> <span class="n">the</span> <span class="n">sequence</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">BLAST</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">consensus</span> <span class="n">seq</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="faq">
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permalink to this heading">¶</a></h2>
+<p>Q: How can I define my own color scheme?</p>
+<p>↝ <a class="reference external" href="http://workmen.biojs.net/jsbin/msa/colorscheme">play in JSBin</a>
+↝ <a class="reference external" href="https://github.com/wilzbach/msa-colorschemes">read the documentation</a></p>
+</section>
+<section id="guidelines">
+<h2 id="guidelines">Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://en.wikipedia.org/wiki/KISS_principle">KISS</a> -&gt; avoid komplexity</p></li>
+<li><p>keep it modular</p></li>
+<li><p>avoid boiler-plate code</p></li>
+<li><p>avoid more than two args for public methods -&gt; accepting a dictionary is more flexible</p></li>
+<li><p>max. 200 lines per file (-&gt; better organization)</p></li>
+</ul>
+</section>
+<section id="step-1-setting-up">
+<h2 id="step-1-setting-up">Step 1) Setting up<a class="headerlink" href="#step-1-setting-up" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/wilzbach/msa
+<span class="nb">cd</span><span class="w"> </span>msa
+npm<span class="w"> </span>install
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>npm</strong>: You will need the <code class="docutils literal notranslate"><span class="pre">npm</span></code> package manager (and node) for this.
+On most distributions there is a package, look <a class="reference external" href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager">here</a></p></li>
+</ul>
+</section>
+<section id="step-2-developing">
+<h2 id="step-2-developing">Step 2) Developing<a class="headerlink" href="#step-2-developing" title="Permalink to this heading">¶</a></h2>
+<p>In the root dir execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">w</span>
+</pre></div>
+</div>
+<p>You can browse the snippets at <a class="reference external" href="http:localhost:9090/snippets">localhost:9090/snippets</a>.</p>
+</section>
+<section id="compiling-for-the-browser">
+<h2 id="compiling-for-the-browser">Compiling for the browser<a class="headerlink" href="#compiling-for-the-browser" title="Permalink to this heading">¶</a></h2>
+<p>For most cases using our CDN builds, is the best way to go.
+If you need to make some changes to the MSA, you can get a minified bundle in
+the folder <code class="docutils literal notranslate"><span class="pre">dist</span></code> with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gulp</span> <span class="n">build</span>
+</pre></div>
+</div>
+</section>
+<section id="package-list">
+<h2 id="package-list">Package list<a class="headerlink" href="#package-list" title="Permalink to this heading">¶</a></h2>
+<p>↝ <a class="reference external" href="https://github.com/wilzbach/msa/wiki/Package-list">Package list</a></p>
+</section>
+<section id="project-structure">
+<h2 id="project-structure">Project structure<a class="headerlink" href="#project-structure" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">browser.js</span></code> main file for browserify - defines the global namespace in the browser</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">css</span></code> stylesheet folder (previously used for SASS)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gulpfile.js</span></code> task definition file (for <a class="reference external" href="http://gulpjs.com/%5D">gulp</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">package.json</span></code> <a class="reference external" href="https://www.npmjs.org/doc/files/package.json.html">npm config</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examples</span></code> short coding snippets that are run by <a class="reference external" href="https://github.com/biojs/sniper"><code class="docutils literal notranslate"><span class="pre">sniper</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">src</span></code> the main source code</p></li>
+</ul>
+</section>
+<section id="want-to-learn-more">
+<h2 id="want-to-learn-more">Want to learn more?<a class="headerlink" href="#want-to-learn-more" title="Permalink to this heading">¶</a></h2>
+<p>Continue at the <a class="reference external" href="https://github.com/wilzbach/msa/wiki">wiki</a>.</p>
+</section>
+<section id="getting-involved">
+<h2 id="getting-involved">Getting involved<a class="headerlink" href="#getting-involved" title="Permalink to this heading">¶</a></h2>
+<p>Just pick a open issue on the <a class="reference external" href="https://github.com/wilzbach/msa/issues">issue tracker</a>
+and help to make the MSAViewer better.</p>
+<p>The best way to get your feature request is to send us a pull request.
+Don’t worry about simple implementations, we will help you to make it better.</p>
+<p>For more questions, ping us on the issue tracker or <a class="reference external" href="https://gitter.im/wilzbach/msa">Gitter</a>.</p>
+</section>
+<section id="team">
+<h2 id="team">Team<a class="headerlink" href="#team" title="Permalink to this heading">¶</a></h2>
+<p>Without the help of these awesome people the MSAViewer project wouldn’t have been possible:</p>
+<p>Sebastian Wilzbach (Technical University of Munich; TUM), Ian Sillitoe (University College London), Benedikt Rauscher (TUM), Robert Sheridan (Harvard Medical School), James Procter (University of Dundee), Suzanna Lewis (Berkeley), Burkhard Rost (TUM), Tatyana Goldberg(TUM) and Guy Yachdav (TUM).</p>
+<p>Do you want to be part of the team? Just grab an issue and send us a PR!
+Ask us on <a class="reference external" href="https://gitter.im/wilzbach/msa">Gitter</a> if you need help to get started.</p>
+</section>
+<section id="versioning-cdn">
+<h2 id="versioning-cdn">Versioning &amp; CDN<a class="headerlink" href="#versioning-cdn" title="Permalink to this heading">¶</a></h2>
+<p>New MSA versions are released following <a class="reference external" href="http://semver.org/">semantic versioning</a>.
+Starting from 1.0.3 <a class="reference external" href="https://github.com/wilzbach/msa/tags">git tags</a> match the versions deployed on npm and our CDN.
+On our CDN we offer four different versions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cdn</span><span class="o">.</span><span class="n">bio</span><span class="o">.</span><span class="n">sh</span><span class="o">/</span><span class="n">msa</span><span class="o">/</span><span class="mf">1.0.3</span><span class="o">/</span><span class="n">msa</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">js</span> <span class="o">//</span> <span class="n">static</span><span class="p">,</span> <span class="n">won</span><span class="s1">'t change</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cdn</span><span class="o">.</span><span class="n">bio</span><span class="o">.</span><span class="n">sh</span><span class="o">/</span><span class="n">msa</span><span class="o">/</span><span class="mf">1.0</span><span class="o">/</span><span class="n">msa</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">js</span> <span class="o">//</span> <span class="n">will</span> <span class="n">be</span> <span class="n">updated</span> <span class="n">until</span> <span class="n">a</span> <span class="n">new</span> <span class="n">minor</span> <span class="n">version</span> <span class="ow">is</span> <span class="n">released</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cdn</span><span class="o">.</span><span class="n">bio</span><span class="o">.</span><span class="n">sh</span><span class="o">/</span><span class="n">msa</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="n">msa</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">js</span> <span class="o">//</span> <span class="n">will</span> <span class="n">be</span> <span class="n">updated</span> <span class="n">until</span> <span class="n">a</span> <span class="n">new</span> <span class="n">major</span> <span class="n">version</span> <span class="ow">is</span> <span class="n">released</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cdn</span><span class="o">.</span><span class="n">bio</span><span class="o">.</span><span class="n">sh</span><span class="o">/</span><span class="n">msa</span><span class="o">/</span><span class="n">latest</span><span class="o">/</span><span class="n">msa</span><span class="o">.</span><span class="n">min</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="n">js</span> <span class="o">//</span> <span class="n">will</span> <span class="n">be</span> <span class="n">updated</span> <span class="n">on</span> <span class="n">every</span> <span class="n">commit</span>
+</pre></div>
+</div>
+<p>If you use the MSAViewer in production, we recommend to lock the CDN version to an exact release and update from time to time.</p>
+</section>
+<section id="license">
+<h2 id="license">License<a class="headerlink" href="#license" title="Permalink to this heading">¶</a></h2>
+<p>This project is licensed under the <a class="reference external" href="https://github.com/wilzbach/msa/blob/master/LICENSE">Boost Software License 1.0</a>.</p>
+<blockquote>
+<div><p>Permission is hereby granted, free of charge, to any person or organization
+obtaining a copy of the software and accompanying documentation covered by
+this license (the “Software”) to use, reproduce, display, distribute,
+execute, and transmit the Software, and to prepare derivative works of the
+Software, and to permit third-parties to whom the Software is furnished to
+do so, all subject to the following:</p>
+</div></blockquote>
+<p>If you use the MSAViewer on your website, it solely requires you to link to us.</p>
+</section>
+<section id="citing-the-msaviewer">
+<h2 id="citing-the-msaviewer">Citing the MSAViewer<a class="headerlink" href="#citing-the-msaviewer" title="Permalink to this heading">¶</a></h2>
+<p>The MSAViewer has been published :tada:</p>
+<p>Please cite <a class="reference external" href="http://bioinformatics.oxfordjournals.org/content/early/2016/07/12/bioinformatics.btw474.abstract">this paper</a>, when you use the MSAViewer in your project.</p>
+<blockquote>
+<div><p>Guy Yachdav and Sebastian Wilzbach and Benedikt Rauscher and Robert Sheridan and Ian Sillitoe and James Procter and Suzanna Lewis and Burkhard Rost and Tatyana Goldberg. “MSAViewer: interactive JavaScript visualization of multiple sequence alignments.” Bioinformatics (2016)</p>
+</div></blockquote>
+<p>As Bibtex:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@Article</span><span class="p">{</span><span class="n">msaviewer</span><span class="p">,</span>
+   <span class="n">Author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Guy</span> <span class="n">Yachdav</span> <span class="ow">and</span> <span class="n">Sebastian</span> <span class="n">Wilzbach</span> <span class="ow">and</span> <span class="n">Benedikt</span> <span class="n">Rauscher</span> <span class="ow">and</span> <span class="n">Robert</span> <span class="n">Sheridan</span> <span class="ow">and</span> <span class="n">Ian</span> <span class="n">Sillitoe</span> <span class="ow">and</span> <span class="n">James</span> <span class="n">Procter</span> <span class="ow">and</span> <span class="n">Suzanna</span> <span class="n">Lewis</span> <span class="ow">and</span> <span class="n">Burkhard</span> <span class="n">Rost</span> <span class="ow">and</span> <span class="n">Tatyana</span> <span class="n">Goldberg</span><span class="p">},</span>
+   <span class="n">Title</span><span class="o">=</span><span class="s2">"{{M}</span><span class="si">{S}{A}{V}</span><span class="s2">iewer: interactive </span><span class="si">{J}</span><span class="s2">ava</span><span class="si">{S}</span><span class="s2">cript visualization of multiple sequence alignments}"</span><span class="p">,</span>
+   <span class="n">Journal</span><span class="o">=</span><span class="s2">"Bioinformatics"</span><span class="p">,</span>
+   <span class="n">Year</span><span class="o">=</span><span class="s2">"2016"</span><span class="p">,</span>
+   <span class="n">Pages</span><span class="o">=</span><span class="s2">" "</span><span class="p">,</span>
+   <span class="n">Month</span><span class="o">=</span><span class="s2">"Jul"</span><span class="p">,</span>
+   <span class="n">Doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.1093</span><span class="o">/</span><span class="n">bioinformatics</span><span class="o">/</span><span class="n">btw474</span><span class="p">},</span>
+   <span class="n">Url</span> <span class="o">=</span> <span class="p">{</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">dx</span><span class="o">.</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">10.1093</span><span class="o">/</span><span class="n">bioinformatics</span><span class="o">/</span><span class="n">btw474</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2020-2025, JupyterLab Contrib Team.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
